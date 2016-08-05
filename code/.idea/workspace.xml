@@ -29,23 +29,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="icfp2016.scala" pinned="false" current-in-tab="false">
+      <file leaf-file-name="icfp2016.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/icfp/icfp2016.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="39" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
+            <state relative-caret-position="315">
+              <caret line="33" column="9" selection-start-line="33" selection-start-column="6" selection-end-line="33" selection-end-column="9" />
               <folding>
-                <element signature="e#1629#1647#0" expanded="true" />
+                <element signature="e#1627#1645#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Origami.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Origami.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/icfp/Origami.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-311">
-              <caret line="72" column="1" selection-start-line="72" selection-start-column="1" selection-end-line="72" selection-end-column="1" />
+            <state relative-caret-position="139">
+              <caret line="53" column="19" selection-start-line="53" selection-start-column="19" selection-end-line="53" selection-end-column="19" />
               <folding>
                 <element signature="e#15#39#0" expanded="true" />
               </folding>
@@ -78,8 +78,8 @@
         <option value="$PROJECT_DIR$/src/main/scala/icfp/API.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/icfp/OrigamiParse.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/ProblemViewer.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/icfp/icfp2016.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/icfp/Origami.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/icfp/icfp2016.scala" />
       </list>
     </option>
   </component>
@@ -505,22 +505,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/icfp/icfp2016.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/icfp/Origami.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="39" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
+        <state relative-caret-position="139">
+          <caret line="53" column="19" selection-start-line="53" selection-start-column="19" selection-end-line="53" selection-end-column="19" />
           <folding>
-            <element signature="e#1629#1647#0" expanded="true" />
+            <element signature="e#15#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/icfp/Origami.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/icfp/icfp2016.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-311">
-          <caret line="72" column="1" selection-start-line="72" selection-start-column="1" selection-end-line="72" selection-end-column="1" />
+        <state relative-caret-position="315">
+          <caret line="33" column="9" selection-start-line="33" selection-start-column="6" selection-end-line="33" selection-end-column="9" />
           <folding>
-            <element signature="e#15#39#0" expanded="true" />
+            <element signature="e#1627#1645#0" expanded="true" />
           </folding>
         </state>
       </provider>

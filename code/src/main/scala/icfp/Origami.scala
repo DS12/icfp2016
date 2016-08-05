@@ -51,7 +51,7 @@ case class Facet(vertices: Seq[Point])
 
 
 case class Skeleton(edges: Seq[LineSegment]){
-  val boundary: Set[LineSegment] = ???
+  val boundary: Seq[LineSegment] = ???
 }
 
 case class Silhouette(polys: Seq[Polygon]) {
