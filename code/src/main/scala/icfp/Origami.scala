@@ -1,3 +1,5 @@
+package icfp;
+
 import scala.math.BigInt
 case class Rational(n: BigInt, d: BigInt) {
   override def toString: String =
@@ -14,12 +16,15 @@ case class Polygon(pts: Seq[Point]) {
   def isCCW: Boolean = ???
 }
 
+case class LineSegment(p1: Point, p2: Point) {
+  def endpoints: Seq[Point] = p1 :: p2 :: Nil
+}
+
 case class Silhouette(polys: Seq[Polygon])
-case class Skeleton(edges: Seq[Origami.LineSegment])
+case class Skeleton(edges: Seq[LineSegment])
+
 
 object Origami {
-
-  type LineSegment = (Point, Point)
   type Problem = (Silhouette, Skeleton)
 
 }

@@ -1,3 +1,5 @@
+package icfp;
+
 import cats.Eval
 import cats.data.{State, StateT}
 
@@ -32,7 +34,7 @@ object OrigamiParse {
   val parseRational: Parse[Rational] = State(runParseRational)
   val parsePoint: Parse[Point] = repeat(2)(parseRational) map (Point(_:_*))
   val parseLineSegment: Parse[LineSegment] = repeat(2)(parsePoint) map {
-    case p1 :: p2 :: Nil => (p1, p2)
+    case p1 :: p2 :: Nil => LineSegment(p1, p2)
   }
 
   val parsePolygon: Parse[Polygon] =

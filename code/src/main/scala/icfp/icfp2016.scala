@@ -7,6 +7,8 @@ import Origami._
 
 object icfp2016 {
 
+  type Facet = Unit
+
   val fourVertices =
     """
        4
@@ -21,9 +23,9 @@ object icfp2016 {
   val destination: Seq[Point] = OrigamiParse.parsePolygon.run(OrigamiParse.tokenize(fourVertices)).value._2.pts
 
   case class SilhouetteState(polys: Seq[Polygon], edges: List[LineSegment], map: Map[Point, Point]) {
-    val isSolved: Boolean = polys.length == 1 && destination.forall(p => polys.head.contains(p))
+    val isSolved: Boolean = polys.length == 1 && destination.forall(p => polys.head.pts.contains(p))
     val isLegal: Boolean = ???
-    val vertices: Set[Point] = (polys.flatMap(poly => poly) ++ edges.flatMap(_.endpoints)).toSet
+    val vertices: Set[Point] = (polys.flatMap(poly => poly.pts) ++ edges.flatMap(_.endpoints)).toSet
     val facet: List[Facet] = ???
     val normalization: Silhouette = ???
 
@@ -42,8 +44,8 @@ object icfp2016 {
   }
 
 
-  def solve(problem: Silhouette): Solution = {
-    if (problem.isSolved) Solution(problem.vertices, problem.facet, problem.map)
+  def solve(problem: SilhouetteState): Solution = {
+    if (problem.isSolved) Solution(problem.vertices.toList, problem.facet, problem.map)
     else ??? // DFS or BFS
   }
 
@@ -52,15 +54,17 @@ object icfp2016 {
 
 object solve extends App {
 
+  import implicits._
+
   import icfp2016._
 
   // no parser, initiate by hand
   val polygon = List((0, 0), (1, 0), (1, 1), (0, 1))
-  val edges = List(LineSeg((0, 0), (1, 0)),
-    LineSeg((0, 0), (0, 1)),
-    LineSeg((1, 0), (1, 1)),
-    LineSeg((0, 1), (1, 1)))
-  val problem = Silhouette(polygon, edges, Map[Point, Point]())
+  val edges = List(LineSegment((0, 0), (1, 0)),
+    LineSegment((0, 0), (0, 1)),
+    LineSegment((1, 0), (1, 1)),
+    LineSegment((0, 1), (1, 1)))
+  val problem = SilhouetteState(List(Polygon(polygon map intPair2Point)), edges, Map[Point, Point]())
   val solution = icfp2016.solve(problem)
   println(solution.vertices)
   println(solution.facets)
