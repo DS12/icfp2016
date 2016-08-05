@@ -1,1 +1,15 @@
 # Created by .ignore support plugin (hsz.mobi)
+*.iws
+*.log
+.cache
+.idea/
+.idea_modules/
+.lib/
+.scala_dependencies
+.worksheet
+
+/out/*
+dist/*
+target/*
+project/target/*
+project/project/target/*
