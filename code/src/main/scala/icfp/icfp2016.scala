@@ -10,27 +10,29 @@ object icfp2016 {
 
   val fourVertices =
     """4
-       0,0
-       1,0
-       1,1
-       0,1
+0,0
+1,0
+1,1
+0,1
     """.stripMargin
 
   val destination: Seq[Point] = OrigamiParse.parsePolygon.run(OrigamiParse.tokenize(fourVertices)).value._2.pts
 
   case class SilhouetteState(polys: Seq[Polygon], edges: Seq[LineSegment], map: Map[Int, List[Point]]) {
-    val isSolved: Boolean = polys.length == 1 && destination.forall(polys.head.pts.contains(_))
-    val isLegal: Boolean = true
-    val vertices: Set[Point] = (polys.flatMap(_.pts) ++ edges.flatMap(_.endpoints)).toSet
-//    val facets: Seq[Facet] = ???
-//    val normalization: Silhouette = ???
+    val isNormalized: Boolean = ???
+    val normalization: Silhouette = ???
 
-    // def unfold(edge: LineSegment): List[SilhouetteState] = ???
+    val isSolved: Boolean = polys.length == 1 && destination.forall(polys.head.pts.contains(_))
+    val isLegal: Boolean = ???
+    val vertices: Set[Point] = (polys.flatMap(_.pts) ++ edges.flatMap(_.endpoints)).toSet
+    lazy val facets: Seq[Facet] = ???
+
+
+    def unfold(edge: LineSegment): List[SilhouetteState] = ???
 
   }
 
   //(silh, skel) => silhState
-
   def analyze(prob: Problem): SilhouetteState = {
     val initLabel = prob._2.edges.flatMap(line => line.endpoints).distinct.zipWithIndex.map {
       case (p, i) => (i, List(p))
@@ -39,29 +41,31 @@ object icfp2016 {
   }
 
 
-  case class Solution(vertices: Set[Point], map: Map[Int, List[Point]]) {
- // case class Solution(vertices: Set[Point], facets: Seq[Facet], map: Map[Int, List[Point]]) {
-    //    override def toString(): String = {
-    //      ???
-    //    }
+  case class Solution(vertices: Set[Point], facets: Seq[Facet], map: Map[Int, List[Point]]) {
+    override def toString(): String = {
+      ???
+    }
   }
 
   def solve(problem: SilhouetteState): Solution = {
 
-    if (problem.isSolved) Solution(problem.vertices, problem.map)
-//    else {
-//      for {
-//        edge <- problem.edges // boundary edges
-//        progress <- problem.unfold(edge).filter(_.isLegal)
-//      } yield solve(progress)
-//    }.head
-    else Solution(problem.vertices, problem.map)
+    if (problem.isSolved) Solution(problem.vertices, problem.facets, problem.map)
+    else {
+      for {
+        edge <- problem.edges // boundary edges
+        progress <- problem.unfold(edge).filter(_.isLegal)
+      } yield solve(progress)
+    }.head
   }
 
 
 }
 
+<<<<<<< HEAD
 object solve extends App{
+=======
+object solve extends App {
+>>>>>>> e3205f67c90b021aa7f49bd7e3e622c37e138453
 
   import implicits._
 
@@ -90,7 +94,7 @@ object solve extends App{
   println(prob)
 
   val problem: SilhouetteState = analyze(prob)
-//  val solution: Solution = icfp2016.solve(problem)
-//  println(solution)
+  val solution: Solution = icfp2016.solve(problem)
+  println(solution)
 
 }
