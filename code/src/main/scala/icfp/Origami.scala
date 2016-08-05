@@ -1,6 +1,7 @@
 package icfp;
 
 import scala.math.BigInt
+
 import spire.math.Rational
 
 case class Point(x: Rational, y: Rational)
