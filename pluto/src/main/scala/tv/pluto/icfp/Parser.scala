@@ -70,7 +70,11 @@ object Parser {
 
 case class Problem(polygons: List[List[Point]], edges: List[Edge])
 
-case class Point(x: Double, y: Double)
+case class Point(x: Double, y: Double){
+  def add(otherPoint: Point) = Point(this.x + otherPoint.x, this.y + otherPoint.y)
+  def divide(divisor: Int) = Point(this.x / divisor, this.y / divisor)
+  def print = x + "," + y
+}
 
 case class Edge(p1: Point, p2: Point)
 
