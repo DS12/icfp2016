@@ -8,7 +8,9 @@ case class Point(x: Rational, y: Rational) {
   def -(that: Point): Point = Point(this.x-that.x, this.y-that.y)
 }
 
-object Point { def apply(coords: Rational*) = new Point(coords(0), coords(1)) }
+object Point {
+  def apply(coords: Rational*) = new Point(coords(0), coords(1))
+}
 
 case class LineSegment(p1: Point, p2: Point){
   def ==(that: LineSegment): Boolean = (this.p1 == that.p1 && this.p2 == that.p2) || (this.p1 == that.p2 && this.p2 == that.p1)
@@ -72,7 +74,7 @@ case class Silhouette(polys: Seq[Polygon]) {
 
 case class Skeleton(edges: Seq[LineSegment]) {
   def translate(p: Point): Skeleton = Skeleton(edges map (_.translate(p)))
-  val boundary: Set[LineSegment] = ???  
+  val boundary: Seq[LineSegment] = ???
 }
 
 case class Problem(silh: Silhouette, skel: Skeleton) {

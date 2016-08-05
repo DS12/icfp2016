@@ -19,7 +19,13 @@ object icfp2016 {
 
   case class SilhouetteState(silhouette: Silhouette, skeleton: Skeleton, map: Map[Int, List[Point]]) {
     val isNormalized: Boolean = ???
-    val normalization: Silhouette = ???
+    def normalization: SilhouetteState = {
+      val newProblem = Problem(silhouette, skeleton).normalize
+      val newMap = map.map{
+        case (i, list) => (i, list.map(_ - newProblem.silh.originPoint))
+      }
+      SilhouetteState(newProblem.silh, newProblem.skel, newMap)
+    }
 
     val isSolved: Boolean = silhouette.polys.length == 1 && destination.forall(silhouette.polys.head.pts.contains(_))
     val isLegal: Boolean = ???
@@ -29,8 +35,11 @@ object icfp2016 {
 
     def unfold(edge: LineSegment): List[SilhouetteState] = ???
 
-    def deFacet(ske: Skeleton): (Facet, Skeleton) = {
-      ???
+    def deFacet(facets: List[Facet], ske: Skeleton): (List[Facet], Skeleton) = {
+      if (ske.edges.length < 3) (facets, ske)
+      else {
+        
+      }
     }
 
   }
@@ -40,7 +49,7 @@ object icfp2016 {
     val initLabel = prob.skel.edges.flatMap(line => line.endpoints).distinct.zipWithIndex.map {
       case (p, i) => (i, List(p))
     }.toMap
-    SilhouetteState(prob.silh.polys, prob.skel.edges, initLabel)
+    SilhouetteState(prob.silh, prob.skel, initLabel)
   }
 
 
