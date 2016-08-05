@@ -1,12 +1,13 @@
 package tv.pluto.icfp
 
+import spire.math.Rational
+
 import scala.collection.mutable.ListBuffer
 
 /**
   * Source: https://gist.github.com/tamland/8916429
   */
 object ConvexHull {
-
 
   def edgesOnConvexHull(points: Set[Point]): Set[Edge] = {
     val hull: Seq[Point] = ConvexHull.convexHull(points.toSeq)
@@ -38,7 +39,7 @@ object ConvexHull {
 
   def leftTurn(p1: Point, p2: Point, p3: Point) = {
     val slope = (p2.x - p1.x) * (p3.y - p1.y) - (p2.y - p1.y) * (p3.x - p1.x)
-    val collinear = math.abs(slope) <= 1e-9
+    val collinear = slope equals Rational.zero
     val leftTurn = slope < 0
     collinear || leftTurn
   }
