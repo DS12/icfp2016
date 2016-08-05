@@ -61,11 +61,7 @@ object icfp2016 {
 
 }
 
-<<<<<<< HEAD
-object solve extends App{
-=======
 object solve extends App {
->>>>>>> e3205f67c90b021aa7f49bd7e3e622c37e138453
 
   import implicits._
 
