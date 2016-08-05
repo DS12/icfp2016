@@ -24,32 +24,42 @@ object icfp2016 {
   val destination: Seq[Point] = OrigamiParse.parsePolygon.run(OrigamiParse.tokenize(fourVertices)).value._2.pts
 
 
-  case class SilhouetteState(polys: Seq[Polygon], edges: Seq[LineSegment], map: Map[Point, Point]) {
+  case class SilhouetteState(polys: Seq[Polygon], edges: Seq[LineSegment], map: Map[Int, List[Point]]) {
     val isSolved: Boolean = polys.length == 1 && destination.forall(polys.head.pts.contains(_))
     val isLegal: Boolean = ???
     val vertices: Set[Point] = (polys.flatMap(_.pts) ++ edges.flatMap(_.endpoints)).toSet
     val facet: Seq[Facet] = ???
     val normalization: Silhouette = ???
 
-    def unfold(edge: LineSegment): Silhouette = ???
+    def unfold(edge: LineSegment): List[SilhouetteState] = ???
 
   }
 
-  case class Solution(vertices: Set[Point], facets: Seq[Facet], map: Map[Point, Point]) {
+  //(silh, skel) => silhState
+
+  def analyze(prob: Problem): SilhouetteState = {
+    val initLabel = prob._2.edges.flatMap(line => line.endpoints).distinct.zipWithIndex.map {
+      case (p, i) => (i, List(p))
+    }.toMap
+    SilhouetteState(prob._1.polys, prob._2.edges, initLabel)
+  }
+
+  case class Solution(vertices: Set[Point], facets: Seq[Facet], map: Map[Int, List[Point]]) {
     //    override def toString(): String = {
     //      ???
     //    }
-  }
-
-  def parser(input: String): Silhouette = {
-    ???
   }
 
 
   def solve(problem: SilhouetteState): Solution = {
 
     if (problem.isSolved) Solution(problem.vertices, problem.facet, problem.map)
-    else ??? // DFS or BFS
+    else {
+      for {
+        edge <- problem.edges // boundary edges
+        progress <- problem.unfold(edge).filter(_.isLegal)
+      } yield solve(progress)
+    }.head
   }
 
 
@@ -60,6 +70,7 @@ object solve extends App {
   import implicits._
 
   import icfp2016._
+  import OrigamiParse._
 
 
   val ex =
@@ -77,14 +88,11 @@ object solve extends App {
 0,0 1/2,1/2
     """
 
+  val initToks = tokenize(ex)
+  println(s"initToks = $initToks")
+  val prob = parseProblem.run(initToks).value._2
 
-  val problem = Silhouette(polygon, edges, Map[Point, Point]())
-  val solution = icfp2016.solve(problem)
-  println(solution.vertices)
-  println(solution.facets)
-  println(solution.vertices.map(solution.map.get(_)))
-
-  //  val problem: Silhouette = parser(???)
-  //  val solution: Solution = icfp2016.solve(problem)
-  //  println(solution)
+  val problem: SilhouetteState = analyze(prob)
+  val solution: Solution = icfp2016.solve(problem)
+  println(solution)
 }
