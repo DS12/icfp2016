@@ -6,6 +6,7 @@ case class Rational(n: BigInt, d: BigInt) {
     if (n==0) "0"
     else if (n==d) "1"
     else n.toString + "/" + d.toString
+
 }
 
 case class Point(x: Rational, y: Rational)
@@ -16,6 +17,14 @@ case class LineSegment(p1: Point, p2: Point){
   def ==(that: LineSegment): Boolean = (this.p1 == that.p1 && this.p2 == that.p2) || (this.p1 == that.p2 && this.p2 == that.p1)
 
   def endpoints: Seq[Point] = p1 :: p2 :: Nil
+
+  def slopeIntForm: (Rational, Rational) = {
+    p2._2 - p1._2
+  }
+
+  def reflect(p: Point): Point = {
+
+  }
 }
 
 case class Polygon(pts: Seq[Point]) {

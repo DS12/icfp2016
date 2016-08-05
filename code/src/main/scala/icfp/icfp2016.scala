@@ -19,12 +19,10 @@ object icfp2016 {
        0,1
     """.stripMargin
 
-  val x = 1
-
   val destination: Seq[Point] = OrigamiParse.parsePolygon.run(OrigamiParse.tokenize(fourVertices)).value._2.pts
 
 
-  case class SilhouetteState(polys: Seq[Polygon], edges: Seq[LineSegment], map: Map[Point, Point]) {
+  case class SilhouetteState(polys: Seq[Polygon], edges: Seq[LineSegment], map: Map[Int, List[Point]]) {
     val isSolved: Boolean = polys.length == 1 && destination.forall(polys.head.pts.contains(_))
     val isLegal: Boolean = ???
     val vertices: Set[Point] = (polys.flatMap(_.pts) ++ edges.flatMap(_.endpoints)).toSet
@@ -40,11 +38,6 @@ object icfp2016 {
     //      ???
     //    }
   }
-
-  def parser(input: String): Silhouette = {
-    ???
-  }
-
 
   def solve(problem: SilhouetteState): Solution = {
 
@@ -78,7 +71,7 @@ object solve extends App {
     """
 
 
-  val problem = Silhouette(polygon, edges, Map[Point, Point]())
+  val problem = SilhouetteState(polygon, edges, Map[Int, List[Point]]())
   val solution = icfp2016.solve(problem)
   println(solution.vertices)
   println(solution.facets)
