@@ -1,0 +1,27 @@
+[0m[[0minfo[0m] [0mRunning OrigamiParseExample [0m
+[0m[[0mdebug[0m] [0mWaiting for threads to exit or System.exit to be called.[0m
+[0m[[0mdebug[0m] [0m  Classpath:[0m
+[0m[[0mdebug[0m] [0m	/Users/plao/Documents/icfp2016/code/target/scala-2.11/classes[0m
+[0m[[0mdebug[0m] [0m	/Users/plao/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.8.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/plao/.ivy2/cache/org.scalaj/scalaj-http_2.11/jars/scalaj-http_2.11-2.3.0.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/plao/.ivy2/cache/org.typelevel/cats_2.11/jars/cats_2.11-0.6.1.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/plao/.ivy2/cache/org.typelevel/cats-macros_2.11/jars/cats-macros_2.11-0.6.1.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/plao/.ivy2/cache/com.github.mpilquist/simulacrum_2.11/jars/simulacrum_2.11-0.7.0.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/plao/.ivy2/cache/org.typelevel/macro-compat_2.11/jars/macro-compat_2.11-1.1.0.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/plao/.ivy2/cache/org.typelevel/machinist_2.11/jars/machinist_2.11-0.4.1.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/plao/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.11.7.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/plao/.ivy2/cache/org.typelevel/cats-kernel_2.11/jars/cats-kernel_2.11-0.6.1.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/plao/.ivy2/cache/org.typelevel/cats-kernel-laws_2.11/jars/cats-kernel-laws_2.11-0.6.1.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/plao/.ivy2/cache/org.scalacheck/scalacheck_2.11/jars/scalacheck_2.11-1.12.5.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/plao/.ivy2/cache/org.scala-sbt/test-interface/jars/test-interface-1.0.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/plao/.ivy2/cache/org.typelevel/discipline_2.11/jars/discipline_2.11-0.4.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/plao/.ivy2/cache/org.typelevel/catalysts-platform_2.11/jars/catalysts-platform_2.11-0.0.2.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/plao/.ivy2/cache/org.typelevel/catalysts-macros_2.11/jars/catalysts-macros_2.11-0.0.2.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/plao/.ivy2/cache/org.typelevel/cats-core_2.11/jars/cats-core_2.11-0.6.1.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/plao/.ivy2/cache/org.typelevel/cats-laws_2.11/jars/cats-laws_2.11-0.6.1.jar[0m
+[0m[[0mdebug[0m] [0m	/Users/plao/.ivy2/cache/org.typelevel/cats-free_2.11/jars/cats-free_2.11-0.6.1.jar[0m
+[0m[[0mdebug[0m] [0mWaiting for thread run-main-16 to terminate.[0m
+[0m[[0mdebug[0m] [0m	Thread run-main-16 exited.[0m
+[0m[[0mdebug[0m] [0mInterrupting remaining threads (should be all daemons).[0m
+[0m[[0mdebug[0m] [0mSandboxed run complete..[0m
+[0m[[0mdebug[0m] [0mExited with code 0[0m
