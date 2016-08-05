@@ -43,7 +43,7 @@ object Parser {
       points.map(parsePoint)
     }
 
-    val edges = lines.tail.map(parseEdge)
+    val edges = lines.tail.map(parseEdge).toSet
 
     Problem(polygons, edges)
   }
@@ -68,7 +68,7 @@ object Parser {
   }
 }
 
-case class Problem(polygons: List[List[Point]], edges: List[Edge])
+case class Problem(polygons: List[List[Point]], edges: Set[Edge])
 
 case class Point(x: Double, y: Double)
 

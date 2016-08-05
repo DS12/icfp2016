@@ -5,17 +5,14 @@ import sys.process._
 
 object Visualizer {
 
-  def visualize(edges: List[Edge], blocking: Boolean = true): Unit = {
+  def visualize(edges: Iterable[Edge]): Unit = {
     val input = edges.map(edge => {
       s"${edge.p1.x} ${edge.p1.y} ${edge.p2.x} ${edge.p2.y}"
     }).mkString("\n")
 
     val builder = "python ./plotting/plot_edges.py" #< new ByteArrayInputStream(input.getBytes())
 
-    if (blocking)
-      builder.!!
-    else
-      builder.lineStream
+    builder.!!
   }
 
   def main(args: Array[String]) {
