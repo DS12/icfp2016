@@ -23,4 +23,3 @@ object Origami {
   type Problem = (Silhouette, Skeleton)
 
 }
-
