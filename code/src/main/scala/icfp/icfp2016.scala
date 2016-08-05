@@ -1,4 +1,5 @@
 package icfp
+
 /**
   * Created by htien on 8/5/16.
   */
@@ -18,22 +19,23 @@ object icfp2016 {
        0,1
     """.stripMargin
 
-    val x = 1
+  val x = 1
 
   val destination: Seq[Point] = OrigamiParse.parsePolygon.run(OrigamiParse.tokenize(fourVertices)).value._2.pts
 
-  case class SilhouetteState(polys: Seq[Polygon], edges: List[LineSegment], map: Map[Point, Point]) {
-    val isSolved: Boolean = polys.length == 1 && destination.forall(p => polys.head.pts.contains(p))
+
+  case class SilhouetteState(polys: Seq[Polygon], edges: Seq[LineSegment], map: Map[Point, Point]) {
+    val isSolved: Boolean = polys.length == 1 && destination.forall(polys.head.pts.contains(_))
     val isLegal: Boolean = ???
-    val vertices: Set[Point] = (polys.flatMap(poly => poly.pts) ++ edges.flatMap(_.endpoints)).toSet
-    val facet: List[Facet] = ???
+    val vertices: Set[Point] = (polys.flatMap(_.pts) ++ edges.flatMap(_.endpoints)).toSet
+    val facet: Seq[Facet] = ???
     val normalization: Silhouette = ???
 
     def unfold(edge: LineSegment): Silhouette = ???
 
   }
 
-  case class Solution(vertices: List[Point], facets: List[Facet], map: Map[Point, Point]) {
+  case class Solution(vertices: Set[Point], facets: Seq[Facet], map: Map[Point, Point]) {
     //    override def toString(): String = {
     //      ???
     //    }
@@ -45,7 +47,8 @@ object icfp2016 {
 
 
   def solve(problem: SilhouetteState): Solution = {
-    if (problem.isSolved) Solution(problem.vertices.toList, problem.facet, problem.map)
+
+    if (problem.isSolved) Solution(problem.vertices, problem.facet, problem.map)
     else ??? // DFS or BFS
   }
 
@@ -58,13 +61,24 @@ object solve extends App {
 
   import icfp2016._
 
-  // no parser, initiate by hand
-  val polygon = List((0, 0), (1, 0), (1, 1), (0, 1))
-  val edges = List(LineSegment((0, 0), (1, 0)),
-    LineSegment((0, 0), (0, 1)),
-    LineSegment((1, 0), (1, 1)),
-    LineSegment((0, 1), (1, 1)))
-  val problem = SilhouetteState(List(Polygon(polygon map intPair2Point)), edges, Map[Point, Point]())
+
+  val ex =
+    """1
+4
+0,0
+1,0
+1/2,1/2
+0,1/2
+5
+0,0 1,0
+1,0 1/2,1/2
+1/2,1/2 0,1/2
+0,1/2 0,0
+0,0 1/2,1/2
+    """
+
+
+  val problem = Silhouette(polygon, edges, Map[Point, Point]())
   val solution = icfp2016.solve(problem)
   println(solution.vertices)
   println(solution.facets)
