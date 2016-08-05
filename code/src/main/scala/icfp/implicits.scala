@@ -2,9 +2,6 @@ package icfp
 
 import spire.math.Rational
 
-import Origami._
-
-
 object implicits {
 
   implicit def int2rat(i: Int): Rational = Rational(i, 1)

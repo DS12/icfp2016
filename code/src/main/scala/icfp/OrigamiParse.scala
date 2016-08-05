@@ -5,7 +5,6 @@ import cats.data.{State, StateT}
 
 import scala.math.BigInt
 import spire.math.Rational
-import Origami._
 
 object OrigamiParse {
   type Parse[A] = StateT[cats.Eval, List[String], A]
@@ -54,7 +53,7 @@ object OrigamiParse {
     }
 
   val parseProblem: Parse[Problem] =
-    parseSilhouette flatMap { sil => parseSkeleton map { skel => (sil, skel) } }
+    parseSilhouette flatMap { sil => parseSkeleton map { skel => Problem(sil, skel) } }
 
 }
 

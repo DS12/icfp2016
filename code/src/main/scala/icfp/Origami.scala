@@ -39,6 +39,8 @@ case class LineSegment(p1: Point, p2: Point){
       }
   }
 
+  def translate(p: Point): LineSegment = LineSegment(p1-p, p2-p)
+
 }
 
 case class Polygon(pts: Seq[Point]) {
@@ -66,12 +68,19 @@ case class Silhouette(polys: Seq[Polygon]) {
   def normalize: Silhouette = this.translate(this.originPoint)
 
 }
-case class Skeleton(edges: Seq[LineSegment])
 
+case class Skeleton(edges: Seq[LineSegment]) {
+  def translate(p: Point): Skeleton = Skeleton(edges map (_.translate(p)))
+}
 
-object Origami {
+case class Problem(silh: Silhouette, skel: Skeleton) {
 
-  type Problem = (Silhouette, Skeleton)
+  def translate(p: Point): Problem = Problem(silh.translate(p), skel.translate(p))
+
+  def normalize: Problem = {
+    val orig = silh.originPoint
+    this.translate(orig)
+  }
 
 }
 
@@ -93,7 +102,7 @@ object OrigamiReflectExample extends App {
   println(s"reflected ${ex3.x.doubleValue}, ${ex3.y.doubleValue} over ident to get ${rex3.x.doubleValue}, ${rex3.y.doubleValue}")
 }
 
-object OrigamiOutThere extends App {
+object OrigamiOutThere {
 
   import OrigamiParse._
 
@@ -115,5 +124,5 @@ object OrigamiOutThere extends App {
 10000000000000000000000000000000000000000000000000000000000000000000000000,1 30000000000000000000000000000000000000000000000000000000000000000000000001/3,1
     """.stripMargin
   val prob = parseProblem.run(tokenize(farAway)).value._2
-  println(prob._1.normalize)
+  println(prob.silh.normalize)
 }
