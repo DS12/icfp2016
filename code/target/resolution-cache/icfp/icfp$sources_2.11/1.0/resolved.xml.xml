@@ -4,7 +4,7 @@
 		module="icfp$sources_2.11"
 		revision="1.0"
 		status="integration"
-		publication="20160805123609"
+		publication="20160805145448"
 	/>
 	<configurations>
 		<conf name="compile" visibility="public" description=""/>

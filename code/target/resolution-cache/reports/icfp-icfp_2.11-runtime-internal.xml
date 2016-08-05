@@ -7,63 +7,63 @@
 		revision="1.0"
 		conf="runtime-internal"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-		date="20160805123605"/>
+		date="20160805145446"/>
 	<dependencies>
 		<module organisation="com.github.wookietreiber" name="scala-chart_2.11">
-			<revision name="0.5.0" status="release" pubdate="20150831015402" resolver="public" artresolver="public" homepage="https://github.com/wookietreiber/scala-chart" extra-info.apiURL="http://wookietreiber.github.io/scala-chart/0.5.0/api/" downloaded="true" searched="true" default="false" conf="default, compile, runtime, default(compile), master" position="31">
+			<revision name="0.5.0" status="release" pubdate="20150831015402" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/wookietreiber/scala-chart" extra-info.apiURL="http://wookietreiber.github.io/scala-chart/0.5.0/api/" downloaded="false" searched="true" default="false" conf="default, compile, runtime, default(compile), master" position="31">
 				<license name="GNU Lesser General Public Licence" url="http://www.gnu.org/licenses/lgpl.txt"/>
-				<metadata-artifact status="successful" details="" size="2817" time="25" location="/Users/greddy/.ivy2/cache/com.github.wookietreiber/scala-chart_2.11/ivy-0.5.0.xml" searched="true" original-local-location="/Users/greddy/.ivy2/cache/com.github.wookietreiber/scala-chart_2.11/ivy-0.5.0.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/github/wookietreiber/scala-chart_2.11/0.5.0/scala-chart_2.11-0.5.0.pom"/>
+				<metadata-artifact status="no" details="" size="3538" time="0" location="/Users/greddy/.ivy2/cache/com.github.wookietreiber/scala-chart_2.11/ivy-0.5.0.xml" searched="true" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/github/wookietreiber/scala-chart_2.11/0.5.0/scala-chart_2.11-0.5.0.pom"/>
 				<caller organisation="icfp" name="icfp_2.11" conf="compile, runtime-internal, runtime, optional" rev="latest.integration" rev-constraint-default="latest.integration" rev-constraint-dynamic="latest.integration" callerrev="1.0"/>
 				<artifacts>
-					<artifact name="scala-chart_2.11" type="jar" ext="jar" status="successful" details="" size="437889" time="84" location="/Users/greddy/.ivy2/cache/com.github.wookietreiber/scala-chart_2.11/jars/scala-chart_2.11-0.5.0.jar">
+					<artifact name="scala-chart_2.11" type="jar" ext="jar" status="no" details="" size="437889" time="0" location="/Users/greddy/.ivy2/cache/com.github.wookietreiber/scala-chart_2.11/jars/scala-chart_2.11-0.5.0.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/github/wookietreiber/scala-chart_2.11/0.5.0/scala-chart_2.11-0.5.0.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.scala-lang.modules" name="scala-swing_2.11">
-			<revision name="1.0.2" status="release" pubdate="20150430062824" resolver="public" artresolver="public" homepage="http://www.scala-lang.org/" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="34">
+			<revision name="1.0.2" status="release" pubdate="20150430062824" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="34">
 				<license name="BSD 3-clause" url="http://opensource.org/licenses/BSD-3-Clause"/>
-				<metadata-artifact status="successful" details="" size="1692" time="22" location="/Users/greddy/.ivy2/cache/org.scala-lang.modules/scala-swing_2.11/ivy-1.0.2.xml" searched="true" original-local-location="/Users/greddy/.ivy2/cache/org.scala-lang.modules/scala-swing_2.11/ivy-1.0.2.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/modules/scala-swing_2.11/1.0.2/scala-swing_2.11-1.0.2.pom"/>
+				<metadata-artifact status="no" details="" size="2663" time="0" location="/Users/greddy/.ivy2/cache/org.scala-lang.modules/scala-swing_2.11/ivy-1.0.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/modules/scala-swing_2.11/1.0.2/scala-swing_2.11-1.0.2.pom"/>
 				<caller organisation="com.github.wookietreiber" name="scala-chart_2.11" conf="default, compile, runtime, master" rev="1.0.2" rev-constraint-default="1.0.2" rev-constraint-dynamic="1.0.2" callerrev="0.5.0"/>
 				<artifacts>
-					<artifact name="scala-swing_2.11" type="bundle" ext="jar" status="successful" details="" size="726498" time="91" location="/Users/greddy/.ivy2/cache/org.scala-lang.modules/scala-swing_2.11/bundles/scala-swing_2.11-1.0.2.jar">
+					<artifact name="scala-swing_2.11" type="bundle" ext="jar" status="no" details="" size="726498" time="0" location="/Users/greddy/.ivy2/cache/org.scala-lang.modules/scala-swing_2.11/bundles/scala-swing_2.11-1.0.2.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scala-lang/modules/scala-swing_2.11/1.0.2/scala-swing_2.11-1.0.2.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.jfree" name="jfreechart">
-			<revision name="1.0.19" status="release" pubdate="20140731053450" resolver="public" artresolver="public" homepage="http://www.jfree.org/jfreechart/" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="32">
+			<revision name="1.0.19" status="release" pubdate="20140731053450" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.jfree.org/jfreechart/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="32">
 				<license name="GNU Lesser General Public Licence" url="http://www.gnu.org/licenses/lgpl.txt"/>
-				<metadata-artifact status="successful" details="" size="9574" time="24" location="/Users/greddy/.ivy2/cache/org.jfree/jfreechart/ivy-1.0.19.xml" searched="true" original-local-location="/Users/greddy/.ivy2/cache/org.jfree/jfreechart/ivy-1.0.19.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/jfree/jfreechart/1.0.19/jfreechart-1.0.19.pom"/>
+				<metadata-artifact status="no" details="" size="4049" time="0" location="/Users/greddy/.ivy2/cache/org.jfree/jfreechart/ivy-1.0.19.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/jfree/jfreechart/1.0.19/jfreechart-1.0.19.pom"/>
 				<caller organisation="com.github.wookietreiber" name="scala-chart_2.11" conf="default, compile, runtime, master" rev="1.0.19" rev-constraint-default="1.0.19" rev-constraint-dynamic="1.0.19" callerrev="0.5.0"/>
 				<artifacts>
-					<artifact name="jfreechart" type="jar" ext="jar" status="successful" details="" size="1565065" time="170" location="/Users/greddy/.ivy2/cache/org.jfree/jfreechart/jars/jfreechart-1.0.19.jar">
+					<artifact name="jfreechart" type="jar" ext="jar" status="no" details="" size="1565065" time="0" location="/Users/greddy/.ivy2/cache/org.jfree/jfreechart/jars/jfreechart-1.0.19.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/jfree/jfreechart/1.0.19/jfreechart-1.0.19.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.jfree" name="jcommon">
-			<revision name="1.0.23" status="release" pubdate="20140724083644" resolver="public" artresolver="public" homepage="http://www.jfree.org/jcommon/" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="33">
+			<revision name="1.0.23" status="release" pubdate="20140724083644" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.jfree.org/jcommon/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="33">
 				<license name="GNU Lesser General Public Licence" url="http://www.gnu.org/licenses/lgpl.txt"/>
-				<metadata-artifact status="successful" details="" size="8524" time="24" location="/Users/greddy/.ivy2/cache/org.jfree/jcommon/ivy-1.0.23.xml" searched="true" original-local-location="/Users/greddy/.ivy2/cache/org.jfree/jcommon/ivy-1.0.23.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/jfree/jcommon/1.0.23/jcommon-1.0.23.pom"/>
+				<metadata-artifact status="no" details="" size="3659" time="0" location="/Users/greddy/.ivy2/cache/org.jfree/jcommon/ivy-1.0.23.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/jfree/jcommon/1.0.23/jcommon-1.0.23.pom"/>
 				<caller organisation="org.jfree" name="jfreechart" conf="compile, runtime" rev="1.0.23" rev-constraint-default="1.0.23" rev-constraint-dynamic="1.0.23" callerrev="1.0.19"/>
 				<artifacts>
-					<artifact name="jcommon" type="jar" ext="jar" status="successful" details="" size="330246" time="46" location="/Users/greddy/.ivy2/cache/org.jfree/jcommon/jars/jcommon-1.0.23.jar">
+					<artifact name="jcommon" type="jar" ext="jar" status="no" details="" size="330246" time="0" location="/Users/greddy/.ivy2/cache/org.jfree/jcommon/jars/jcommon-1.0.23.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/jfree/jcommon/1.0.23/jcommon-1.0.23.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="com.typesafe.play" name="play-json_2.11">
-			<revision name="2.5.3" status="release" pubdate="20160427173018" resolver="public" artresolver="public" homepage="https://playframework.com" downloaded="true" searched="true" default="false" conf="default, compile, runtime, default(compile), master" position="18">
+			<revision name="2.5.3" status="release" pubdate="20160427173018" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="18">
 				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="successful" details="" size="4595" time="29" location="/Users/greddy/.ivy2/cache/com.typesafe.play/play-json_2.11/ivy-2.5.3.xml" searched="true" original-local-location="/Users/greddy/.ivy2/cache/com.typesafe.play/play-json_2.11/ivy-2.5.3.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-json_2.11/2.5.3/play-json_2.11-2.5.3.pom"/>
+				<metadata-artifact status="no" details="" size="4979" time="0" location="/Users/greddy/.ivy2/cache/com.typesafe.play/play-json_2.11/ivy-2.5.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-json_2.11/2.5.3/play-json_2.11-2.5.3.pom"/>
 				<caller organisation="icfp" name="icfp_2.11" conf="compile, runtime-internal, runtime, optional" rev="2.5.3" rev-constraint-default="2.5.3" rev-constraint-dynamic="2.5.3" callerrev="1.0"/>
 				<artifacts>
-					<artifact name="play-json_2.11" type="jar" ext="jar" status="successful" details="" size="641204" time="153" location="/Users/greddy/.ivy2/cache/com.typesafe.play/play-json_2.11/jars/play-json_2.11-2.5.3.jar">
+					<artifact name="play-json_2.11" type="jar" ext="jar" status="no" details="" size="641204" time="0" location="/Users/greddy/.ivy2/cache/com.typesafe.play/play-json_2.11/jars/play-json_2.11-2.5.3.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/play-json_2.11/2.5.3/play-json_2.11-2.5.3.jar"/>
 					</artifact>
 				</artifacts>
@@ -166,36 +166,36 @@
 			</revision>
 		</module>
 		<module organisation="com.typesafe.play" name="play-datacommons_2.11">
-			<revision name="2.5.3" status="release" pubdate="20160427172938" resolver="public" artresolver="public" homepage="https://playframework.com" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="23">
+			<revision name="2.5.3" status="release" pubdate="20160427172938" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="23">
 				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="successful" details="" size="1516" time="23" location="/Users/greddy/.ivy2/cache/com.typesafe.play/play-datacommons_2.11/ivy-2.5.3.xml" searched="true" original-local-location="/Users/greddy/.ivy2/cache/com.typesafe.play/play-datacommons_2.11/ivy-2.5.3.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-datacommons_2.11/2.5.3/play-datacommons_2.11-2.5.3.pom"/>
+				<metadata-artifact status="no" details="" size="2671" time="0" location="/Users/greddy/.ivy2/cache/com.typesafe.play/play-datacommons_2.11/ivy-2.5.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-datacommons_2.11/2.5.3/play-datacommons_2.11-2.5.3.pom"/>
 				<caller organisation="com.typesafe.play" name="play-json_2.11" conf="default, compile, runtime, master" rev="2.5.3" rev-constraint-default="2.5.3" rev-constraint-dynamic="2.5.3" callerrev="2.5.3"/>
 				<artifacts>
-					<artifact name="play-datacommons_2.11" type="jar" ext="jar" status="successful" details="" size="5713" time="22" location="/Users/greddy/.ivy2/cache/com.typesafe.play/play-datacommons_2.11/jars/play-datacommons_2.11-2.5.3.jar">
+					<artifact name="play-datacommons_2.11" type="jar" ext="jar" status="no" details="" size="5713" time="0" location="/Users/greddy/.ivy2/cache/com.typesafe.play/play-datacommons_2.11/jars/play-datacommons_2.11-2.5.3.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/play-datacommons_2.11/2.5.3/play-datacommons_2.11-2.5.3.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="com.typesafe.play" name="play-functional_2.11">
-			<revision name="2.5.3" status="release" pubdate="20160427172956" resolver="public" artresolver="public" homepage="https://playframework.com" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="22">
+			<revision name="2.5.3" status="release" pubdate="20160427172956" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="22">
 				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="successful" details="" size="1513" time="28" location="/Users/greddy/.ivy2/cache/com.typesafe.play/play-functional_2.11/ivy-2.5.3.xml" searched="true" original-local-location="/Users/greddy/.ivy2/cache/com.typesafe.play/play-functional_2.11/ivy-2.5.3.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-functional_2.11/2.5.3/play-functional_2.11-2.5.3.pom"/>
+				<metadata-artifact status="no" details="" size="2668" time="0" location="/Users/greddy/.ivy2/cache/com.typesafe.play/play-functional_2.11/ivy-2.5.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-functional_2.11/2.5.3/play-functional_2.11-2.5.3.pom"/>
 				<caller organisation="com.typesafe.play" name="play-json_2.11" conf="default, compile, runtime, master" rev="2.5.3" rev-constraint-default="2.5.3" rev-constraint-dynamic="2.5.3" callerrev="2.5.3"/>
 				<artifacts>
-					<artifact name="play-functional_2.11" type="jar" ext="jar" status="successful" details="" size="411037" time="62" location="/Users/greddy/.ivy2/cache/com.typesafe.play/play-functional_2.11/jars/play-functional_2.11-2.5.3.jar">
+					<artifact name="play-functional_2.11" type="jar" ext="jar" status="no" details="" size="411037" time="0" location="/Users/greddy/.ivy2/cache/com.typesafe.play/play-functional_2.11/jars/play-functional_2.11-2.5.3.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/play-functional_2.11/2.5.3/play-functional_2.11-2.5.3.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="com.typesafe.play" name="play-iteratees_2.11">
-			<revision name="2.5.3" status="release" pubdate="20160427173013" resolver="public" artresolver="public" homepage="https://playframework.com" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="19">
+			<revision name="2.5.3" status="release" pubdate="20160427173013" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="19">
 				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="successful" details="" size="2897" time="33" location="/Users/greddy/.ivy2/cache/com.typesafe.play/play-iteratees_2.11/ivy-2.5.3.xml" searched="true" original-local-location="/Users/greddy/.ivy2/cache/com.typesafe.play/play-iteratees_2.11/ivy-2.5.3.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-iteratees_2.11/2.5.3/play-iteratees_2.11-2.5.3.pom"/>
+				<metadata-artifact status="no" details="" size="3560" time="0" location="/Users/greddy/.ivy2/cache/com.typesafe.play/play-iteratees_2.11/ivy-2.5.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-iteratees_2.11/2.5.3/play-iteratees_2.11-2.5.3.pom"/>
 				<caller organisation="com.typesafe.play" name="play-json_2.11" conf="default, compile, runtime, master" rev="2.5.3" rev-constraint-default="2.5.3" rev-constraint-dynamic="2.5.3" callerrev="2.5.3"/>
 				<artifacts>
-					<artifact name="play-iteratees_2.11" type="jar" ext="jar" status="successful" details="" size="783800" time="87" location="/Users/greddy/.ivy2/cache/com.typesafe.play/play-iteratees_2.11/jars/play-iteratees_2.11-2.5.3.jar">
+					<artifact name="play-iteratees_2.11" type="jar" ext="jar" status="no" details="" size="783800" time="0" location="/Users/greddy/.ivy2/cache/com.typesafe.play/play-iteratees_2.11/jars/play-iteratees_2.11-2.5.3.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/play-iteratees_2.11/2.5.3/play-iteratees_2.11-2.5.3.jar"/>
 					</artifact>
 				</artifacts>
@@ -226,63 +226,63 @@
 			</revision>
 		</module>
 		<module organisation="org.typelevel" name="cats_2.11">
-			<revision name="0.6.1" status="release" pubdate="20160714112521" resolver="public" artresolver="public" homepage="https://github.com/typelevel/cats" extra-info.apiURL="http://typelevel.org/cats/api/" downloaded="true" searched="true" default="false" conf="default, compile, runtime, default(compile), master" position="2">
+			<revision name="0.6.1" status="release" pubdate="20160714112521" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/typelevel/cats" extra-info.apiURL="http://typelevel.org/cats/api/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="2">
 				<license name="MIT" url="http://opensource.org/licenses/MIT"/>
-				<metadata-artifact status="successful" details="" size="5045" time="27" location="/Users/greddy/.ivy2/cache/org.typelevel/cats_2.11/ivy-0.6.1.xml" searched="true" original-local-location="/Users/greddy/.ivy2/cache/org.typelevel/cats_2.11/ivy-0.6.1.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/typelevel/cats_2.11/0.6.1/cats_2.11-0.6.1.pom"/>
+				<metadata-artifact status="no" details="" size="4275" time="0" location="/Users/greddy/.ivy2/cache/org.typelevel/cats_2.11/ivy-0.6.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/typelevel/cats_2.11/0.6.1/cats_2.11-0.6.1.pom"/>
 				<caller organisation="icfp" name="icfp_2.11" conf="compile, runtime-internal, runtime, optional" rev="0.6.1" rev-constraint-default="0.6.1" rev-constraint-dynamic="0.6.1" callerrev="1.0"/>
 				<artifacts>
-					<artifact name="cats_2.11" type="jar" ext="jar" status="successful" details="" size="304" time="22" location="/Users/greddy/.ivy2/cache/org.typelevel/cats_2.11/jars/cats_2.11-0.6.1.jar">
+					<artifact name="cats_2.11" type="jar" ext="jar" status="no" details="" size="304" time="0" location="/Users/greddy/.ivy2/cache/org.typelevel/cats_2.11/jars/cats_2.11-0.6.1.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/typelevel/cats_2.11/0.6.1/cats_2.11-0.6.1.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.typelevel" name="cats-free_2.11">
-			<revision name="0.6.1" status="release" pubdate="20160714112522" resolver="public" artresolver="public" homepage="https://github.com/typelevel/cats" extra-info.apiURL="http://typelevel.org/cats/api/" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="17">
+			<revision name="0.6.1" status="release" pubdate="20160714112522" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/typelevel/cats" extra-info.apiURL="http://typelevel.org/cats/api/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="17">
 				<license name="MIT" url="http://opensource.org/licenses/MIT"/>
-				<metadata-artifact status="successful" details="" size="4327" time="22" location="/Users/greddy/.ivy2/cache/org.typelevel/cats-free_2.11/ivy-0.6.1.xml" searched="true" original-local-location="/Users/greddy/.ivy2/cache/org.typelevel/cats-free_2.11/ivy-0.6.1.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/typelevel/cats-free_2.11/0.6.1/cats-free_2.11-0.6.1.pom"/>
+				<metadata-artifact status="no" details="" size="3689" time="0" location="/Users/greddy/.ivy2/cache/org.typelevel/cats-free_2.11/ivy-0.6.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/typelevel/cats-free_2.11/0.6.1/cats-free_2.11-0.6.1.pom"/>
 				<caller organisation="org.typelevel" name="cats_2.11" conf="default, compile, runtime, master" rev="0.6.1" rev-constraint-default="0.6.1" rev-constraint-dynamic="0.6.1" callerrev="0.6.1"/>
 				<artifacts>
-					<artifact name="cats-free_2.11" type="jar" ext="jar" status="successful" details="" size="87665" time="38" location="/Users/greddy/.ivy2/cache/org.typelevel/cats-free_2.11/jars/cats-free_2.11-0.6.1.jar">
+					<artifact name="cats-free_2.11" type="jar" ext="jar" status="no" details="" size="87665" time="0" location="/Users/greddy/.ivy2/cache/org.typelevel/cats-free_2.11/jars/cats-free_2.11-0.6.1.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/typelevel/cats-free_2.11/0.6.1/cats-free_2.11-0.6.1.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.typelevel" name="cats-laws_2.11">
-			<revision name="0.6.1" status="release" pubdate="20160714112538" resolver="public" artresolver="public" homepage="https://github.com/typelevel/cats" extra-info.apiURL="http://typelevel.org/cats/api/" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="16">
+			<revision name="0.6.1" status="release" pubdate="20160714112538" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/typelevel/cats" extra-info.apiURL="http://typelevel.org/cats/api/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="16">
 				<license name="MIT" url="http://opensource.org/licenses/MIT"/>
-				<metadata-artifact status="successful" details="" size="5232" time="21" location="/Users/greddy/.ivy2/cache/org.typelevel/cats-laws_2.11/ivy-0.6.1.xml" searched="true" original-local-location="/Users/greddy/.ivy2/cache/org.typelevel/cats-laws_2.11/ivy-0.6.1.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/typelevel/cats-laws_2.11/0.6.1/cats-laws_2.11-0.6.1.pom"/>
+				<metadata-artifact status="no" details="" size="4439" time="0" location="/Users/greddy/.ivy2/cache/org.typelevel/cats-laws_2.11/ivy-0.6.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/typelevel/cats-laws_2.11/0.6.1/cats-laws_2.11-0.6.1.pom"/>
 				<caller organisation="org.typelevel" name="cats_2.11" conf="default, compile, runtime, master" rev="0.6.1" rev-constraint-default="0.6.1" rev-constraint-dynamic="0.6.1" callerrev="0.6.1"/>
 				<artifacts>
-					<artifact name="cats-laws_2.11" type="jar" ext="jar" status="successful" details="" size="962722" time="111" location="/Users/greddy/.ivy2/cache/org.typelevel/cats-laws_2.11/jars/cats-laws_2.11-0.6.1.jar">
+					<artifact name="cats-laws_2.11" type="jar" ext="jar" status="no" details="" size="962722" time="0" location="/Users/greddy/.ivy2/cache/org.typelevel/cats-laws_2.11/jars/cats-laws_2.11-0.6.1.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/typelevel/cats-laws_2.11/0.6.1/cats-laws_2.11-0.6.1.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.typelevel" name="cats-core_2.11">
-			<revision name="0.6.1" status="release" pubdate="20160714112553" resolver="public" artresolver="public" homepage="https://github.com/typelevel/cats" extra-info.apiURL="http://typelevel.org/cats/api/" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="15">
+			<revision name="0.6.1" status="release" pubdate="20160714112553" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/typelevel/cats" extra-info.apiURL="http://typelevel.org/cats/api/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="15">
 				<license name="MIT" url="http://opensource.org/licenses/MIT"/>
-				<metadata-artifact status="successful" details="" size="4541" time="25" location="/Users/greddy/.ivy2/cache/org.typelevel/cats-core_2.11/ivy-0.6.1.xml" searched="true" original-local-location="/Users/greddy/.ivy2/cache/org.typelevel/cats-core_2.11/ivy-0.6.1.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/typelevel/cats-core_2.11/0.6.1/cats-core_2.11-0.6.1.pom"/>
+				<metadata-artifact status="no" details="" size="3817" time="0" location="/Users/greddy/.ivy2/cache/org.typelevel/cats-core_2.11/ivy-0.6.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/typelevel/cats-core_2.11/0.6.1/cats-core_2.11-0.6.1.pom"/>
 				<caller organisation="org.typelevel" name="cats_2.11" conf="default, compile, runtime, master" rev="0.6.1" rev-constraint-default="0.6.1" rev-constraint-dynamic="0.6.1" callerrev="0.6.1"/>
 				<caller organisation="org.typelevel" name="cats-laws_2.11" conf="compile, runtime" rev="0.6.1" rev-constraint-default="0.6.1" rev-constraint-dynamic="0.6.1" callerrev="0.6.1"/>
 				<caller organisation="org.typelevel" name="cats-free_2.11" conf="compile, runtime" rev="0.6.1" rev-constraint-default="0.6.1" rev-constraint-dynamic="0.6.1" callerrev="0.6.1"/>
 				<artifacts>
-					<artifact name="cats-core_2.11" type="jar" ext="jar" status="successful" details="" size="2580933" time="287" location="/Users/greddy/.ivy2/cache/org.typelevel/cats-core_2.11/jars/cats-core_2.11-0.6.1.jar">
+					<artifact name="cats-core_2.11" type="jar" ext="jar" status="no" details="" size="2580933" time="0" location="/Users/greddy/.ivy2/cache/org.typelevel/cats-core_2.11/jars/cats-core_2.11-0.6.1.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/typelevel/cats-core_2.11/0.6.1/cats-core_2.11-0.6.1.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.typelevel" name="cats-kernel-laws_2.11">
-			<revision name="0.6.1" status="release" pubdate="20160714112519" resolver="public" artresolver="public" homepage="https://github.com/typelevel/cats" extra-info.apiURL="http://typelevel.org/cats/api/" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="9">
+			<revision name="0.6.1" status="release" pubdate="20160714112519" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/typelevel/cats" extra-info.apiURL="http://typelevel.org/cats/api/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="9">
 				<license name="MIT" url="http://opensource.org/licenses/MIT"/>
-				<metadata-artifact status="successful" details="" size="4777" time="22" location="/Users/greddy/.ivy2/cache/org.typelevel/cats-kernel-laws_2.11/ivy-0.6.1.xml" searched="true" original-local-location="/Users/greddy/.ivy2/cache/org.typelevel/cats-kernel-laws_2.11/ivy-0.6.1.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/typelevel/cats-kernel-laws_2.11/0.6.1/cats-kernel-laws_2.11-0.6.1.pom"/>
+				<metadata-artifact status="no" details="" size="3968" time="0" location="/Users/greddy/.ivy2/cache/org.typelevel/cats-kernel-laws_2.11/ivy-0.6.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/typelevel/cats-kernel-laws_2.11/0.6.1/cats-kernel-laws_2.11-0.6.1.pom"/>
 				<caller organisation="org.typelevel" name="cats_2.11" conf="default, compile, runtime, master" rev="0.6.1" rev-constraint-default="0.6.1" rev-constraint-dynamic="0.6.1" callerrev="0.6.1"/>
 				<caller organisation="org.typelevel" name="cats-laws_2.11" conf="compile, runtime" rev="0.6.1" rev-constraint-default="0.6.1" rev-constraint-dynamic="0.6.1" callerrev="0.6.1"/>
 				<artifacts>
-					<artifact name="cats-kernel-laws_2.11" type="jar" ext="jar" status="successful" details="" size="155308" time="41" location="/Users/greddy/.ivy2/cache/org.typelevel/cats-kernel-laws_2.11/jars/cats-kernel-laws_2.11-0.6.1.jar">
+					<artifact name="cats-kernel-laws_2.11" type="jar" ext="jar" status="no" details="" size="155308" time="0" location="/Users/greddy/.ivy2/cache/org.typelevel/cats-kernel-laws_2.11/jars/cats-kernel-laws_2.11-0.6.1.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/typelevel/cats-kernel-laws_2.11/0.6.1/cats-kernel-laws_2.11-0.6.1.jar"/>
 					</artifact>
 				</artifacts>
@@ -359,30 +359,30 @@
 			</revision>
 		</module>
 		<module organisation="org.typelevel" name="cats-kernel_2.11">
-			<revision name="0.6.1" status="release" pubdate="20160714112537" resolver="public" artresolver="public" homepage="https://github.com/typelevel/cats" extra-info.apiURL="http://typelevel.org/cats/api/" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="8">
+			<revision name="0.6.1" status="release" pubdate="20160714112537" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/typelevel/cats" extra-info.apiURL="http://typelevel.org/cats/api/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="8">
 				<license name="MIT" url="http://opensource.org/licenses/MIT"/>
-				<metadata-artifact status="successful" details="" size="3615" time="27" location="/Users/greddy/.ivy2/cache/org.typelevel/cats-kernel_2.11/ivy-0.6.1.xml" searched="true" original-local-location="/Users/greddy/.ivy2/cache/org.typelevel/cats-kernel_2.11/ivy-0.6.1.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/typelevel/cats-kernel_2.11/0.6.1/cats-kernel_2.11-0.6.1.pom"/>
+				<metadata-artifact status="no" details="" size="3101" time="0" location="/Users/greddy/.ivy2/cache/org.typelevel/cats-kernel_2.11/ivy-0.6.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/typelevel/cats-kernel_2.11/0.6.1/cats-kernel_2.11-0.6.1.pom"/>
 				<caller organisation="org.typelevel" name="cats-core_2.11" conf="compile, runtime" rev="0.6.1" rev-constraint-default="0.6.1" rev-constraint-dynamic="0.6.1" callerrev="0.6.1"/>
 				<caller organisation="org.typelevel" name="cats_2.11" conf="default, compile, runtime, master" rev="0.6.1" rev-constraint-default="0.6.1" rev-constraint-dynamic="0.6.1" callerrev="0.6.1"/>
 				<caller organisation="org.typelevel" name="cats-laws_2.11" conf="compile, runtime" rev="0.6.1" rev-constraint-default="0.6.1" rev-constraint-dynamic="0.6.1" callerrev="0.6.1"/>
 				<caller organisation="org.typelevel" name="cats-kernel-laws_2.11" conf="compile, runtime" rev="0.6.1" rev-constraint-default="0.6.1" rev-constraint-dynamic="0.6.1" callerrev="0.6.1"/>
 				<artifacts>
-					<artifact name="cats-kernel_2.11" type="jar" ext="jar" status="successful" details="" size="4225439" time="503" location="/Users/greddy/.ivy2/cache/org.typelevel/cats-kernel_2.11/jars/cats-kernel_2.11-0.6.1.jar">
+					<artifact name="cats-kernel_2.11" type="jar" ext="jar" status="no" details="" size="4225439" time="0" location="/Users/greddy/.ivy2/cache/org.typelevel/cats-kernel_2.11/jars/cats-kernel_2.11-0.6.1.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/typelevel/cats-kernel_2.11/0.6.1/cats-kernel_2.11-0.6.1.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.typelevel" name="cats-macros_2.11">
-			<revision name="0.6.1" status="release" pubdate="20160714112516" resolver="public" artresolver="public" homepage="https://github.com/typelevel/cats" extra-info.apiURL="http://typelevel.org/cats/api/" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="3">
+			<revision name="0.6.1" status="release" pubdate="20160714112516" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/typelevel/cats" extra-info.apiURL="http://typelevel.org/cats/api/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="3">
 				<license name="MIT" url="http://opensource.org/licenses/MIT"/>
-				<metadata-artifact status="successful" details="" size="3977" time="22" location="/Users/greddy/.ivy2/cache/org.typelevel/cats-macros_2.11/ivy-0.6.1.xml" searched="true" original-local-location="/Users/greddy/.ivy2/cache/org.typelevel/cats-macros_2.11/ivy-0.6.1.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/typelevel/cats-macros_2.11/0.6.1/cats-macros_2.11-0.6.1.pom"/>
+				<metadata-artifact status="no" details="" size="3401" time="0" location="/Users/greddy/.ivy2/cache/org.typelevel/cats-macros_2.11/ivy-0.6.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/typelevel/cats-macros_2.11/0.6.1/cats-macros_2.11-0.6.1.pom"/>
 				<caller organisation="org.typelevel" name="cats-core_2.11" conf="compile, runtime" rev="0.6.1" rev-constraint-default="0.6.1" rev-constraint-dynamic="0.6.1" callerrev="0.6.1"/>
 				<caller organisation="org.typelevel" name="cats_2.11" conf="default, compile, runtime, master" rev="0.6.1" rev-constraint-default="0.6.1" rev-constraint-dynamic="0.6.1" callerrev="0.6.1"/>
 				<caller organisation="org.typelevel" name="cats-laws_2.11" conf="compile, runtime" rev="0.6.1" rev-constraint-default="0.6.1" rev-constraint-dynamic="0.6.1" callerrev="0.6.1"/>
 				<caller organisation="org.typelevel" name="cats-free_2.11" conf="compile, runtime" rev="0.6.1" rev-constraint-default="0.6.1" rev-constraint-dynamic="0.6.1" callerrev="0.6.1"/>
 				<artifacts>
-					<artifact name="cats-macros_2.11" type="jar" ext="jar" status="successful" details="" size="5578" time="23" location="/Users/greddy/.ivy2/cache/org.typelevel/cats-macros_2.11/jars/cats-macros_2.11-0.6.1.jar">
+					<artifact name="cats-macros_2.11" type="jar" ext="jar" status="no" details="" size="5578" time="0" location="/Users/greddy/.ivy2/cache/org.typelevel/cats-macros_2.11/jars/cats-macros_2.11-0.6.1.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/typelevel/cats-macros_2.11/0.6.1/cats-macros_2.11-0.6.1.jar"/>
 					</artifact>
 				</artifacts>
@@ -453,12 +453,12 @@
 			</revision>
 		</module>
 		<module organisation="org.scalaj" name="scalaj-http_2.11">
-			<revision name="2.3.0" status="release" pubdate="20160402135234" resolver="public" artresolver="public" homepage="http://github.com/scalaj/scalaj-http" downloaded="true" searched="true" default="false" conf="default, compile, runtime, default(compile), master" position="1">
+			<revision name="2.3.0" status="release" pubdate="20160402135234" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://github.com/scalaj/scalaj-http" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="1">
 				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-				<metadata-artifact status="successful" details="" size="2269" time="33" location="/Users/greddy/.ivy2/cache/org.scalaj/scalaj-http_2.11/ivy-2.3.0.xml" searched="true" original-local-location="/Users/greddy/.ivy2/cache/org.scalaj/scalaj-http_2.11/ivy-2.3.0.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scalaj/scalaj-http_2.11/2.3.0/scalaj-http_2.11-2.3.0.pom"/>
+				<metadata-artifact status="no" details="" size="3165" time="0" location="/Users/greddy/.ivy2/cache/org.scalaj/scalaj-http_2.11/ivy-2.3.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scalaj/scalaj-http_2.11/2.3.0/scalaj-http_2.11-2.3.0.pom"/>
 				<caller organisation="icfp" name="icfp_2.11" conf="compile, runtime-internal, runtime, optional" rev="2.3.0" rev-constraint-default="2.3.0" rev-constraint-dynamic="2.3.0" callerrev="1.0"/>
 				<artifacts>
-					<artifact name="scalaj-http_2.11" type="jar" ext="jar" status="successful" details="" size="156197" time="61" location="/Users/greddy/.ivy2/cache/org.scalaj/scalaj-http_2.11/jars/scalaj-http_2.11-2.3.0.jar">
+					<artifact name="scalaj-http_2.11" type="jar" ext="jar" status="no" details="" size="156197" time="0" location="/Users/greddy/.ivy2/cache/org.scalaj/scalaj-http_2.11/jars/scalaj-http_2.11-2.3.0.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scalaj/scalaj-http_2.11/2.3.0/scalaj-http_2.11-2.3.0.jar"/>
 					</artifact>
 				</artifacts>

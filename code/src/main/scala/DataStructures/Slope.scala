@@ -4,8 +4,7 @@ package DataStructures
   * Created by greddy on 8/5/16.
   */
 
-case class Slope(value:Fraction)  {
-
+case class Slope(value:FractionT)  {
 
   /**
     * Slope = m = tan(angle) = (num/den)
@@ -41,8 +40,6 @@ case class Slope(value:Fraction)  {
     this.copy( (value - slope.value) / ((value * slope.value) + 1).reduce)
   }
 
-  def add(slope:Slope):Slope = this
-
 }
 
 
@@ -60,7 +57,7 @@ object main extends App {
 
   println("diffs is ", f1 - f2)
   println("mult is", f1*f2)
-  println("diff is " + s.diff(Slope(f2)))
+  println("diff is " + s.-(Slope(f2)))
 
 
 }

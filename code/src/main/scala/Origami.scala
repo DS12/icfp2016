@@ -1,3 +1,5 @@
+import DataStructures.Skeleton
+
 import scala.math.BigInt
 case class Rational(n: BigInt, d: BigInt) {
   val double = n.toDouble / d.toDouble
@@ -17,7 +19,7 @@ case class Polygon(pts: Seq[Point]) {
 }
 
 case class Silhouette(polys: Seq[Polygon])
-case class Skeleton(edges: Seq[Origami.LineSegment])
+
 
 object Origami {
 

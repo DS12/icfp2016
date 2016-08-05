@@ -13,3 +13,5 @@ libraryDependencies += "com.typesafe.play" % "play-json_2.11" % "2.5.3"
 
 // visualization libarary
 libraryDependencies += "com.github.wookietreiber" %% "scala-chart" % "latest.integration"
+
+scalacOptions += "-Ylog-classpath"

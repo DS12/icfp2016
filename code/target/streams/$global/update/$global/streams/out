@@ -1,4 +1,4 @@
-[info] Updating {file:/Users/greddy/Documents/ICPF/code/}code...
+[info] Updating {file:/Users/greddy/Documents/ICPF/icfp2016/code/}code...
 [debug] :: resolving dependencies :: icfp#icfp_2.11;1.0
 [debug] 	confs: [compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool]
 [debug] 	validate = true
@@ -7,7 +7,7 @@
 [debug] == resolving dependencies for icfp#icfp_2.11;1.0 [compile]
 [debug] == resolving dependencies icfp#icfp_2.11;1.0->org.scala-lang#scala-library;2.11.8 [compile->default(compile)]
 [info] Resolving org.scala-lang#scala-library;2.11.8 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@b64f521
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@5297da70
 [debug] sbt-chain: module revision found in cache: org.scala-lang#scala-library;2.11.8
 [debug] 	found org.scala-lang#scala-library;2.11.8 in sbt-chain
 [debug] 	[2.11.8] org.scala-lang#scala-library;2.11.8
@@ -17,27 +17,8 @@
 [debug] == resolving dependencies icfp#icfp_2.11;1.0->org.scalaj#scalaj-http_2.11;2.3.0 [compile->default(compile)]
 [info] Resolving org.scalaj#scalaj-http_2.11;2.3.0 ...
 [debug] sbt-chain: Checking cache for: dependency: org.scalaj#scalaj-http_2.11;2.3.0 {compile=[default(compile)]}
-[info] Resolving org.scalaj#scalaj-http_2.11;2.3.0 ...
-[debug] sbt-chain-delegate: Checking cache for: dependency: org.scalaj#scalaj-http_2.11;2.3.0 {compile=[default(compile)]}
-[debug] 		tried /Users/greddy/.ivy2/local/org.scalaj/scalaj-http_2.11/2.3.0/ivys/ivy.xml
-[debug] 	local: no ivy file found for org.scalaj#scalaj-http_2.11;2.3.0
-[debug] 		tried /Users/greddy/.activator/repository/org.scalaj/scalaj-http_2.11/2.3.0/ivys/ivy.xml
-[debug] 	activator-launcher-local: no ivy file found for org.scalaj#scalaj-http_2.11;2.3.0
-[debug] 		tried /Users/greddy/Documents/activator-dist-1.3.10/repository/org.scalaj/scalaj-http_2.11/2.3.0/ivys/ivy.xml
-[debug] 	activator-local: no ivy file found for org.scalaj#scalaj-http_2.11;2.3.0
-[debug] 		tried https://repo1.maven.org/maven2/org/scalaj/scalaj-http_2.11/2.3.0/scalaj-http_2.11-2.3.0.pom
-[debug] 	public: found md file for org.scalaj#scalaj-http_2.11;2.3.0
-[debug] 		=> https://repo1.maven.org/maven2/org/scalaj/scalaj-http_2.11/2.3.0/scalaj-http_2.11-2.3.0.pom (2.3.0)
-[debug] downloading https://repo1.maven.org/maven2/org/scalaj/scalaj-http_2.11/2.3.0/scalaj-http_2.11-2.3.0.pom ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/scalaj/scalaj-http_2.11/2.3.0/scalaj-http_2.11-2.3.0.pom
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/scalaj/scalaj-http_2.11/2.3.0/scalaj-http_2.11-2.3.0.pom.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/org/scalaj/scalaj-http_2.11/2.3.0/scalaj-http_2.11-2.3.0.pom
-[debug] 	[SUCCESSFUL ] org.scalaj#scalaj-http_2.11;2.3.0!scalaj-http_2.11.pom(pom.original) (33ms)
-[debug] 		tried /Users/greddy/.ivy2/local/org.scalaj/scalaj-http_2.11/2.3.0/jars/scalaj-http_2.11.jar
-[debug] 		tried /Users/greddy/.activator/repository/org.scalaj/scalaj-http_2.11/2.3.0/jars/scalaj-http_2.11.jar
-[debug] 		tried /Users/greddy/Documents/activator-dist-1.3.10/repository/org.scalaj/scalaj-http_2.11/2.3.0/jars/scalaj-http_2.11.jar
-[debug] 		tried https://repo1.maven.org/maven2/org/scalaj/scalaj-http_2.11/2.3.0/scalaj-http_2.11-2.3.0.jar
-[debug] 	found org.scalaj#scalaj-http_2.11;2.3.0 in public
+[debug] sbt-chain: module revision found in cache: org.scalaj#scalaj-http_2.11;2.3.0
+[debug] 	found org.scalaj#scalaj-http_2.11;2.3.0 in sbt-chain
 [debug] == resolving dependencies icfp#icfp_2.11;1.0->org.scalaj#scalaj-http_2.11;2.3.0 [compile->runtime]
 [debug] == resolving dependencies icfp#icfp_2.11;1.0->org.scalaj#scalaj-http_2.11;2.3.0 [compile->compile]
 [debug] == resolving dependencies org.scalaj#scalaj-http_2.11;2.3.0->org.scala-lang#scala-library;2.11.7 [compile->master(compile)]
@@ -51,27 +32,8 @@
 [debug] == resolving dependencies icfp#icfp_2.11;1.0->org.typelevel#cats_2.11;0.6.1 [compile->default(compile)]
 [info] Resolving org.typelevel#cats_2.11;0.6.1 ...
 [debug] sbt-chain: Checking cache for: dependency: org.typelevel#cats_2.11;0.6.1 {compile=[default(compile)]}
-[info] Resolving org.typelevel#cats_2.11;0.6.1 ...
-[debug] sbt-chain-delegate: Checking cache for: dependency: org.typelevel#cats_2.11;0.6.1 {compile=[default(compile)]}
-[debug] 		tried /Users/greddy/.ivy2/local/org.typelevel/cats_2.11/0.6.1/ivys/ivy.xml
-[debug] 	local: no ivy file found for org.typelevel#cats_2.11;0.6.1
-[debug] 		tried /Users/greddy/.activator/repository/org.typelevel/cats_2.11/0.6.1/ivys/ivy.xml
-[debug] 	activator-launcher-local: no ivy file found for org.typelevel#cats_2.11;0.6.1
-[debug] 		tried /Users/greddy/Documents/activator-dist-1.3.10/repository/org.typelevel/cats_2.11/0.6.1/ivys/ivy.xml
-[debug] 	activator-local: no ivy file found for org.typelevel#cats_2.11;0.6.1
-[debug] 		tried https://repo1.maven.org/maven2/org/typelevel/cats_2.11/0.6.1/cats_2.11-0.6.1.pom
-[debug] 	public: found md file for org.typelevel#cats_2.11;0.6.1
-[debug] 		=> https://repo1.maven.org/maven2/org/typelevel/cats_2.11/0.6.1/cats_2.11-0.6.1.pom (0.6.1)
-[debug] downloading https://repo1.maven.org/maven2/org/typelevel/cats_2.11/0.6.1/cats_2.11-0.6.1.pom ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/typelevel/cats_2.11/0.6.1/cats_2.11-0.6.1.pom
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/typelevel/cats_2.11/0.6.1/cats_2.11-0.6.1.pom.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/org/typelevel/cats_2.11/0.6.1/cats_2.11-0.6.1.pom
-[debug] 	[SUCCESSFUL ] org.typelevel#cats_2.11;0.6.1!cats_2.11.pom(pom.original) (27ms)
-[debug] 		tried /Users/greddy/.ivy2/local/org.typelevel/cats_2.11/0.6.1/jars/cats_2.11.jar
-[debug] 		tried /Users/greddy/.activator/repository/org.typelevel/cats_2.11/0.6.1/jars/cats_2.11.jar
-[debug] 		tried /Users/greddy/Documents/activator-dist-1.3.10/repository/org.typelevel/cats_2.11/0.6.1/jars/cats_2.11.jar
-[debug] 		tried https://repo1.maven.org/maven2/org/typelevel/cats_2.11/0.6.1/cats_2.11-0.6.1.jar
-[debug] 	found org.typelevel#cats_2.11;0.6.1 in public
+[debug] sbt-chain: module revision found in cache: org.typelevel#cats_2.11;0.6.1
+[debug] 	found org.typelevel#cats_2.11;0.6.1 in sbt-chain
 [debug] 	[0.6.1] org.typelevel#cats_2.11;0.6.1
 [debug] == resolving dependencies icfp#icfp_2.11;1.0->org.typelevel#cats_2.11;0.6.1 [compile->runtime]
 [debug] == resolving dependencies icfp#icfp_2.11;1.0->org.typelevel#cats_2.11;0.6.1 [compile->compile]
@@ -80,27 +42,8 @@
 [debug] == resolving dependencies org.typelevel#cats_2.11;0.6.1->org.typelevel#cats-macros_2.11;0.6.1 [compile->master(compile)]
 [info] Resolving org.typelevel#cats-macros_2.11;0.6.1 ...
 [debug] sbt-chain: Checking cache for: dependency: org.typelevel#cats-macros_2.11;0.6.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
-[info] Resolving org.typelevel#cats-macros_2.11;0.6.1 ...
-[debug] sbt-chain-delegate: Checking cache for: dependency: org.typelevel#cats-macros_2.11;0.6.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
-[debug] 		tried /Users/greddy/.ivy2/local/org.typelevel/cats-macros_2.11/0.6.1/ivys/ivy.xml
-[debug] 	local: no ivy file found for org.typelevel#cats-macros_2.11;0.6.1
-[debug] 		tried /Users/greddy/.activator/repository/org.typelevel/cats-macros_2.11/0.6.1/ivys/ivy.xml
-[debug] 	activator-launcher-local: no ivy file found for org.typelevel#cats-macros_2.11;0.6.1
-[debug] 		tried /Users/greddy/Documents/activator-dist-1.3.10/repository/org.typelevel/cats-macros_2.11/0.6.1/ivys/ivy.xml
-[debug] 	activator-local: no ivy file found for org.typelevel#cats-macros_2.11;0.6.1
-[debug] 		tried https://repo1.maven.org/maven2/org/typelevel/cats-macros_2.11/0.6.1/cats-macros_2.11-0.6.1.pom
-[debug] 	public: found md file for org.typelevel#cats-macros_2.11;0.6.1
-[debug] 		=> https://repo1.maven.org/maven2/org/typelevel/cats-macros_2.11/0.6.1/cats-macros_2.11-0.6.1.pom (0.6.1)
-[debug] downloading https://repo1.maven.org/maven2/org/typelevel/cats-macros_2.11/0.6.1/cats-macros_2.11-0.6.1.pom ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/typelevel/cats-macros_2.11/0.6.1/cats-macros_2.11-0.6.1.pom
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/typelevel/cats-macros_2.11/0.6.1/cats-macros_2.11-0.6.1.pom.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/org/typelevel/cats-macros_2.11/0.6.1/cats-macros_2.11-0.6.1.pom
-[debug] 	[SUCCESSFUL ] org.typelevel#cats-macros_2.11;0.6.1!cats-macros_2.11.pom(pom.original) (22ms)
-[debug] 		tried /Users/greddy/.ivy2/local/org.typelevel/cats-macros_2.11/0.6.1/jars/cats-macros_2.11.jar
-[debug] 		tried /Users/greddy/.activator/repository/org.typelevel/cats-macros_2.11/0.6.1/jars/cats-macros_2.11.jar
-[debug] 		tried /Users/greddy/Documents/activator-dist-1.3.10/repository/org.typelevel/cats-macros_2.11/0.6.1/jars/cats-macros_2.11.jar
-[debug] 		tried https://repo1.maven.org/maven2/org/typelevel/cats-macros_2.11/0.6.1/cats-macros_2.11-0.6.1.jar
-[debug] 	found org.typelevel#cats-macros_2.11;0.6.1 in public
+[debug] sbt-chain: module revision found in cache: org.typelevel#cats-macros_2.11;0.6.1
+[debug] 	found org.typelevel#cats-macros_2.11;0.6.1 in sbt-chain
 [debug] 	[0.6.1] org.typelevel#cats-macros_2.11;0.6.1
 [debug] == resolving dependencies org.typelevel#cats_2.11;0.6.1->org.typelevel#cats-macros_2.11;0.6.1 [compile->compile(*)]
 [debug] == resolving dependencies org.typelevel#cats-macros_2.11;0.6.1->org.scala-lang#scala-library;2.11.8 [compile->master(compile)]
@@ -177,27 +120,8 @@
 [debug] == resolving dependencies org.typelevel#cats_2.11;0.6.1->org.typelevel#cats-kernel_2.11;0.6.1 [compile->master(compile)]
 [info] Resolving org.typelevel#cats-kernel_2.11;0.6.1 ...
 [debug] sbt-chain: Checking cache for: dependency: org.typelevel#cats-kernel_2.11;0.6.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
-[info] Resolving org.typelevel#cats-kernel_2.11;0.6.1 ...
-[debug] sbt-chain-delegate: Checking cache for: dependency: org.typelevel#cats-kernel_2.11;0.6.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
-[debug] 		tried /Users/greddy/.ivy2/local/org.typelevel/cats-kernel_2.11/0.6.1/ivys/ivy.xml
-[debug] 	local: no ivy file found for org.typelevel#cats-kernel_2.11;0.6.1
-[debug] 		tried /Users/greddy/.activator/repository/org.typelevel/cats-kernel_2.11/0.6.1/ivys/ivy.xml
-[debug] 	activator-launcher-local: no ivy file found for org.typelevel#cats-kernel_2.11;0.6.1
-[debug] 		tried /Users/greddy/Documents/activator-dist-1.3.10/repository/org.typelevel/cats-kernel_2.11/0.6.1/ivys/ivy.xml
-[debug] 	activator-local: no ivy file found for org.typelevel#cats-kernel_2.11;0.6.1
-[debug] 		tried https://repo1.maven.org/maven2/org/typelevel/cats-kernel_2.11/0.6.1/cats-kernel_2.11-0.6.1.pom
-[debug] 	public: found md file for org.typelevel#cats-kernel_2.11;0.6.1
-[debug] 		=> https://repo1.maven.org/maven2/org/typelevel/cats-kernel_2.11/0.6.1/cats-kernel_2.11-0.6.1.pom (0.6.1)
-[debug] downloading https://repo1.maven.org/maven2/org/typelevel/cats-kernel_2.11/0.6.1/cats-kernel_2.11-0.6.1.pom ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/typelevel/cats-kernel_2.11/0.6.1/cats-kernel_2.11-0.6.1.pom
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/typelevel/cats-kernel_2.11/0.6.1/cats-kernel_2.11-0.6.1.pom.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/org/typelevel/cats-kernel_2.11/0.6.1/cats-kernel_2.11-0.6.1.pom
-[debug] 	[SUCCESSFUL ] org.typelevel#cats-kernel_2.11;0.6.1!cats-kernel_2.11.pom(pom.original) (27ms)
-[debug] 		tried /Users/greddy/.ivy2/local/org.typelevel/cats-kernel_2.11/0.6.1/jars/cats-kernel_2.11.jar
-[debug] 		tried /Users/greddy/.activator/repository/org.typelevel/cats-kernel_2.11/0.6.1/jars/cats-kernel_2.11.jar
-[debug] 		tried /Users/greddy/Documents/activator-dist-1.3.10/repository/org.typelevel/cats-kernel_2.11/0.6.1/jars/cats-kernel_2.11.jar
-[debug] 		tried https://repo1.maven.org/maven2/org/typelevel/cats-kernel_2.11/0.6.1/cats-kernel_2.11-0.6.1.jar
-[debug] 	found org.typelevel#cats-kernel_2.11;0.6.1 in public
+[debug] sbt-chain: module revision found in cache: org.typelevel#cats-kernel_2.11;0.6.1
+[debug] 	found org.typelevel#cats-kernel_2.11;0.6.1 in sbt-chain
 [debug] 	[0.6.1] org.typelevel#cats-kernel_2.11;0.6.1
 [debug] == resolving dependencies org.typelevel#cats_2.11;0.6.1->org.typelevel#cats-kernel_2.11;0.6.1 [compile->compile(*)]
 [debug] == resolving dependencies org.typelevel#cats-kernel_2.11;0.6.1->org.scala-lang#scala-library;2.11.8 [compile->master(compile)]
@@ -209,27 +133,8 @@
 [debug] == resolving dependencies org.typelevel#cats_2.11;0.6.1->org.typelevel#cats-kernel-laws_2.11;0.6.1 [compile->master(compile)]
 [info] Resolving org.typelevel#cats-kernel-laws_2.11;0.6.1 ...
 [debug] sbt-chain: Checking cache for: dependency: org.typelevel#cats-kernel-laws_2.11;0.6.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
-[info] Resolving org.typelevel#cats-kernel-laws_2.11;0.6.1 ...
-[debug] sbt-chain-delegate: Checking cache for: dependency: org.typelevel#cats-kernel-laws_2.11;0.6.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
-[debug] 		tried /Users/greddy/.ivy2/local/org.typelevel/cats-kernel-laws_2.11/0.6.1/ivys/ivy.xml
-[debug] 	local: no ivy file found for org.typelevel#cats-kernel-laws_2.11;0.6.1
-[debug] 		tried /Users/greddy/.activator/repository/org.typelevel/cats-kernel-laws_2.11/0.6.1/ivys/ivy.xml
-[debug] 	activator-launcher-local: no ivy file found for org.typelevel#cats-kernel-laws_2.11;0.6.1
-[debug] 		tried /Users/greddy/Documents/activator-dist-1.3.10/repository/org.typelevel/cats-kernel-laws_2.11/0.6.1/ivys/ivy.xml
-[debug] 	activator-local: no ivy file found for org.typelevel#cats-kernel-laws_2.11;0.6.1
-[debug] 		tried https://repo1.maven.org/maven2/org/typelevel/cats-kernel-laws_2.11/0.6.1/cats-kernel-laws_2.11-0.6.1.pom
-[debug] 	public: found md file for org.typelevel#cats-kernel-laws_2.11;0.6.1
-[debug] 		=> https://repo1.maven.org/maven2/org/typelevel/cats-kernel-laws_2.11/0.6.1/cats-kernel-laws_2.11-0.6.1.pom (0.6.1)
-[debug] downloading https://repo1.maven.org/maven2/org/typelevel/cats-kernel-laws_2.11/0.6.1/cats-kernel-laws_2.11-0.6.1.pom ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/typelevel/cats-kernel-laws_2.11/0.6.1/cats-kernel-laws_2.11-0.6.1.pom
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/typelevel/cats-kernel-laws_2.11/0.6.1/cats-kernel-laws_2.11-0.6.1.pom.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/org/typelevel/cats-kernel-laws_2.11/0.6.1/cats-kernel-laws_2.11-0.6.1.pom
-[debug] 	[SUCCESSFUL ] org.typelevel#cats-kernel-laws_2.11;0.6.1!cats-kernel-laws_2.11.pom(pom.original) (22ms)
-[debug] 		tried /Users/greddy/.ivy2/local/org.typelevel/cats-kernel-laws_2.11/0.6.1/jars/cats-kernel-laws_2.11.jar
-[debug] 		tried /Users/greddy/.activator/repository/org.typelevel/cats-kernel-laws_2.11/0.6.1/jars/cats-kernel-laws_2.11.jar
-[debug] 		tried /Users/greddy/Documents/activator-dist-1.3.10/repository/org.typelevel/cats-kernel-laws_2.11/0.6.1/jars/cats-kernel-laws_2.11.jar
-[debug] 		tried https://repo1.maven.org/maven2/org/typelevel/cats-kernel-laws_2.11/0.6.1/cats-kernel-laws_2.11-0.6.1.jar
-[debug] 	found org.typelevel#cats-kernel-laws_2.11;0.6.1 in public
+[debug] sbt-chain: module revision found in cache: org.typelevel#cats-kernel-laws_2.11;0.6.1
+[debug] 	found org.typelevel#cats-kernel-laws_2.11;0.6.1 in sbt-chain
 [debug] 	[0.6.1] org.typelevel#cats-kernel-laws_2.11;0.6.1
 [debug] == resolving dependencies org.typelevel#cats_2.11;0.6.1->org.typelevel#cats-kernel-laws_2.11;0.6.1 [compile->compile(*)]
 [debug] == resolving dependencies org.typelevel#cats-kernel-laws_2.11;0.6.1->org.scala-lang#scala-library;2.11.8 [compile->master(compile)]
@@ -329,27 +234,8 @@
 [debug] == resolving dependencies org.typelevel#cats_2.11;0.6.1->org.typelevel#cats-core_2.11;0.6.1 [compile->master(compile)]
 [info] Resolving org.typelevel#cats-core_2.11;0.6.1 ...
 [debug] sbt-chain: Checking cache for: dependency: org.typelevel#cats-core_2.11;0.6.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
-[info] Resolving org.typelevel#cats-core_2.11;0.6.1 ...
-[debug] sbt-chain-delegate: Checking cache for: dependency: org.typelevel#cats-core_2.11;0.6.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
-[debug] 		tried /Users/greddy/.ivy2/local/org.typelevel/cats-core_2.11/0.6.1/ivys/ivy.xml
-[debug] 	local: no ivy file found for org.typelevel#cats-core_2.11;0.6.1
-[debug] 		tried /Users/greddy/.activator/repository/org.typelevel/cats-core_2.11/0.6.1/ivys/ivy.xml
-[debug] 	activator-launcher-local: no ivy file found for org.typelevel#cats-core_2.11;0.6.1
-[debug] 		tried /Users/greddy/Documents/activator-dist-1.3.10/repository/org.typelevel/cats-core_2.11/0.6.1/ivys/ivy.xml
-[debug] 	activator-local: no ivy file found for org.typelevel#cats-core_2.11;0.6.1
-[debug] 		tried https://repo1.maven.org/maven2/org/typelevel/cats-core_2.11/0.6.1/cats-core_2.11-0.6.1.pom
-[debug] 	public: found md file for org.typelevel#cats-core_2.11;0.6.1
-[debug] 		=> https://repo1.maven.org/maven2/org/typelevel/cats-core_2.11/0.6.1/cats-core_2.11-0.6.1.pom (0.6.1)
-[debug] downloading https://repo1.maven.org/maven2/org/typelevel/cats-core_2.11/0.6.1/cats-core_2.11-0.6.1.pom ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/typelevel/cats-core_2.11/0.6.1/cats-core_2.11-0.6.1.pom
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/typelevel/cats-core_2.11/0.6.1/cats-core_2.11-0.6.1.pom.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/org/typelevel/cats-core_2.11/0.6.1/cats-core_2.11-0.6.1.pom
-[debug] 	[SUCCESSFUL ] org.typelevel#cats-core_2.11;0.6.1!cats-core_2.11.pom(pom.original) (25ms)
-[debug] 		tried /Users/greddy/.ivy2/local/org.typelevel/cats-core_2.11/0.6.1/jars/cats-core_2.11.jar
-[debug] 		tried /Users/greddy/.activator/repository/org.typelevel/cats-core_2.11/0.6.1/jars/cats-core_2.11.jar
-[debug] 		tried /Users/greddy/Documents/activator-dist-1.3.10/repository/org.typelevel/cats-core_2.11/0.6.1/jars/cats-core_2.11.jar
-[debug] 		tried https://repo1.maven.org/maven2/org/typelevel/cats-core_2.11/0.6.1/cats-core_2.11-0.6.1.jar
-[debug] 	found org.typelevel#cats-core_2.11;0.6.1 in public
+[debug] sbt-chain: module revision found in cache: org.typelevel#cats-core_2.11;0.6.1
+[debug] 	found org.typelevel#cats-core_2.11;0.6.1 in sbt-chain
 [debug] 	[0.6.1] org.typelevel#cats-core_2.11;0.6.1
 [debug] == resolving dependencies org.typelevel#cats_2.11;0.6.1->org.typelevel#cats-core_2.11;0.6.1 [compile->compile(*)]
 [debug] == resolving dependencies org.typelevel#cats-core_2.11;0.6.1->org.scala-lang#scala-library;2.11.8 [compile->master(compile)]
@@ -377,27 +263,8 @@
 [debug] == resolving dependencies org.typelevel#cats_2.11;0.6.1->org.typelevel#cats-laws_2.11;0.6.1 [compile->master(compile)]
 [info] Resolving org.typelevel#cats-laws_2.11;0.6.1 ...
 [debug] sbt-chain: Checking cache for: dependency: org.typelevel#cats-laws_2.11;0.6.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
-[info] Resolving org.typelevel#cats-laws_2.11;0.6.1 ...
-[debug] sbt-chain-delegate: Checking cache for: dependency: org.typelevel#cats-laws_2.11;0.6.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
-[debug] 		tried /Users/greddy/.ivy2/local/org.typelevel/cats-laws_2.11/0.6.1/ivys/ivy.xml
-[debug] 	local: no ivy file found for org.typelevel#cats-laws_2.11;0.6.1
-[debug] 		tried /Users/greddy/.activator/repository/org.typelevel/cats-laws_2.11/0.6.1/ivys/ivy.xml
-[debug] 	activator-launcher-local: no ivy file found for org.typelevel#cats-laws_2.11;0.6.1
-[debug] 		tried /Users/greddy/Documents/activator-dist-1.3.10/repository/org.typelevel/cats-laws_2.11/0.6.1/ivys/ivy.xml
-[debug] 	activator-local: no ivy file found for org.typelevel#cats-laws_2.11;0.6.1
-[debug] 		tried https://repo1.maven.org/maven2/org/typelevel/cats-laws_2.11/0.6.1/cats-laws_2.11-0.6.1.pom
-[debug] 	public: found md file for org.typelevel#cats-laws_2.11;0.6.1
-[debug] 		=> https://repo1.maven.org/maven2/org/typelevel/cats-laws_2.11/0.6.1/cats-laws_2.11-0.6.1.pom (0.6.1)
-[debug] downloading https://repo1.maven.org/maven2/org/typelevel/cats-laws_2.11/0.6.1/cats-laws_2.11-0.6.1.pom ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/typelevel/cats-laws_2.11/0.6.1/cats-laws_2.11-0.6.1.pom
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/typelevel/cats-laws_2.11/0.6.1/cats-laws_2.11-0.6.1.pom.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/org/typelevel/cats-laws_2.11/0.6.1/cats-laws_2.11-0.6.1.pom
-[debug] 	[SUCCESSFUL ] org.typelevel#cats-laws_2.11;0.6.1!cats-laws_2.11.pom(pom.original) (21ms)
-[debug] 		tried /Users/greddy/.ivy2/local/org.typelevel/cats-laws_2.11/0.6.1/jars/cats-laws_2.11.jar
-[debug] 		tried /Users/greddy/.activator/repository/org.typelevel/cats-laws_2.11/0.6.1/jars/cats-laws_2.11.jar
-[debug] 		tried /Users/greddy/Documents/activator-dist-1.3.10/repository/org.typelevel/cats-laws_2.11/0.6.1/jars/cats-laws_2.11.jar
-[debug] 		tried https://repo1.maven.org/maven2/org/typelevel/cats-laws_2.11/0.6.1/cats-laws_2.11-0.6.1.jar
-[debug] 	found org.typelevel#cats-laws_2.11;0.6.1 in public
+[debug] sbt-chain: module revision found in cache: org.typelevel#cats-laws_2.11;0.6.1
+[debug] 	found org.typelevel#cats-laws_2.11;0.6.1 in sbt-chain
 [debug] 	[0.6.1] org.typelevel#cats-laws_2.11;0.6.1
 [debug] == resolving dependencies org.typelevel#cats_2.11;0.6.1->org.typelevel#cats-laws_2.11;0.6.1 [compile->compile(*)]
 [debug] == resolving dependencies org.typelevel#cats-laws_2.11;0.6.1->org.scala-lang#scala-library;2.11.8 [compile->master(compile)]
@@ -445,27 +312,8 @@
 [debug] == resolving dependencies org.typelevel#cats_2.11;0.6.1->org.typelevel#cats-free_2.11;0.6.1 [compile->master(compile)]
 [info] Resolving org.typelevel#cats-free_2.11;0.6.1 ...
 [debug] sbt-chain: Checking cache for: dependency: org.typelevel#cats-free_2.11;0.6.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
-[info] Resolving org.typelevel#cats-free_2.11;0.6.1 ...
-[debug] sbt-chain-delegate: Checking cache for: dependency: org.typelevel#cats-free_2.11;0.6.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
-[debug] 		tried /Users/greddy/.ivy2/local/org.typelevel/cats-free_2.11/0.6.1/ivys/ivy.xml
-[debug] 	local: no ivy file found for org.typelevel#cats-free_2.11;0.6.1
-[debug] 		tried /Users/greddy/.activator/repository/org.typelevel/cats-free_2.11/0.6.1/ivys/ivy.xml
-[debug] 	activator-launcher-local: no ivy file found for org.typelevel#cats-free_2.11;0.6.1
-[debug] 		tried /Users/greddy/Documents/activator-dist-1.3.10/repository/org.typelevel/cats-free_2.11/0.6.1/ivys/ivy.xml
-[debug] 	activator-local: no ivy file found for org.typelevel#cats-free_2.11;0.6.1
-[debug] 		tried https://repo1.maven.org/maven2/org/typelevel/cats-free_2.11/0.6.1/cats-free_2.11-0.6.1.pom
-[debug] 	public: found md file for org.typelevel#cats-free_2.11;0.6.1
-[debug] 		=> https://repo1.maven.org/maven2/org/typelevel/cats-free_2.11/0.6.1/cats-free_2.11-0.6.1.pom (0.6.1)
-[debug] downloading https://repo1.maven.org/maven2/org/typelevel/cats-free_2.11/0.6.1/cats-free_2.11-0.6.1.pom ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/typelevel/cats-free_2.11/0.6.1/cats-free_2.11-0.6.1.pom
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/typelevel/cats-free_2.11/0.6.1/cats-free_2.11-0.6.1.pom.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/org/typelevel/cats-free_2.11/0.6.1/cats-free_2.11-0.6.1.pom
-[debug] 	[SUCCESSFUL ] org.typelevel#cats-free_2.11;0.6.1!cats-free_2.11.pom(pom.original) (22ms)
-[debug] 		tried /Users/greddy/.ivy2/local/org.typelevel/cats-free_2.11/0.6.1/jars/cats-free_2.11.jar
-[debug] 		tried /Users/greddy/.activator/repository/org.typelevel/cats-free_2.11/0.6.1/jars/cats-free_2.11.jar
-[debug] 		tried /Users/greddy/Documents/activator-dist-1.3.10/repository/org.typelevel/cats-free_2.11/0.6.1/jars/cats-free_2.11.jar
-[debug] 		tried https://repo1.maven.org/maven2/org/typelevel/cats-free_2.11/0.6.1/cats-free_2.11-0.6.1.jar
-[debug] 	found org.typelevel#cats-free_2.11;0.6.1 in public
+[debug] sbt-chain: module revision found in cache: org.typelevel#cats-free_2.11;0.6.1
+[debug] 	found org.typelevel#cats-free_2.11;0.6.1 in sbt-chain
 [debug] 	[0.6.1] org.typelevel#cats-free_2.11;0.6.1
 [debug] == resolving dependencies org.typelevel#cats_2.11;0.6.1->org.typelevel#cats-free_2.11;0.6.1 [compile->compile(*)]
 [debug] == resolving dependencies org.typelevel#cats-free_2.11;0.6.1->org.scala-lang#scala-library;2.11.8 [compile->master(compile)]
@@ -516,27 +364,8 @@
 [debug] == resolving dependencies icfp#icfp_2.11;1.0->com.typesafe.play#play-json_2.11;2.5.3 [compile->default(compile)]
 [info] Resolving com.typesafe.play#play-json_2.11;2.5.3 ...
 [debug] sbt-chain: Checking cache for: dependency: com.typesafe.play#play-json_2.11;2.5.3 {compile=[default(compile)]}
-[info] Resolving com.typesafe.play#play-json_2.11;2.5.3 ...
-[debug] sbt-chain-delegate: Checking cache for: dependency: com.typesafe.play#play-json_2.11;2.5.3 {compile=[default(compile)]}
-[debug] 		tried /Users/greddy/.ivy2/local/com.typesafe.play/play-json_2.11/2.5.3/ivys/ivy.xml
-[debug] 	local: no ivy file found for com.typesafe.play#play-json_2.11;2.5.3
-[debug] 		tried /Users/greddy/.activator/repository/com.typesafe.play/play-json_2.11/2.5.3/ivys/ivy.xml
-[debug] 	activator-launcher-local: no ivy file found for com.typesafe.play#play-json_2.11;2.5.3
-[debug] 		tried /Users/greddy/Documents/activator-dist-1.3.10/repository/com.typesafe.play/play-json_2.11/2.5.3/ivys/ivy.xml
-[debug] 	activator-local: no ivy file found for com.typesafe.play#play-json_2.11;2.5.3
-[debug] 		tried https://repo1.maven.org/maven2/com/typesafe/play/play-json_2.11/2.5.3/play-json_2.11-2.5.3.pom
-[debug] 	public: found md file for com.typesafe.play#play-json_2.11;2.5.3
-[debug] 		=> https://repo1.maven.org/maven2/com/typesafe/play/play-json_2.11/2.5.3/play-json_2.11-2.5.3.pom (2.5.3)
-[debug] downloading https://repo1.maven.org/maven2/com/typesafe/play/play-json_2.11/2.5.3/play-json_2.11-2.5.3.pom ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/com/typesafe/play/play-json_2.11/2.5.3/play-json_2.11-2.5.3.pom
-[debug] 	public: downloading https://repo1.maven.org/maven2/com/typesafe/play/play-json_2.11/2.5.3/play-json_2.11-2.5.3.pom.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/com/typesafe/play/play-json_2.11/2.5.3/play-json_2.11-2.5.3.pom
-[debug] 	[SUCCESSFUL ] com.typesafe.play#play-json_2.11;2.5.3!play-json_2.11.pom(pom.original) (29ms)
-[debug] 		tried /Users/greddy/.ivy2/local/com.typesafe.play/play-json_2.11/2.5.3/jars/play-json_2.11.jar
-[debug] 		tried /Users/greddy/.activator/repository/com.typesafe.play/play-json_2.11/2.5.3/jars/play-json_2.11.jar
-[debug] 		tried /Users/greddy/Documents/activator-dist-1.3.10/repository/com.typesafe.play/play-json_2.11/2.5.3/jars/play-json_2.11.jar
-[debug] 		tried https://repo1.maven.org/maven2/com/typesafe/play/play-json_2.11/2.5.3/play-json_2.11-2.5.3.jar
-[debug] 	found com.typesafe.play#play-json_2.11;2.5.3 in public
+[debug] sbt-chain: module revision found in cache: com.typesafe.play#play-json_2.11;2.5.3
+[debug] 	found com.typesafe.play#play-json_2.11;2.5.3 in sbt-chain
 [debug] == resolving dependencies icfp#icfp_2.11;1.0->com.typesafe.play#play-json_2.11;2.5.3 [compile->runtime]
 [debug] == resolving dependencies icfp#icfp_2.11;1.0->com.typesafe.play#play-json_2.11;2.5.3 [compile->compile]
 [debug] == resolving dependencies com.typesafe.play#play-json_2.11;2.5.3->org.scala-lang#scala-library;2.11.7 [compile->master(compile)]
@@ -546,27 +375,8 @@
 [debug] == resolving dependencies com.typesafe.play#play-json_2.11;2.5.3->com.typesafe.play#play-iteratees_2.11;2.5.3 [compile->master(compile)]
 [info] Resolving com.typesafe.play#play-iteratees_2.11;2.5.3 ...
 [debug] sbt-chain: Checking cache for: dependency: com.typesafe.play#play-iteratees_2.11;2.5.3 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
-[info] Resolving com.typesafe.play#play-iteratees_2.11;2.5.3 ...
-[debug] sbt-chain-delegate: Checking cache for: dependency: com.typesafe.play#play-iteratees_2.11;2.5.3 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
-[debug] 		tried /Users/greddy/.ivy2/local/com.typesafe.play/play-iteratees_2.11/2.5.3/ivys/ivy.xml
-[debug] 	local: no ivy file found for com.typesafe.play#play-iteratees_2.11;2.5.3
-[debug] 		tried /Users/greddy/.activator/repository/com.typesafe.play/play-iteratees_2.11/2.5.3/ivys/ivy.xml
-[debug] 	activator-launcher-local: no ivy file found for com.typesafe.play#play-iteratees_2.11;2.5.3
-[debug] 		tried /Users/greddy/Documents/activator-dist-1.3.10/repository/com.typesafe.play/play-iteratees_2.11/2.5.3/ivys/ivy.xml
-[debug] 	activator-local: no ivy file found for com.typesafe.play#play-iteratees_2.11;2.5.3
-[debug] 		tried https://repo1.maven.org/maven2/com/typesafe/play/play-iteratees_2.11/2.5.3/play-iteratees_2.11-2.5.3.pom
-[debug] 	public: found md file for com.typesafe.play#play-iteratees_2.11;2.5.3
-[debug] 		=> https://repo1.maven.org/maven2/com/typesafe/play/play-iteratees_2.11/2.5.3/play-iteratees_2.11-2.5.3.pom (2.5.3)
-[debug] downloading https://repo1.maven.org/maven2/com/typesafe/play/play-iteratees_2.11/2.5.3/play-iteratees_2.11-2.5.3.pom ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/com/typesafe/play/play-iteratees_2.11/2.5.3/play-iteratees_2.11-2.5.3.pom
-[debug] 	public: downloading https://repo1.maven.org/maven2/com/typesafe/play/play-iteratees_2.11/2.5.3/play-iteratees_2.11-2.5.3.pom.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/com/typesafe/play/play-iteratees_2.11/2.5.3/play-iteratees_2.11-2.5.3.pom
-[debug] 	[SUCCESSFUL ] com.typesafe.play#play-iteratees_2.11;2.5.3!play-iteratees_2.11.pom(pom.original) (33ms)
-[debug] 		tried /Users/greddy/.ivy2/local/com.typesafe.play/play-iteratees_2.11/2.5.3/jars/play-iteratees_2.11.jar
-[debug] 		tried /Users/greddy/.activator/repository/com.typesafe.play/play-iteratees_2.11/2.5.3/jars/play-iteratees_2.11.jar
-[debug] 		tried /Users/greddy/Documents/activator-dist-1.3.10/repository/com.typesafe.play/play-iteratees_2.11/2.5.3/jars/play-iteratees_2.11.jar
-[debug] 		tried https://repo1.maven.org/maven2/com/typesafe/play/play-iteratees_2.11/2.5.3/play-iteratees_2.11-2.5.3.jar
-[debug] 	found com.typesafe.play#play-iteratees_2.11;2.5.3 in public
+[debug] sbt-chain: module revision found in cache: com.typesafe.play#play-iteratees_2.11;2.5.3
+[debug] 	found com.typesafe.play#play-iteratees_2.11;2.5.3 in sbt-chain
 [debug] == resolving dependencies com.typesafe.play#play-json_2.11;2.5.3->com.typesafe.play#play-iteratees_2.11;2.5.3 [compile->compile(*)]
 [debug] == resolving dependencies com.typesafe.play#play-iteratees_2.11;2.5.3->org.scala-lang#scala-library;2.11.7 [compile->master(compile)]
 [debug] == resolving dependencies com.typesafe.play#play-iteratees_2.11;2.5.3->org.scala-lang#scala-library;2.11.8 [compile->master(compile)]
@@ -602,27 +412,8 @@
 [debug] == resolving dependencies com.typesafe.play#play-json_2.11;2.5.3->com.typesafe.play#play-functional_2.11;2.5.3 [compile->master(compile)]
 [info] Resolving com.typesafe.play#play-functional_2.11;2.5.3 ...
 [debug] sbt-chain: Checking cache for: dependency: com.typesafe.play#play-functional_2.11;2.5.3 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
-[info] Resolving com.typesafe.play#play-functional_2.11;2.5.3 ...
-[debug] sbt-chain-delegate: Checking cache for: dependency: com.typesafe.play#play-functional_2.11;2.5.3 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
-[debug] 		tried /Users/greddy/.ivy2/local/com.typesafe.play/play-functional_2.11/2.5.3/ivys/ivy.xml
-[debug] 	local: no ivy file found for com.typesafe.play#play-functional_2.11;2.5.3
-[debug] 		tried /Users/greddy/.activator/repository/com.typesafe.play/play-functional_2.11/2.5.3/ivys/ivy.xml
-[debug] 	activator-launcher-local: no ivy file found for com.typesafe.play#play-functional_2.11;2.5.3
-[debug] 		tried /Users/greddy/Documents/activator-dist-1.3.10/repository/com.typesafe.play/play-functional_2.11/2.5.3/ivys/ivy.xml
-[debug] 	activator-local: no ivy file found for com.typesafe.play#play-functional_2.11;2.5.3
-[debug] 		tried https://repo1.maven.org/maven2/com/typesafe/play/play-functional_2.11/2.5.3/play-functional_2.11-2.5.3.pom
-[debug] 	public: found md file for com.typesafe.play#play-functional_2.11;2.5.3
-[debug] 		=> https://repo1.maven.org/maven2/com/typesafe/play/play-functional_2.11/2.5.3/play-functional_2.11-2.5.3.pom (2.5.3)
-[debug] downloading https://repo1.maven.org/maven2/com/typesafe/play/play-functional_2.11/2.5.3/play-functional_2.11-2.5.3.pom ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/com/typesafe/play/play-functional_2.11/2.5.3/play-functional_2.11-2.5.3.pom
-[debug] 	public: downloading https://repo1.maven.org/maven2/com/typesafe/play/play-functional_2.11/2.5.3/play-functional_2.11-2.5.3.pom.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/com/typesafe/play/play-functional_2.11/2.5.3/play-functional_2.11-2.5.3.pom
-[debug] 	[SUCCESSFUL ] com.typesafe.play#play-functional_2.11;2.5.3!play-functional_2.11.pom(pom.original) (28ms)
-[debug] 		tried /Users/greddy/.ivy2/local/com.typesafe.play/play-functional_2.11/2.5.3/jars/play-functional_2.11.jar
-[debug] 		tried /Users/greddy/.activator/repository/com.typesafe.play/play-functional_2.11/2.5.3/jars/play-functional_2.11.jar
-[debug] 		tried /Users/greddy/Documents/activator-dist-1.3.10/repository/com.typesafe.play/play-functional_2.11/2.5.3/jars/play-functional_2.11.jar
-[debug] 		tried https://repo1.maven.org/maven2/com/typesafe/play/play-functional_2.11/2.5.3/play-functional_2.11-2.5.3.jar
-[debug] 	found com.typesafe.play#play-functional_2.11;2.5.3 in public
+[debug] sbt-chain: module revision found in cache: com.typesafe.play#play-functional_2.11;2.5.3
+[debug] 	found com.typesafe.play#play-functional_2.11;2.5.3 in sbt-chain
 [debug] == resolving dependencies com.typesafe.play#play-json_2.11;2.5.3->com.typesafe.play#play-functional_2.11;2.5.3 [compile->compile(*)]
 [debug] == resolving dependencies com.typesafe.play#play-functional_2.11;2.5.3->org.scala-lang#scala-library;2.11.7 [compile->master(compile)]
 [debug] == resolving dependencies com.typesafe.play#play-functional_2.11;2.5.3->org.scala-lang#scala-library;2.11.8 [compile->master(compile)]
@@ -636,27 +427,8 @@
 [debug] == resolving dependencies com.typesafe.play#play-json_2.11;2.5.3->com.typesafe.play#play-datacommons_2.11;2.5.3 [compile->master(compile)]
 [info] Resolving com.typesafe.play#play-datacommons_2.11;2.5.3 ...
 [debug] sbt-chain: Checking cache for: dependency: com.typesafe.play#play-datacommons_2.11;2.5.3 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
-[info] Resolving com.typesafe.play#play-datacommons_2.11;2.5.3 ...
-[debug] sbt-chain-delegate: Checking cache for: dependency: com.typesafe.play#play-datacommons_2.11;2.5.3 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
-[debug] 		tried /Users/greddy/.ivy2/local/com.typesafe.play/play-datacommons_2.11/2.5.3/ivys/ivy.xml
-[debug] 	local: no ivy file found for com.typesafe.play#play-datacommons_2.11;2.5.3
-[debug] 		tried /Users/greddy/.activator/repository/com.typesafe.play/play-datacommons_2.11/2.5.3/ivys/ivy.xml
-[debug] 	activator-launcher-local: no ivy file found for com.typesafe.play#play-datacommons_2.11;2.5.3
-[debug] 		tried /Users/greddy/Documents/activator-dist-1.3.10/repository/com.typesafe.play/play-datacommons_2.11/2.5.3/ivys/ivy.xml
-[debug] 	activator-local: no ivy file found for com.typesafe.play#play-datacommons_2.11;2.5.3
-[debug] 		tried https://repo1.maven.org/maven2/com/typesafe/play/play-datacommons_2.11/2.5.3/play-datacommons_2.11-2.5.3.pom
-[debug] 	public: found md file for com.typesafe.play#play-datacommons_2.11;2.5.3
-[debug] 		=> https://repo1.maven.org/maven2/com/typesafe/play/play-datacommons_2.11/2.5.3/play-datacommons_2.11-2.5.3.pom (2.5.3)
-[debug] downloading https://repo1.maven.org/maven2/com/typesafe/play/play-datacommons_2.11/2.5.3/play-datacommons_2.11-2.5.3.pom ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/com/typesafe/play/play-datacommons_2.11/2.5.3/play-datacommons_2.11-2.5.3.pom
-[debug] 	public: downloading https://repo1.maven.org/maven2/com/typesafe/play/play-datacommons_2.11/2.5.3/play-datacommons_2.11-2.5.3.pom.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/com/typesafe/play/play-datacommons_2.11/2.5.3/play-datacommons_2.11-2.5.3.pom
-[debug] 	[SUCCESSFUL ] com.typesafe.play#play-datacommons_2.11;2.5.3!play-datacommons_2.11.pom(pom.original) (23ms)
-[debug] 		tried /Users/greddy/.ivy2/local/com.typesafe.play/play-datacommons_2.11/2.5.3/jars/play-datacommons_2.11.jar
-[debug] 		tried /Users/greddy/.activator/repository/com.typesafe.play/play-datacommons_2.11/2.5.3/jars/play-datacommons_2.11.jar
-[debug] 		tried /Users/greddy/Documents/activator-dist-1.3.10/repository/com.typesafe.play/play-datacommons_2.11/2.5.3/jars/play-datacommons_2.11.jar
-[debug] 		tried https://repo1.maven.org/maven2/com/typesafe/play/play-datacommons_2.11/2.5.3/play-datacommons_2.11-2.5.3.jar
-[debug] 	found com.typesafe.play#play-datacommons_2.11;2.5.3 in public
+[debug] sbt-chain: module revision found in cache: com.typesafe.play#play-datacommons_2.11;2.5.3
+[debug] 	found com.typesafe.play#play-datacommons_2.11;2.5.3 in sbt-chain
 [debug] == resolving dependencies com.typesafe.play#play-json_2.11;2.5.3->com.typesafe.play#play-datacommons_2.11;2.5.3 [compile->compile(*)]
 [debug] == resolving dependencies com.typesafe.play#play-datacommons_2.11;2.5.3->org.scala-lang#scala-library;2.11.7 [compile->master(compile)]
 [debug] == resolving dependencies com.typesafe.play#play-datacommons_2.11;2.5.3->org.scala-lang#scala-library;2.11.8 [compile->master(compile)]
@@ -781,35 +553,26 @@
 [debug] == resolving dependencies icfp#icfp_2.11;1.0->com.github.wookietreiber#scala-chart_2.11;latest.integration [compile->default(compile)]
 [info] Resolving com.github.wookietreiber#scala-chart_2.11;latest.integration ...
 [debug] sbt-chain: Checking cache for: dependency: com.github.wookietreiber#scala-chart_2.11;latest.integration {compile=[default(compile)]}
-[debug] default-cache: no cached resolved revision for com.github.wookietreiber#scala-chart_2.11;latest.integration
+[debug] default-cache: cached resolved revision expired for com.github.wookietreiber#scala-chart_2.11;latest.integration
 [info] Resolving com.github.wookietreiber#scala-chart_2.11;latest.integration ...
 [debug] sbt-chain-delegate: Checking cache for: dependency: com.github.wookietreiber#scala-chart_2.11;latest.integration {compile=[default(compile)]}
-[debug] default-cache: no cached resolved revision for com.github.wookietreiber#scala-chart_2.11;latest.integration
-[debug] default-cache: no cached resolved revision for com.github.wookietreiber#scala-chart_2.11;latest.integration
+[debug] default-cache: cached resolved revision expired for com.github.wookietreiber#scala-chart_2.11;latest.integration
+[debug] default-cache: cached resolved revision expired for com.github.wookietreiber#scala-chart_2.11;latest.integration
 [debug] 		tried /Users/greddy/.ivy2/local/com.github.wookietreiber/scala-chart_2.11/[revision]/ivys/ivy.xml
 [debug] 	local: no ivy file found for com.github.wookietreiber#scala-chart_2.11;latest.integration
-[debug] default-cache: no cached resolved revision for com.github.wookietreiber#scala-chart_2.11;latest.integration
+[debug] default-cache: cached resolved revision expired for com.github.wookietreiber#scala-chart_2.11;latest.integration
 [debug] 		tried /Users/greddy/.activator/repository/com.github.wookietreiber/scala-chart_2.11/[revision]/ivys/ivy.xml
 [debug] 	activator-launcher-local: no ivy file found for com.github.wookietreiber#scala-chart_2.11;latest.integration
-[debug] default-cache: no cached resolved revision for com.github.wookietreiber#scala-chart_2.11;latest.integration
+[debug] default-cache: cached resolved revision expired for com.github.wookietreiber#scala-chart_2.11;latest.integration
 [debug] 		tried /Users/greddy/Documents/activator-dist-1.3.10/repository/com.github.wookietreiber/scala-chart_2.11/[revision]/ivys/ivy.xml
 [debug] 	activator-local: no ivy file found for com.github.wookietreiber#scala-chart_2.11;latest.integration
-[debug] default-cache: no cached resolved revision for com.github.wookietreiber#scala-chart_2.11;latest.integration
+[debug] default-cache: cached resolved revision expired for com.github.wookietreiber#scala-chart_2.11;latest.integration
 [debug] 		tried https://repo1.maven.org/maven2/com/github/wookietreiber/scala-chart_2.11/[revision]/scala-chart_2.11-[revision].pom
 [debug] 	listing revisions from maven-metadata: https://repo1.maven.org/maven2/com/github/wookietreiber/scala-chart_2.11/maven-metadata.xml
 [debug] 	public: found md file for com.github.wookietreiber#scala-chart_2.11;latest.integration
 [debug] 		=> https://repo1.maven.org/maven2/com/github/wookietreiber/scala-chart_2.11/0.5.0/scala-chart_2.11-0.5.0.pom (0.5.0)
-[debug] downloading https://repo1.maven.org/maven2/com/github/wookietreiber/scala-chart_2.11/0.5.0/scala-chart_2.11-0.5.0.pom ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/com/github/wookietreiber/scala-chart_2.11/0.5.0/scala-chart_2.11-0.5.0.pom
-[debug] 	public: downloading https://repo1.maven.org/maven2/com/github/wookietreiber/scala-chart_2.11/0.5.0/scala-chart_2.11-0.5.0.pom.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/com/github/wookietreiber/scala-chart_2.11/0.5.0/scala-chart_2.11-0.5.0.pom
-[debug] 	[SUCCESSFUL ] com.github.wookietreiber#scala-chart_2.11;0.5.0!scala-chart_2.11.pom(pom.original) (25ms)
-[debug] 		tried /Users/greddy/.ivy2/local/com.github.wookietreiber/scala-chart_2.11/0.5.0/jars/scala-chart_2.11.jar
-[debug] 		tried /Users/greddy/.activator/repository/com.github.wookietreiber/scala-chart_2.11/0.5.0/jars/scala-chart_2.11.jar
-[debug] 		tried /Users/greddy/Documents/activator-dist-1.3.10/repository/com.github.wookietreiber/scala-chart_2.11/0.5.0/jars/scala-chart_2.11.jar
-[debug] 		tried https://repo1.maven.org/maven2/com/github/wookietreiber/scala-chart_2.11/0.5.0/scala-chart_2.11-0.5.0.jar
-[debug] 		[0.5.0] com.github.wookietreiber#scala-chart_2.11
-[debug] 	found com.github.wookietreiber#scala-chart_2.11;0.5.0 in public
+[debug] 	default-cache: revision in cache: com.github.wookietreiber#scala-chart_2.11;0.5.0
+[debug] 	found com.github.wookietreiber#scala-chart_2.11;0.5.0 in sbt-chain
 [debug] 	[0.5.0] com.github.wookietreiber#scala-chart_2.11;latest.integration
 [debug] == resolving dependencies icfp#icfp_2.11;1.0->com.github.wookietreiber#scala-chart_2.11;latest.integration [compile->runtime]
 [debug] == resolving dependencies icfp#icfp_2.11;1.0->com.github.wookietreiber#scala-chart_2.11;latest.integration [compile->compile]
@@ -820,58 +583,14 @@
 [debug] == resolving dependencies com.github.wookietreiber#scala-chart_2.11;latest.integration->org.jfree#jfreechart;1.0.19 [compile->master(compile)]
 [info] Resolving org.jfree#jfreechart;1.0.19 ...
 [debug] sbt-chain: Checking cache for: dependency: org.jfree#jfreechart;1.0.19 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
-[info] Resolving org.jfree#jfreechart;1.0.19 ...
-[debug] sbt-chain-delegate: Checking cache for: dependency: org.jfree#jfreechart;1.0.19 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
-[debug] 		tried /Users/greddy/.ivy2/local/org.jfree/jfreechart/1.0.19/ivys/ivy.xml
-[debug] 	local: no ivy file found for org.jfree#jfreechart;1.0.19
-[debug] 		tried /Users/greddy/.activator/repository/org.jfree/jfreechart/1.0.19/ivys/ivy.xml
-[debug] 	activator-launcher-local: no ivy file found for org.jfree#jfreechart;1.0.19
-[debug] 		tried /Users/greddy/Documents/activator-dist-1.3.10/repository/org.jfree/jfreechart/1.0.19/ivys/ivy.xml
-[debug] 	activator-local: no ivy file found for org.jfree#jfreechart;1.0.19
-[debug] 		tried https://repo1.maven.org/maven2/org/jfree/jfreechart/1.0.19/jfreechart-1.0.19.pom
-[debug] 	public: found md file for org.jfree#jfreechart;1.0.19
-[debug] 		=> https://repo1.maven.org/maven2/org/jfree/jfreechart/1.0.19/jfreechart-1.0.19.pom (1.0.19)
-[debug] downloading https://repo1.maven.org/maven2/org/jfree/jfreechart/1.0.19/jfreechart-1.0.19.pom ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/jfree/jfreechart/1.0.19/jfreechart-1.0.19.pom
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/jfree/jfreechart/1.0.19/jfreechart-1.0.19.pom.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/org/jfree/jfreechart/1.0.19/jfreechart-1.0.19.pom
-[debug] 	[SUCCESSFUL ] org.jfree#jfreechart;1.0.19!jfreechart.pom(pom.original) (24ms)
-[info] Resolving org.sonatype.oss#oss-parent;9 ...
-[debug] sbt-chain: Checking cache for: dependency: org.sonatype.oss#oss-parent;9 {}
-[debug] sbt-chain: module revision found in cache: org.sonatype.oss#oss-parent;9
-[debug] 		tried /Users/greddy/.ivy2/local/org.jfree/jfreechart/1.0.19/jars/jfreechart.jar
-[debug] 		tried /Users/greddy/.activator/repository/org.jfree/jfreechart/1.0.19/jars/jfreechart.jar
-[debug] 		tried /Users/greddy/Documents/activator-dist-1.3.10/repository/org.jfree/jfreechart/1.0.19/jars/jfreechart.jar
-[debug] 		tried https://repo1.maven.org/maven2/org/jfree/jfreechart/1.0.19/jfreechart-1.0.19.jar
-[debug] 	found org.jfree#jfreechart;1.0.19 in public
+[debug] sbt-chain: module revision found in cache: org.jfree#jfreechart;1.0.19
+[debug] 	found org.jfree#jfreechart;1.0.19 in sbt-chain
 [debug] == resolving dependencies com.github.wookietreiber#scala-chart_2.11;latest.integration->org.jfree#jfreechart;1.0.19 [compile->compile(*)]
 [debug] == resolving dependencies org.jfree#jfreechart;1.0.19->org.jfree#jcommon;1.0.23 [compile->master(compile)]
 [info] Resolving org.jfree#jcommon;1.0.23 ...
 [debug] sbt-chain: Checking cache for: dependency: org.jfree#jcommon;1.0.23 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
-[info] Resolving org.jfree#jcommon;1.0.23 ...
-[debug] sbt-chain-delegate: Checking cache for: dependency: org.jfree#jcommon;1.0.23 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
-[debug] 		tried /Users/greddy/.ivy2/local/org.jfree/jcommon/1.0.23/ivys/ivy.xml
-[debug] 	local: no ivy file found for org.jfree#jcommon;1.0.23
-[debug] 		tried /Users/greddy/.activator/repository/org.jfree/jcommon/1.0.23/ivys/ivy.xml
-[debug] 	activator-launcher-local: no ivy file found for org.jfree#jcommon;1.0.23
-[debug] 		tried /Users/greddy/Documents/activator-dist-1.3.10/repository/org.jfree/jcommon/1.0.23/ivys/ivy.xml
-[debug] 	activator-local: no ivy file found for org.jfree#jcommon;1.0.23
-[debug] 		tried https://repo1.maven.org/maven2/org/jfree/jcommon/1.0.23/jcommon-1.0.23.pom
-[debug] 	public: found md file for org.jfree#jcommon;1.0.23
-[debug] 		=> https://repo1.maven.org/maven2/org/jfree/jcommon/1.0.23/jcommon-1.0.23.pom (1.0.23)
-[debug] downloading https://repo1.maven.org/maven2/org/jfree/jcommon/1.0.23/jcommon-1.0.23.pom ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/jfree/jcommon/1.0.23/jcommon-1.0.23.pom
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/jfree/jcommon/1.0.23/jcommon-1.0.23.pom.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/org/jfree/jcommon/1.0.23/jcommon-1.0.23.pom
-[debug] 	[SUCCESSFUL ] org.jfree#jcommon;1.0.23!jcommon.pom(pom.original) (24ms)
-[info] Resolving org.sonatype.oss#oss-parent;9 ...
-[debug] sbt-chain: Checking cache for: dependency: org.sonatype.oss#oss-parent;9 {}
-[debug] sbt-chain: module revision found in cache: org.sonatype.oss#oss-parent;9
-[debug] 		tried /Users/greddy/.ivy2/local/org.jfree/jcommon/1.0.23/jars/jcommon.jar
-[debug] 		tried /Users/greddy/.activator/repository/org.jfree/jcommon/1.0.23/jars/jcommon.jar
-[debug] 		tried /Users/greddy/Documents/activator-dist-1.3.10/repository/org.jfree/jcommon/1.0.23/jars/jcommon.jar
-[debug] 		tried https://repo1.maven.org/maven2/org/jfree/jcommon/1.0.23/jcommon-1.0.23.jar
-[debug] 	found org.jfree#jcommon;1.0.23 in public
+[debug] sbt-chain: module revision found in cache: org.jfree#jcommon;1.0.23
+[debug] 	found org.jfree#jcommon;1.0.23 in sbt-chain
 [debug] == resolving dependencies org.jfree#jfreechart;1.0.19->org.jfree#jcommon;1.0.23 [compile->compile(*)]
 [debug] == resolving dependencies com.github.wookietreiber#scala-chart_2.11;latest.integration->org.jfree#jfreechart;1.0.19 [compile->runtime(*)]
 [debug] == resolving dependencies com.github.wookietreiber#scala-chart_2.11;latest.integration->org.jfree#jfreechart;1.0.19 [compile->compile]
@@ -880,27 +599,8 @@
 [debug] == resolving dependencies com.github.wookietreiber#scala-chart_2.11;latest.integration->org.scala-lang.modules#scala-swing_2.11;1.0.2 [compile->master(compile)]
 [info] Resolving org.scala-lang.modules#scala-swing_2.11;1.0.2 ...
 [debug] sbt-chain: Checking cache for: dependency: org.scala-lang.modules#scala-swing_2.11;1.0.2 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
-[info] Resolving org.scala-lang.modules#scala-swing_2.11;1.0.2 ...
-[debug] sbt-chain-delegate: Checking cache for: dependency: org.scala-lang.modules#scala-swing_2.11;1.0.2 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
-[debug] 		tried /Users/greddy/.ivy2/local/org.scala-lang.modules/scala-swing_2.11/1.0.2/ivys/ivy.xml
-[debug] 	local: no ivy file found for org.scala-lang.modules#scala-swing_2.11;1.0.2
-[debug] 		tried /Users/greddy/.activator/repository/org.scala-lang.modules/scala-swing_2.11/1.0.2/ivys/ivy.xml
-[debug] 	activator-launcher-local: no ivy file found for org.scala-lang.modules#scala-swing_2.11;1.0.2
-[debug] 		tried /Users/greddy/Documents/activator-dist-1.3.10/repository/org.scala-lang.modules/scala-swing_2.11/1.0.2/ivys/ivy.xml
-[debug] 	activator-local: no ivy file found for org.scala-lang.modules#scala-swing_2.11;1.0.2
-[debug] 		tried https://repo1.maven.org/maven2/org/scala-lang/modules/scala-swing_2.11/1.0.2/scala-swing_2.11-1.0.2.pom
-[debug] 	public: found md file for org.scala-lang.modules#scala-swing_2.11;1.0.2
-[debug] 		=> https://repo1.maven.org/maven2/org/scala-lang/modules/scala-swing_2.11/1.0.2/scala-swing_2.11-1.0.2.pom (1.0.2)
-[debug] downloading https://repo1.maven.org/maven2/org/scala-lang/modules/scala-swing_2.11/1.0.2/scala-swing_2.11-1.0.2.pom ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/scala-lang/modules/scala-swing_2.11/1.0.2/scala-swing_2.11-1.0.2.pom
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/scala-lang/modules/scala-swing_2.11/1.0.2/scala-swing_2.11-1.0.2.pom.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/org/scala-lang/modules/scala-swing_2.11/1.0.2/scala-swing_2.11-1.0.2.pom
-[debug] 	[SUCCESSFUL ] org.scala-lang.modules#scala-swing_2.11;1.0.2!scala-swing_2.11.pom(pom.original) (22ms)
-[debug] 		tried /Users/greddy/.ivy2/local/org.scala-lang.modules/scala-swing_2.11/1.0.2/bundles/scala-swing_2.11.jar
-[debug] 		tried /Users/greddy/.activator/repository/org.scala-lang.modules/scala-swing_2.11/1.0.2/bundles/scala-swing_2.11.jar
-[debug] 		tried /Users/greddy/Documents/activator-dist-1.3.10/repository/org.scala-lang.modules/scala-swing_2.11/1.0.2/bundles/scala-swing_2.11.jar
-[debug] 		tried https://repo1.maven.org/maven2/org/scala-lang/modules/scala-swing_2.11/1.0.2/scala-swing_2.11-1.0.2.jar
-[debug] 	found org.scala-lang.modules#scala-swing_2.11;1.0.2 in public
+[debug] sbt-chain: module revision found in cache: org.scala-lang.modules#scala-swing_2.11;1.0.2
+[debug] 	found org.scala-lang.modules#scala-swing_2.11;1.0.2 in sbt-chain
 [debug] == resolving dependencies com.github.wookietreiber#scala-chart_2.11;latest.integration->org.scala-lang.modules#scala-swing_2.11;1.0.2 [compile->compile(*)]
 [debug] == resolving dependencies org.scala-lang.modules#scala-swing_2.11;1.0.2->org.scala-lang#scala-library;2.11.0 [compile->master(compile)]
 [debug] == resolving dependencies org.scala-lang.modules#scala-swing_2.11;1.0.2->org.scala-lang#scala-library;2.11.0 [compile->compile(*)]
@@ -3052,66 +2752,16 @@
 [debug] 	resolved ivy file produced in cache
 [debug] :: downloading artifacts ::
 [debug] 	[NOT REQUIRED] org.scala-lang#scala-library;2.11.8!scala-library.jar
-[debug] 		tried https://repo1.maven.org/maven2/org/scalaj/scalaj-http_2.11/2.3.0/scalaj-http_2.11-2.3.0.jar
-[info] downloading https://repo1.maven.org/maven2/org/scalaj/scalaj-http_2.11/2.3.0/scalaj-http_2.11-2.3.0.jar ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/scalaj/scalaj-http_2.11/2.3.0/scalaj-http_2.11-2.3.0.jar
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/scalaj/scalaj-http_2.11/2.3.0/scalaj-http_2.11-2.3.0.jar.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/org/scalaj/scalaj-http_2.11/2.3.0/scalaj-http_2.11-2.3.0.jar
-[info] 	[SUCCESSFUL ] org.scalaj#scalaj-http_2.11;2.3.0!scalaj-http_2.11.jar (61ms)
-[debug] 		tried https://repo1.maven.org/maven2/org/typelevel/cats_2.11/0.6.1/cats_2.11-0.6.1.jar
-[info] downloading https://repo1.maven.org/maven2/org/typelevel/cats_2.11/0.6.1/cats_2.11-0.6.1.jar ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/typelevel/cats_2.11/0.6.1/cats_2.11-0.6.1.jar
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/typelevel/cats_2.11/0.6.1/cats_2.11-0.6.1.jar.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/org/typelevel/cats_2.11/0.6.1/cats_2.11-0.6.1.jar
-[info] 	[SUCCESSFUL ] org.typelevel#cats_2.11;0.6.1!cats_2.11.jar (22ms)
-[debug] 		tried https://repo1.maven.org/maven2/com/typesafe/play/play-json_2.11/2.5.3/play-json_2.11-2.5.3.jar
-[info] downloading https://repo1.maven.org/maven2/com/typesafe/play/play-json_2.11/2.5.3/play-json_2.11-2.5.3.jar ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/com/typesafe/play/play-json_2.11/2.5.3/play-json_2.11-2.5.3.jar
-[debug] 	public: downloading https://repo1.maven.org/maven2/com/typesafe/play/play-json_2.11/2.5.3/play-json_2.11-2.5.3.jar.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/com/typesafe/play/play-json_2.11/2.5.3/play-json_2.11-2.5.3.jar
-[info] 	[SUCCESSFUL ] com.typesafe.play#play-json_2.11;2.5.3!play-json_2.11.jar (153ms)
-[debug] 		tried https://repo1.maven.org/maven2/com/github/wookietreiber/scala-chart_2.11/0.5.0/scala-chart_2.11-0.5.0.jar
-[info] downloading https://repo1.maven.org/maven2/com/github/wookietreiber/scala-chart_2.11/0.5.0/scala-chart_2.11-0.5.0.jar ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/com/github/wookietreiber/scala-chart_2.11/0.5.0/scala-chart_2.11-0.5.0.jar
-[debug] 	public: downloading https://repo1.maven.org/maven2/com/github/wookietreiber/scala-chart_2.11/0.5.0/scala-chart_2.11-0.5.0.jar.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/com/github/wookietreiber/scala-chart_2.11/0.5.0/scala-chart_2.11-0.5.0.jar
-[info] 	[SUCCESSFUL ] com.github.wookietreiber#scala-chart_2.11;0.5.0!scala-chart_2.11.jar (84ms)
-[debug] 		tried https://repo1.maven.org/maven2/org/typelevel/cats-macros_2.11/0.6.1/cats-macros_2.11-0.6.1.jar
-[info] downloading https://repo1.maven.org/maven2/org/typelevel/cats-macros_2.11/0.6.1/cats-macros_2.11-0.6.1.jar ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/typelevel/cats-macros_2.11/0.6.1/cats-macros_2.11-0.6.1.jar
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/typelevel/cats-macros_2.11/0.6.1/cats-macros_2.11-0.6.1.jar.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/org/typelevel/cats-macros_2.11/0.6.1/cats-macros_2.11-0.6.1.jar
-[info] 	[SUCCESSFUL ] org.typelevel#cats-macros_2.11;0.6.1!cats-macros_2.11.jar (23ms)
-[debug] 		tried https://repo1.maven.org/maven2/org/typelevel/cats-kernel_2.11/0.6.1/cats-kernel_2.11-0.6.1.jar
-[info] downloading https://repo1.maven.org/maven2/org/typelevel/cats-kernel_2.11/0.6.1/cats-kernel_2.11-0.6.1.jar ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/typelevel/cats-kernel_2.11/0.6.1/cats-kernel_2.11-0.6.1.jar
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/typelevel/cats-kernel_2.11/0.6.1/cats-kernel_2.11-0.6.1.jar.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/org/typelevel/cats-kernel_2.11/0.6.1/cats-kernel_2.11-0.6.1.jar
-[info] 	[SUCCESSFUL ] org.typelevel#cats-kernel_2.11;0.6.1!cats-kernel_2.11.jar (503ms)
-[debug] 		tried https://repo1.maven.org/maven2/org/typelevel/cats-kernel-laws_2.11/0.6.1/cats-kernel-laws_2.11-0.6.1.jar
-[info] downloading https://repo1.maven.org/maven2/org/typelevel/cats-kernel-laws_2.11/0.6.1/cats-kernel-laws_2.11-0.6.1.jar ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/typelevel/cats-kernel-laws_2.11/0.6.1/cats-kernel-laws_2.11-0.6.1.jar
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/typelevel/cats-kernel-laws_2.11/0.6.1/cats-kernel-laws_2.11-0.6.1.jar.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/org/typelevel/cats-kernel-laws_2.11/0.6.1/cats-kernel-laws_2.11-0.6.1.jar
-[info] 	[SUCCESSFUL ] org.typelevel#cats-kernel-laws_2.11;0.6.1!cats-kernel-laws_2.11.jar (41ms)
-[debug] 		tried https://repo1.maven.org/maven2/org/typelevel/cats-core_2.11/0.6.1/cats-core_2.11-0.6.1.jar
-[info] downloading https://repo1.maven.org/maven2/org/typelevel/cats-core_2.11/0.6.1/cats-core_2.11-0.6.1.jar ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/typelevel/cats-core_2.11/0.6.1/cats-core_2.11-0.6.1.jar
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/typelevel/cats-core_2.11/0.6.1/cats-core_2.11-0.6.1.jar.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/org/typelevel/cats-core_2.11/0.6.1/cats-core_2.11-0.6.1.jar
-[info] 	[SUCCESSFUL ] org.typelevel#cats-core_2.11;0.6.1!cats-core_2.11.jar (287ms)
-[debug] 		tried https://repo1.maven.org/maven2/org/typelevel/cats-laws_2.11/0.6.1/cats-laws_2.11-0.6.1.jar
-[info] downloading https://repo1.maven.org/maven2/org/typelevel/cats-laws_2.11/0.6.1/cats-laws_2.11-0.6.1.jar ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/typelevel/cats-laws_2.11/0.6.1/cats-laws_2.11-0.6.1.jar
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/typelevel/cats-laws_2.11/0.6.1/cats-laws_2.11-0.6.1.jar.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/org/typelevel/cats-laws_2.11/0.6.1/cats-laws_2.11-0.6.1.jar
-[info] 	[SUCCESSFUL ] org.typelevel#cats-laws_2.11;0.6.1!cats-laws_2.11.jar (111ms)
-[debug] 		tried https://repo1.maven.org/maven2/org/typelevel/cats-free_2.11/0.6.1/cats-free_2.11-0.6.1.jar
-[info] downloading https://repo1.maven.org/maven2/org/typelevel/cats-free_2.11/0.6.1/cats-free_2.11-0.6.1.jar ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/typelevel/cats-free_2.11/0.6.1/cats-free_2.11-0.6.1.jar
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/typelevel/cats-free_2.11/0.6.1/cats-free_2.11-0.6.1.jar.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/org/typelevel/cats-free_2.11/0.6.1/cats-free_2.11-0.6.1.jar
-[info] 	[SUCCESSFUL ] org.typelevel#cats-free_2.11;0.6.1!cats-free_2.11.jar (38ms)
+[debug] 	[NOT REQUIRED] org.scalaj#scalaj-http_2.11;2.3.0!scalaj-http_2.11.jar
+[debug] 	[NOT REQUIRED] org.typelevel#cats_2.11;0.6.1!cats_2.11.jar
+[debug] 	[NOT REQUIRED] com.typesafe.play#play-json_2.11;2.5.3!play-json_2.11.jar
+[debug] 	[NOT REQUIRED] com.github.wookietreiber#scala-chart_2.11;0.5.0!scala-chart_2.11.jar
+[debug] 	[NOT REQUIRED] org.typelevel#cats-macros_2.11;0.6.1!cats-macros_2.11.jar
+[debug] 	[NOT REQUIRED] org.typelevel#cats-kernel_2.11;0.6.1!cats-kernel_2.11.jar
+[debug] 	[NOT REQUIRED] org.typelevel#cats-kernel-laws_2.11;0.6.1!cats-kernel-laws_2.11.jar
+[debug] 	[NOT REQUIRED] org.typelevel#cats-core_2.11;0.6.1!cats-core_2.11.jar
+[debug] 	[NOT REQUIRED] org.typelevel#cats-laws_2.11;0.6.1!cats-laws_2.11.jar
+[debug] 	[NOT REQUIRED] org.typelevel#cats-free_2.11;0.6.1!cats-free_2.11.jar
 [debug] 	[NOT REQUIRED] com.github.mpilquist#simulacrum_2.11;0.7.0!simulacrum_2.11.jar
 [debug] 	[NOT REQUIRED] org.typelevel#machinist_2.11;0.4.1!machinist_2.11.jar
 [debug] 	[NOT REQUIRED] org.typelevel#macro-compat_2.11;1.1.0!macro-compat_2.11.jar
@@ -3121,24 +2771,9 @@
 [debug] 	[NOT REQUIRED] org.typelevel#catalysts-platform_2.11;0.0.2!catalysts-platform_2.11.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#test-interface;1.0!test-interface.jar
 [debug] 	[NOT REQUIRED] org.typelevel#catalysts-macros_2.11;0.0.2!catalysts-macros_2.11.jar
-[debug] 		tried https://repo1.maven.org/maven2/com/typesafe/play/play-iteratees_2.11/2.5.3/play-iteratees_2.11-2.5.3.jar
-[info] downloading https://repo1.maven.org/maven2/com/typesafe/play/play-iteratees_2.11/2.5.3/play-iteratees_2.11-2.5.3.jar ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/com/typesafe/play/play-iteratees_2.11/2.5.3/play-iteratees_2.11-2.5.3.jar
-[debug] 	public: downloading https://repo1.maven.org/maven2/com/typesafe/play/play-iteratees_2.11/2.5.3/play-iteratees_2.11-2.5.3.jar.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/com/typesafe/play/play-iteratees_2.11/2.5.3/play-iteratees_2.11-2.5.3.jar
-[info] 	[SUCCESSFUL ] com.typesafe.play#play-iteratees_2.11;2.5.3!play-iteratees_2.11.jar (87ms)
-[debug] 		tried https://repo1.maven.org/maven2/com/typesafe/play/play-functional_2.11/2.5.3/play-functional_2.11-2.5.3.jar
-[info] downloading https://repo1.maven.org/maven2/com/typesafe/play/play-functional_2.11/2.5.3/play-functional_2.11-2.5.3.jar ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/com/typesafe/play/play-functional_2.11/2.5.3/play-functional_2.11-2.5.3.jar
-[debug] 	public: downloading https://repo1.maven.org/maven2/com/typesafe/play/play-functional_2.11/2.5.3/play-functional_2.11-2.5.3.jar.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/com/typesafe/play/play-functional_2.11/2.5.3/play-functional_2.11-2.5.3.jar
-[info] 	[SUCCESSFUL ] com.typesafe.play#play-functional_2.11;2.5.3!play-functional_2.11.jar (62ms)
-[debug] 		tried https://repo1.maven.org/maven2/com/typesafe/play/play-datacommons_2.11/2.5.3/play-datacommons_2.11-2.5.3.jar
-[info] downloading https://repo1.maven.org/maven2/com/typesafe/play/play-datacommons_2.11/2.5.3/play-datacommons_2.11-2.5.3.jar ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/com/typesafe/play/play-datacommons_2.11/2.5.3/play-datacommons_2.11-2.5.3.jar
-[debug] 	public: downloading https://repo1.maven.org/maven2/com/typesafe/play/play-datacommons_2.11/2.5.3/play-datacommons_2.11-2.5.3.jar.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/com/typesafe/play/play-datacommons_2.11/2.5.3/play-datacommons_2.11-2.5.3.jar
-[info] 	[SUCCESSFUL ] com.typesafe.play#play-datacommons_2.11;2.5.3!play-datacommons_2.11.jar (22ms)
+[debug] 	[NOT REQUIRED] com.typesafe.play#play-iteratees_2.11;2.5.3!play-iteratees_2.11.jar
+[debug] 	[NOT REQUIRED] com.typesafe.play#play-functional_2.11;2.5.3!play-functional_2.11.jar
+[debug] 	[NOT REQUIRED] com.typesafe.play#play-datacommons_2.11;2.5.3!play-datacommons_2.11.jar
 [debug] 	[NOT REQUIRED] joda-time#joda-time;2.9.2!joda-time.jar
 [debug] 	[NOT REQUIRED] org.joda#joda-convert;1.8.1!joda-convert.jar
 [debug] 	[NOT REQUIRED] com.fasterxml.jackson.core#jackson-core;2.7.1!jackson-core.jar(bundle)
@@ -3148,42 +2783,27 @@
 [debug] 	[NOT REQUIRED] com.fasterxml.jackson.datatype#jackson-datatype-jsr310;2.7.1!jackson-datatype-jsr310.jar(bundle)
 [debug] 	[NOT REQUIRED] org.scala-stm#scala-stm_2.11;0.7!scala-stm_2.11.jar
 [debug] 	[NOT REQUIRED] com.typesafe#config;1.3.0!config.jar(bundle)
-[debug] 		tried https://repo1.maven.org/maven2/org/jfree/jfreechart/1.0.19/jfreechart-1.0.19.jar
-[info] downloading https://repo1.maven.org/maven2/org/jfree/jfreechart/1.0.19/jfreechart-1.0.19.jar ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/jfree/jfreechart/1.0.19/jfreechart-1.0.19.jar
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/jfree/jfreechart/1.0.19/jfreechart-1.0.19.jar.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/org/jfree/jfreechart/1.0.19/jfreechart-1.0.19.jar
-[info] 	[SUCCESSFUL ] org.jfree#jfreechart;1.0.19!jfreechart.jar (170ms)
-[debug] 		tried https://repo1.maven.org/maven2/org/scala-lang/modules/scala-swing_2.11/1.0.2/scala-swing_2.11-1.0.2.jar
-[info] downloading https://repo1.maven.org/maven2/org/scala-lang/modules/scala-swing_2.11/1.0.2/scala-swing_2.11-1.0.2.jar ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/scala-lang/modules/scala-swing_2.11/1.0.2/scala-swing_2.11-1.0.2.jar
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/scala-lang/modules/scala-swing_2.11/1.0.2/scala-swing_2.11-1.0.2.jar.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/org/scala-lang/modules/scala-swing_2.11/1.0.2/scala-swing_2.11-1.0.2.jar
-[info] 	[SUCCESSFUL ] org.scala-lang.modules#scala-swing_2.11;1.0.2!scala-swing_2.11.jar(bundle) (91ms)
-[debug] 		tried https://repo1.maven.org/maven2/org/jfree/jcommon/1.0.23/jcommon-1.0.23.jar
-[info] downloading https://repo1.maven.org/maven2/org/jfree/jcommon/1.0.23/jcommon-1.0.23.jar ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/jfree/jcommon/1.0.23/jcommon-1.0.23.jar
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/jfree/jcommon/1.0.23/jcommon-1.0.23.jar.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/org/jfree/jcommon/1.0.23/jcommon-1.0.23.jar
-[info] 	[SUCCESSFUL ] org.jfree#jcommon;1.0.23!jcommon.jar (46ms)
+[debug] 	[NOT REQUIRED] org.jfree#jfreechart;1.0.19!jfreechart.jar
+[debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-swing_2.11;1.0.2!scala-swing_2.11.jar(bundle)
+[debug] 	[NOT REQUIRED] org.jfree#jcommon;1.0.23!jcommon.jar
 [debug] 	[NOT REQUIRED] org.scala-lang#scala-compiler;2.11.8!scala-compiler.jar
 [debug] 	[NOT REQUIRED] org.scala-lang#scala-reflect;2.11.8!scala-reflect.jar
 [debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.11;1.0.4!scala-xml_2.11.jar(bundle)
 [debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-parser-combinators_2.11;1.0.4!scala-parser-combinators_2.11.jar(bundle)
 [debug] 	[NOT REQUIRED] jline#jline;2.12.1!jline.jar
-[debug] :: resolution report :: resolve 2339ms :: artifacts dl 1824ms
-[debug] 	report for icfp#icfp_2.11;1.0 compile produced in /Users/greddy/Documents/ICPF/code/target/resolution-cache/reports/icfp-icfp_2.11-compile.xml
-[debug] 	report for icfp#icfp_2.11;1.0 runtime produced in /Users/greddy/Documents/ICPF/code/target/resolution-cache/reports/icfp-icfp_2.11-runtime.xml
-[debug] 	report for icfp#icfp_2.11;1.0 test produced in /Users/greddy/Documents/ICPF/code/target/resolution-cache/reports/icfp-icfp_2.11-test.xml
-[debug] 	report for icfp#icfp_2.11;1.0 provided produced in /Users/greddy/Documents/ICPF/code/target/resolution-cache/reports/icfp-icfp_2.11-provided.xml
-[debug] 	report for icfp#icfp_2.11;1.0 optional produced in /Users/greddy/Documents/ICPF/code/target/resolution-cache/reports/icfp-icfp_2.11-optional.xml
-[debug] 	report for icfp#icfp_2.11;1.0 compile-internal produced in /Users/greddy/Documents/ICPF/code/target/resolution-cache/reports/icfp-icfp_2.11-compile-internal.xml
-[debug] 	report for icfp#icfp_2.11;1.0 runtime-internal produced in /Users/greddy/Documents/ICPF/code/target/resolution-cache/reports/icfp-icfp_2.11-runtime-internal.xml
-[debug] 	report for icfp#icfp_2.11;1.0 test-internal produced in /Users/greddy/Documents/ICPF/code/target/resolution-cache/reports/icfp-icfp_2.11-test-internal.xml
-[debug] 	report for icfp#icfp_2.11;1.0 plugin produced in /Users/greddy/Documents/ICPF/code/target/resolution-cache/reports/icfp-icfp_2.11-plugin.xml
-[debug] 	report for icfp#icfp_2.11;1.0 sources produced in /Users/greddy/Documents/ICPF/code/target/resolution-cache/reports/icfp-icfp_2.11-sources.xml
-[debug] 	report for icfp#icfp_2.11;1.0 docs produced in /Users/greddy/Documents/ICPF/code/target/resolution-cache/reports/icfp-icfp_2.11-docs.xml
-[debug] 	report for icfp#icfp_2.11;1.0 pom produced in /Users/greddy/Documents/ICPF/code/target/resolution-cache/reports/icfp-icfp_2.11-pom.xml
-[debug] 	report for icfp#icfp_2.11;1.0 scala-tool produced in /Users/greddy/Documents/ICPF/code/target/resolution-cache/reports/icfp-icfp_2.11-scala-tool.xml
-[debug] 	resolve done (2339ms resolve - 1824ms download)
+[debug] :: resolution report :: resolve 1390ms :: artifacts dl 21ms
+[debug] 	report for icfp#icfp_2.11;1.0 compile produced in /Users/greddy/Documents/ICPF/icfp2016/code/target/resolution-cache/reports/icfp-icfp_2.11-compile.xml
+[debug] 	report for icfp#icfp_2.11;1.0 runtime produced in /Users/greddy/Documents/ICPF/icfp2016/code/target/resolution-cache/reports/icfp-icfp_2.11-runtime.xml
+[debug] 	report for icfp#icfp_2.11;1.0 test produced in /Users/greddy/Documents/ICPF/icfp2016/code/target/resolution-cache/reports/icfp-icfp_2.11-test.xml
+[debug] 	report for icfp#icfp_2.11;1.0 provided produced in /Users/greddy/Documents/ICPF/icfp2016/code/target/resolution-cache/reports/icfp-icfp_2.11-provided.xml
+[debug] 	report for icfp#icfp_2.11;1.0 optional produced in /Users/greddy/Documents/ICPF/icfp2016/code/target/resolution-cache/reports/icfp-icfp_2.11-optional.xml
+[debug] 	report for icfp#icfp_2.11;1.0 compile-internal produced in /Users/greddy/Documents/ICPF/icfp2016/code/target/resolution-cache/reports/icfp-icfp_2.11-compile-internal.xml
+[debug] 	report for icfp#icfp_2.11;1.0 runtime-internal produced in /Users/greddy/Documents/ICPF/icfp2016/code/target/resolution-cache/reports/icfp-icfp_2.11-runtime-internal.xml
+[debug] 	report for icfp#icfp_2.11;1.0 test-internal produced in /Users/greddy/Documents/ICPF/icfp2016/code/target/resolution-cache/reports/icfp-icfp_2.11-test-internal.xml
+[debug] 	report for icfp#icfp_2.11;1.0 plugin produced in /Users/greddy/Documents/ICPF/icfp2016/code/target/resolution-cache/reports/icfp-icfp_2.11-plugin.xml
+[debug] 	report for icfp#icfp_2.11;1.0 sources produced in /Users/greddy/Documents/ICPF/icfp2016/code/target/resolution-cache/reports/icfp-icfp_2.11-sources.xml
+[debug] 	report for icfp#icfp_2.11;1.0 docs produced in /Users/greddy/Documents/ICPF/icfp2016/code/target/resolution-cache/reports/icfp-icfp_2.11-docs.xml
+[debug] 	report for icfp#icfp_2.11;1.0 pom produced in /Users/greddy/Documents/ICPF/icfp2016/code/target/resolution-cache/reports/icfp-icfp_2.11-pom.xml
+[debug] 	report for icfp#icfp_2.11;1.0 scala-tool produced in /Users/greddy/Documents/ICPF/icfp2016/code/target/resolution-cache/reports/icfp-icfp_2.11-scala-tool.xml
+[debug] 	resolve done (1390ms resolve - 21ms download)
 [info] Done updating.

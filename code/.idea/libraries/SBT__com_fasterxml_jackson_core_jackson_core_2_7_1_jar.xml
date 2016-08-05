@@ -2,6 +2,7 @@
   <library name="SBT: com.fasterxml.jackson.core:jackson-core:2.7.1:jar">
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/../../activator-dist-1.3.10/repository/com.fasterxml.jackson.core/jackson-core/2.7.1/bundles/jackson-core.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../activator-dist-1.3.10/repository/com.fasterxml.jackson.core/jackson-core/2.7.1/bundles/jackson-core.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

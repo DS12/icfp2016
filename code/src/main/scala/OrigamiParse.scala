@@ -1,3 +1,4 @@
+import DataStructures.Skeleton
 import cats.Eval
 import cats.data.{State, StateT}
 
