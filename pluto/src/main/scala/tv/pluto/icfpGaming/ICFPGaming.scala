@@ -15,9 +15,9 @@ object ICFPGaming {
 
   def main(args: Array[String]): Unit = {
 
-    val problemFileNames: List[String] = "ls problems".lineStream.take(10).toList
+    val problemFileNames: List[String] = "ls problems".lineStream.take(101).toList
 
-    problemFileNames foreach { fn => pipeline(fn) }
+    problemFileNames foreach { fn => println(fn);pipeline(fn) }
 
 /*
     val test = List(Point(1.0, 1.0), Point(2.0, 2.0), Point(3.0, 3.0))
