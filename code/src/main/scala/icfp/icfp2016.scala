@@ -61,7 +61,7 @@ object icfp2016 {
 
 }
 
-object solve {
+object solve extends App{
 
   import implicits._
 
@@ -89,7 +89,7 @@ object solve {
   val prob = parseProblem.run(initToks).value._2
   println(prob)
 
-//  val problem: SilhouetteState = analyze(prob)
+  val problem: SilhouetteState = analyze(prob)
 //  val solution: Solution = icfp2016.solve(problem)
 //  println(solution)
 
