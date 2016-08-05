@@ -46,7 +46,9 @@ case class Polygon(pts: Seq[Point]) {
 case class Facet(vertices: Seq[Point])
 
 case class Silhouette(polys: Seq[Polygon])
-case class Skeleton(edges: Seq[LineSegment])
+case class Skeleton(edges: Seq[LineSegment]){
+  val boundary: Set[LineSegment] = ???
+}
 
 
 object Origami {

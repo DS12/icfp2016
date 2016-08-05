@@ -18,17 +18,21 @@ object icfp2016 {
 
   val destination: Seq[Point] = OrigamiParse.parsePolygon.run(OrigamiParse.tokenize(fourVertices)).value._2.pts
 
-  case class SilhouetteState(polys: Seq[Polygon], edges: Seq[LineSegment], map: Map[Int, List[Point]]) {
+  case class SilhouetteState(silhouette: Silhouette, skeleton: Skeleton, map: Map[Int, List[Point]]) {
     val isNormalized: Boolean = ???
     val normalization: Silhouette = ???
 
-    val isSolved: Boolean = polys.length == 1 && destination.forall(polys.head.pts.contains(_))
+    val isSolved: Boolean = silhouette.polys.length == 1 && destination.forall(silhouette.polys.head.pts.contains(_))
     val isLegal: Boolean = ???
-    val vertices: Set[Point] = (polys.flatMap(_.pts) ++ edges.flatMap(_.endpoints)).toSet
-    lazy val facets: Seq[Facet] = ???
+    val vertices: Set[Point] = (skeleton.edges.flatMap(_.endpoints)).toSet
+    val boundaries: Set[LineSegment] = skeleton.boundary
 
 
     def unfold(edge: LineSegment): List[SilhouetteState] = ???
+
+    def deFacet(ske: Skeleton): (Facet, Skeleton) = {
+      ???
+    }
 
   }
 
@@ -37,11 +41,13 @@ object icfp2016 {
     val initLabel = prob._2.edges.flatMap(line => line.endpoints).distinct.zipWithIndex.map {
       case (p, i) => (i, List(p))
     }.toMap
-    SilhouetteState(prob._1.polys, prob._2.edges, initLabel)
+    SilhouetteState(prob._1, prob._2, initLabel)
   }
 
 
-  case class Solution(vertices: Set[Point], facets: Seq[Facet], map: Map[Int, List[Point]]) {
+  case class Solution(sil: SilhouetteState) {
+    require(sil.isSolved)
+    val facets: Seq[Facet] = ???
     override def toString(): String = {
       ???
     }
@@ -49,10 +55,10 @@ object icfp2016 {
 
   def solve(problem: SilhouetteState): Solution = {
 
-    if (problem.isSolved) Solution(problem.vertices, problem.facets, problem.map)
+    if (problem.isSolved) Solution(problem)
     else {
       for {
-        edge <- problem.edges // boundary edges
+        edge <- problem.boundaries // boundary edges
         progress <- problem.unfold(edge).filter(_.isLegal)
       } yield solve(progress)
     }.head
