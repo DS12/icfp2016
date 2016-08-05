@@ -88,8 +88,6 @@ object ICFPGaming {
     val y = centroid.y
 
     List(Point(x-0.5, y-0.5), Point(x+0.5, y-0.5), Point(x+0.5, y+0.5), Point(x-0.5, y+0.5))
-
-
   }
 
 }

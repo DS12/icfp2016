@@ -2,18 +2,13 @@ package tv.pluto.icfp
 
 import java.io.PrintWriter
 
+import spire.math.Rational
+
 import scala.io.Source
 
 object Parser {
 
-  def parseValue(segment: String): Double = {
-    if (segment.contains("/")) {
-      val parts = segment.split("/")
-      parts(0).toDouble / parts(1).toDouble
-    } else {
-      segment.toDouble
-    }
-  }
+  def parseValue(segment: String): Rational = Rational(segment)
 
   def parsePoint(segment: String): Point = {
     val parts = segment.split(",")
@@ -43,7 +38,7 @@ object Parser {
       points.map(parsePoint)
     }
 
-    val edges = lines.tail.map(parseEdge)
+    val edges = lines.tail.map(parseEdge).toSet
 
     Problem(polygons, edges)
   }
@@ -68,12 +63,16 @@ object Parser {
   }
 }
 
-case class Problem(polygons: List[List[Point]], edges: List[Edge])
+case class Problem(polygons: List[List[Point]], edges: Set[Edge])
 
-case class Point(x: Double, y: Double){
+case class Point(x: Rational, y: Rational) {
+
   def add(otherPoint: Point) = Point(this.x + otherPoint.x, this.y + otherPoint.y)
+
   def divide(divisor: Int) = Point(this.x / divisor, this.y / divisor)
-  def print = x + "," + y
+
+  override def toString = x + "," + y
+
 }
 
 case class Edge(p1: Point, p2: Point)

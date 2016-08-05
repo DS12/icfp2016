@@ -14,7 +14,7 @@ object NaiveSolWriter {
 
     val source = List("4", "0,0", "1,0", "1,1", "0,1").mkString("\n") + "\n"
     val facets = List("1", "4 0 1 2 3").mkString("\n") + "\n"
-    val destination = destPoints.map{ point => point.print }.mkString("\n") + "\n"
+    val destination = destPoints.map{ point => point.toString }.mkString("\n") + "\n"
 
     val writer = new PrintWriter(new File(fileDest))
 
