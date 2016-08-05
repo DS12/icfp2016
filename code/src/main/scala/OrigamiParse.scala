@@ -10,15 +10,8 @@ object OrigamiParse {
   def tokenize(str: String): List[String] = str.split("""(\s|,)""").toList
 
   def repeat[A](n: Int)(p: Parse[A]): Parse[List[A]] = 
-    State { (toks: List[String]) => 
-      if (n==0) {
-        (toks, Nil)
-      } else {
-        val (s, a) = p.run(toks).value
-        val rest = repeat(n-1)(p).run(s).value
-        (rest._1, a :: rest._2)
-      }
-    }
+    if (n==0) State.pure(Nil)
+    else p flatMap { a => repeat(n-1)(p) map (a :: _) }
 
   val parseNum: Parse[BigInt] =
     State { (toks: List[String]) =>
