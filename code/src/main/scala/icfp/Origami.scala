@@ -2,6 +2,8 @@ package icfp;
 
 import scala.math.BigInt
 case class Rational(n: BigInt, d: BigInt) {
+  val double = n.toDouble / d.toDouble
+
   override def toString: String =
     if (n==0) "0"
     else if (n==d) "1"
