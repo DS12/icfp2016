@@ -4,6 +4,7 @@ import cats.Eval
 import cats.data.{State, StateT}
 
 import scala.math.BigInt
+import spire.math.Rational
 import Origami._
 
 object OrigamiParse {
@@ -25,9 +26,9 @@ object OrigamiParse {
     (toks.tail,
       if (tok contains '/') {
         val Array(num, denom) = tok.split('/')
-        new Rational(BigInt(num), BigInt(denom))
+        Rational(BigInt(num), BigInt(denom))
       } else {
-        new Rational(BigInt(tok), BigInt(1))
+        Rational(BigInt(tok), BigInt(1))
       }
     )
   }

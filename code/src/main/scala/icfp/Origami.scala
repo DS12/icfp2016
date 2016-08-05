@@ -1,13 +1,7 @@
 package icfp;
 
 import scala.math.BigInt
-case class Rational(n: BigInt, d: BigInt) {
-  override def toString: String =
-    if (n==0) "0"
-    else if (n==d) "1"
-    else n.toString + "/" + d.toString
-
-}
+import spire.math.Rational
 
 case class Point(x: Rational, y: Rational)
 
@@ -19,11 +13,11 @@ case class LineSegment(p1: Point, p2: Point){
   def endpoints: Seq[Point] = p1 :: p2 :: Nil
 
   def slopeIntForm: (Rational, Rational) = {
-    p2._2 - p1._2
+    ???
   }
 
   def reflect(p: Point): Point = {
-
+    ???
   }
 }
 

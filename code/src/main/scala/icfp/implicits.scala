@@ -1,6 +1,9 @@
 package icfp
 
+import spire.math.Rational
+
 import Origami._
+
 
 object implicits {
 

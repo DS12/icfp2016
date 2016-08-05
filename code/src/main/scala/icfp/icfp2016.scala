@@ -8,8 +8,6 @@ import Origami._
 
 object icfp2016 {
 
-  type Facet = Unit
-
   val fourVertices =
     """
        4
@@ -33,7 +31,7 @@ object icfp2016 {
 
   }
 
-  case class Solution(vertices: Set[Point], facets: Seq[Facet], map: Map[Point, Point]) {
+  case class Solution(vertices: Set[Point], facets: Seq[Facet], map: Map[Int, List[Point]]) {
     //    override def toString(): String = {
     //      ???
     //    }
@@ -70,8 +68,8 @@ object solve extends App {
 0,0 1/2,1/2
     """
 
-
-  val problem = SilhouetteState(polygon, edges, Map[Int, List[Point]]())
+  val rawProblem = OrigamiParse.parseProblem.run(ex).value._2
+  val problem = SilhouetteState(rawProblem._1.polys, edges, Map[Int, List[Point]]())
   val solution = icfp2016.solve(problem)
   println(solution.vertices)
   println(solution.facets)
