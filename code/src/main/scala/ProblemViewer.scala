@@ -1,3 +1,5 @@
+package icfp;
+
 import OrigamiParse._
 
 import scalax.chart.XYChart
@@ -5,7 +7,7 @@ import scalax.chart.api._
 
 object ProblemViewer {
 
-  def toDoublePoint(p: Point): (Double, Double) = (p.x.double, p.y.double)
+  def toDoublePoint(p: Point): (Double, Double) = (p.x.doubleValue, p.y.doubleValue)
 
   def problemToGraph(problem: String): XYChart = {
 
@@ -22,7 +24,7 @@ object ProblemViewer {
       i <- names.indices
     } yield {
       val name = names(i)
-      val series = Seq(toDoublePoint(edges(i)._1), toDoublePoint(edges(i)._2))
+      val series = Seq(toDoublePoint(edges(i).p1), toDoublePoint(edges(i).p2))
       (name, series): (String, Seq[(Double, Double)])
     }
 
