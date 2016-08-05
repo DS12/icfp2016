@@ -71,10 +71,10 @@ case class Silhouette(polys: Seq[Polygon]) {
 
 case class Skeleton(edges: Seq[LineSegment]) {
   def translate(p: Point): Skeleton = Skeleton(edges map (_.translate(p)))
+  val boundary: Set[LineSegment] = ???  
 }
 
 case class Problem(silh: Silhouette, skel: Skeleton) {
-
   def translate(p: Point): Problem = Problem(silh.translate(p), skel.translate(p))
 
   def normalize: Problem = {
