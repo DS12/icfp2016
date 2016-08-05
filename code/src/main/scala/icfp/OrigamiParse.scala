@@ -1,3 +1,5 @@
+package icfp
+
 import cats.Eval
 import cats.data.{State, StateT}
 

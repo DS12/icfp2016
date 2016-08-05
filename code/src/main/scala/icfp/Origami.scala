@@ -1,3 +1,5 @@
+package icfp
+
 import scala.math.BigInt
 case class Rational(n: BigInt, d: BigInt) {
   override def toString: String =

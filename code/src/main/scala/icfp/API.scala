@@ -1,3 +1,5 @@
+package icfp
+
 import scalaj.http.{Http, HttpRequest}
 import play.api.libs.json._
 
