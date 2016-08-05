@@ -51,6 +51,7 @@ case class Polygon(pts: Seq[Point]) {
 
 case class Facet(vertices: Seq[Point])
 
+
 case class Silhouette(polys: Seq[Polygon]) {
   // the left-most bottom-most point in the silhouette
   def originPoint: Point = {
