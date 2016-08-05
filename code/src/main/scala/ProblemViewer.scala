@@ -16,7 +16,7 @@ object ProblemViewer {
     val prob = parseProblem.run(initToks).value._2
 
     // extract the edges
-    val edges = prob._2.edges
+    val edges = prob.skel.edges
 
     // create data for chart
     val names: Seq[String] = edges.indices.map(_.toString)

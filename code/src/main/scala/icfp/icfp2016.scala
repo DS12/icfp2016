@@ -4,7 +4,6 @@ package icfp
   * Created by htien on 8/5/16.
   */
 
-import Origami._
 
 object icfp2016 {
 
@@ -38,10 +37,10 @@ object icfp2016 {
 
   //(silh, skel) => silhState
   def analyze(prob: Problem): SilhouetteState = {
-    val initLabel = prob._2.edges.flatMap(line => line.endpoints).distinct.zipWithIndex.map {
+    val initLabel = prob.skel.edges.flatMap(line => line.endpoints).distinct.zipWithIndex.map {
       case (p, i) => (i, List(p))
     }.toMap
-    SilhouetteState(prob._1, prob._2, initLabel)
+    SilhouetteState(prob.silh.polys, prob.skel.edges, initLabel)
   }
 
 
