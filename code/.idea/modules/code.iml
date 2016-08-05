@@ -24,6 +24,8 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="SBT: com.fasterxml.jackson.core:jackson-annotations:2.7.1:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.spire-math:spire_2.11:0.11.0:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.spire-math:spire-macros_2.11:0.11.0:jar" level="project" />
     <orderEntry type="library" name="SBT: org.typelevel:macro-compat_2.11:1.1.0:jar" level="project" />
     <orderEntry type="library" name="SBT: org.typelevel:machinist_2.11:0.4.1:jar" level="project" />
     <orderEntry type="library" name="SBT: org.typelevel:discipline_2.11:0.4:jar" level="project" />
@@ -54,5 +56,9 @@
     <orderEntry type="library" name="SBT: com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.7.1:jar" level="project" />
     <orderEntry type="library" name="SBT: com.fasterxml.jackson.core:jackson-databind:2.7.1:jar" level="project" />
     <orderEntry type="library" name="SBT: com.fasterxml.jackson.core:jackson-core:2.7.1:jar" level="project" />
+    <orderEntry type="library" name="SBT: com.github.wookietreiber:scala-chart_2.11:0.5.0:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.jfree:jcommon:1.0.23:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.jfree:jfreechart:1.0.19:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.scala-lang.modules:scala-swing_2.11:1.0.2:jar" level="project" />
   </component>
 </module>
