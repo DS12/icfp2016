@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 package icfp
-
-=======
->>>>>>> origin/waze-eng
 /**
   * Created by htien on 8/5/16.
   */
@@ -20,11 +16,8 @@ object icfp2016 {
        0,1
     """.stripMargin
 
-<<<<<<< HEAD
     val x = 1
 
-=======
->>>>>>> origin/waze-eng
   val destination: Seq[Point] = OrigamiParse.parsePolygon.run(OrigamiParse.tokenize(fourVertices)).value._2.pts
 
   case class SilhouetteState(polys: Seq[Polygon], edges: List[LineSegment], map: Map[Point, Point]) {
@@ -76,8 +69,4 @@ object solve extends App {
   //  val problem: Silhouette = parser(???)
   //  val solution: Solution = icfp2016.solve(problem)
   //  println(solution)
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> origin/waze-eng
