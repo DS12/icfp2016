@@ -40,7 +40,7 @@ object icfp2016 {
     val initLabel = prob.skel.edges.flatMap(line => line.endpoints).distinct.zipWithIndex.map {
       case (p, i) => (i, List(p))
     }.toMap
-    SilhouetteState(prob.silh.polys, prob.skel.edges, initLabel)
+    SilhouetteState(prob.silh, prob.skel, initLabel)
   }
 
 
