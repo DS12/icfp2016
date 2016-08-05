@@ -74,10 +74,15 @@ object ICFPGaming {
 
   // Naive centroid by summing all points and dividing by num of points
   def findCentroid(points: List[Point]): Point = {
-    val numPoints = points.length
-    val pointsSum: Point = points.fold(Point(0.0, 0.0)){ _.add(_) }
+    val minX = points.map(_.x).min
+    val maxX = points.map(_.x).max
+    val minY = points.map(_.y).min
+    val maxY = points.map(_.y).max
 
-    pointsSum.divide(numPoints)
+    val x = (minX + maxX) / 2
+    val y = (minY + maxY) / 2
+
+    Point(x, y)
   }
 
   // Given a centroid point, return a unit square around this point
@@ -86,7 +91,7 @@ object ICFPGaming {
     val x = centroid.x
     val y = centroid.y
 
-    List(Point(x-0.5, y-0.5), Point(x+0.5, y-0.5), Point(x+0.5, y+0.5), Point(x-0.5, y+0.5))
+    List(Point(x - 0.5, y - 0.5), Point(x + 0.5, y - 0.5), Point(x + 0.5, y + 0.5), Point(x - 0.5, y + 0.5))
   }
 
 }
