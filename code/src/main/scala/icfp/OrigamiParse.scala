@@ -1,4 +1,4 @@
-package icfp;
+package icfp
 
 import cats.Eval
 import cats.data.{State, StateT}
@@ -39,17 +39,17 @@ object OrigamiParse {
 
   val parsePolygon: Parse[Polygon] =
     parseNum flatMap {
-      n => repeat(n.toInt)(parsePoint) map (Polygon(_))
+      n => repeat(n.toInt)(parsePoint) map (lp => Polygon(lp.toSet))
     }
 
   val parseSilhouette: Parse[Silhouette] =
     parseNum flatMap {
-      n => repeat(n.toInt)(parsePolygon) map (Silhouette(_))
+      n => repeat(n.toInt)(parsePolygon) map (lp => Silhouette(lp.toSet))
     }
 
   val parseSkeleton: Parse[Skeleton] =
     parseNum flatMap {
-      n => repeat(n.toInt)(parseLineSegment) map (Skeleton(_))
+      n => repeat(n.toInt)(parseLineSegment) map (ll => Skeleton(ll.toSet))
     }
 
   val parseProblem: Parse[Problem] =

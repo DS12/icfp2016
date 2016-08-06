@@ -1,6 +1,5 @@
-package icfp;
-
-import OrigamiParse._
+import icfp.OrigamiParse._
+import icfp.Point
 
 import scalax.chart.XYChart
 import scalax.chart.api._
@@ -16,7 +15,7 @@ object ProblemViewer {
     val prob = parseProblem.run(initToks).value._2
 
     // extract the edges
-    val edges = prob.skel.edges
+    val edges = prob.skel.edges.toArray
 
     // create data for chart
     val names: Seq[String] = edges.indices.map(_.toString)
