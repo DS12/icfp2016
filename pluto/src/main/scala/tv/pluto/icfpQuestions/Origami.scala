@@ -17,6 +17,11 @@ case class Origami(vertexMap: Map[String, Point], edgeList: List[VertexEdge]) {
 
   }
 
+  def randomPoints(vm : Map[String, Point], el: List[VertexEdge]): (Point,VertexEdge,Point,VertexEdge) = {
+    ???
+  }
+
+
 }
 
 case class VertexEdge(pointA: String, pointB: String)
