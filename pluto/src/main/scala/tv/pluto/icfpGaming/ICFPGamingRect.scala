@@ -20,7 +20,7 @@ object ICFPGamingRect {
   implicit def tuple2ToList[T](t: (T, T)): List[T] = List(t._1, t._2)
 
   def main(args: Array[String]): Unit = {
-    //    val problemFileNames: List[String] = "ls problems".lineStream.filter(_.contains("16")).toList
+//        val problemFileNames: List[String] = "ls problems".lineStream.filter(_.contains("1452")).toList
     val problemFileNames: List[String] = "ls problems".lineStream.take(10).toList
 
     problemFileNames foreach { fn => println(fn); pipeline(fn) }
@@ -32,8 +32,8 @@ object ICFPGamingRect {
     case x :: Nil => {
       val lastPoint: Point = x._1
       val lastIndex: Int = x._2
-      val extraLength: Rational = lastPoint.x - shiftBy
-      val shiftedEnd: List[(Point, Int)] = List((Point(shiftBy - extraLength, lastPoint.y), lastIndex))
+      val extraLength: Rational = lastPoint.x - shiftBy / (-2)
+      val shiftedEnd: List[(Point, Int)] = List((Point(shiftBy / (-2) - extraLength, lastPoint.y), lastIndex))
 
       front ++ shiftedEnd
     }
@@ -52,8 +52,8 @@ object ICFPGamingRect {
     case x :: Nil => {
       val lastPoint: Point = x._1
       val lastIndex: Int = x._2
-      val extraLength: Rational = lastPoint.y - shiftBy
-      val shiftedEnd: List[(Point, Int)] = List((Point(lastPoint.x, shiftBy - extraLength), lastIndex))
+      val extraLength: Rational = lastPoint.y - shiftBy / (-2)
+      val shiftedEnd: List[(Point, Int)] = List((Point(lastPoint.x, shiftBy / (-2) - extraLength), lastIndex))
 
       front ++ shiftedEnd
     }
@@ -137,16 +137,16 @@ object ICFPGamingRect {
         }
       }
 
-    //    println("--- original points:")
-    //    xIndexedPointGroups.foreach(println(_))
+//        println("--- original points:")
+//        xIndexedPointGroups.foreach(println(_))
 
     val shiftedXIndexedPointGroups: List[List[(Point, Int)]] =
       xIndexedPointGroups.map { group: List[(Point, Int)] =>
-        translateX(group.take(2), group.drop(2), dX)
+        translateX(group.take(2), group.drop(2), -2 * dX)
       }
 
-    //    println("--- original points shifted along x:")
-    //    shiftedXIndexedPointGroups.foreach(println(_))
+//        println("--- original points shifted along x:")
+//        shiftedXIndexedPointGroups.foreach(println(_))
 
     val shiftedXIndexedPoints: List[(Int, Point)] = shiftedXIndexedPointGroups.flatten.map { x => (x._2, x._1) }
     val shiftedXMap: Map[Int, Point] = shiftedXIndexedPoints.toMap
@@ -158,11 +158,11 @@ object ICFPGamingRect {
 
     val shiftedYIndexedPointGroups: List[List[(Point, Int)]] =
       yIndexedPointGroups.map { group: List[(Point, Int)] =>
-        translateY(group.take(2), group.drop(2), dY)
+        translateY(group.take(2), group.drop(2), -2 * dY)
       }
 
-    //    println("--- original points shifted along both x and y:")
-    //    shiftedYIndexedPointGroups.foreach(println(_))
+//        println("--- original points shifted along both x and y:")
+//        shiftedYIndexedPointGroups.foreach(println(_))
 
     val shiftedIndexedPoints: List[(Point, Int)] = shiftedYIndexedPointGroups.flatten
     val silhouette: List[Point] =
@@ -175,7 +175,7 @@ object ICFPGamingRect {
 
     val solved: String = Solution(skeleton, facets, silhouette).toString
 
-    //    plotSolution(Solution(skeleton, facets, silhouette))
+//        plotSolution(Solution(skeleton, facets, silhouette))
 
     val fileDest = "./solutionsRect/" + filename
     val writer = new PrintWriter(new File(fileDest))
