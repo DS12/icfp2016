@@ -1,4 +1,4 @@
-package icfp;
+package icfp
 
 import scala.math.BigInt
 import scala.math.sqrt
@@ -48,22 +48,24 @@ case class LineSegment(p1: Point, p2: Point){
       }
   }
 
+  def reflect(l: LineSegment): LineSegment = LineSegment(this.reflect(l.p1), this.reflect(l.p2))
+
   def translate(p: Point): LineSegment = LineSegment(p1-p, p2-p)
 
 }
 
-case class Polygon(pts: Seq[Point]) {
+case class Polygon(pts: Set[Point]) {
   def translate(p: Point): Polygon = Polygon(pts.map(_-p))
 
   def isCCW: Boolean = ???
 }
 
-case class Facet(edges: Seq[LineSegment]){
-  val vertices: Set[Point] = edges.flatMap(_.endpoints).toSet
+case class Facet(edges: Set[LineSegment]){
+  val vertices: Set[Point] = edges.flatMap(_.endpoints)
 }
 
 
-case class Silhouette(polys: Seq[Polygon]) {
+case class Silhouette(polys: Set[Polygon]) {
   // the left-most bottom-most point in the silhouette
   def originPoint: Point = {
     def originest(acc: Point, next: Point): Point =
@@ -81,18 +83,18 @@ case class Silhouette(polys: Seq[Polygon]) {
 
 }
 
-case class Skeleton(edges: Seq[LineSegment]) {
+case class Skeleton(edges: Set[LineSegment]) {
   def translate(p: Point): Skeleton = Skeleton(edges map (_.translate(p)))
   val boundary: Set[LineSegment] = Set()
 }
 
 case class Problem(silh: Silhouette, skel: Skeleton) {
-  lazy val allPts: Seq[Point] = this.silh.polys.flatMap(_.pts)
+  lazy val allPts: Set[Point] = this.silh.polys.flatMap(_.pts)
 
-  lazy val minX = allPts.map(_.x).reduce(_ min _)
-  lazy val minY = allPts.map(_.y).reduce(_ min _)
-  lazy val maxX = allPts.map(_.x).reduce(_ max _)
-  lazy val maxY = allPts.map(_.y).reduce(_ max _)
+  lazy val minX = allPts.map(_.x).min
+  lazy val minY = allPts.map(_.y).min
+  lazy val maxX = allPts.map(_.x).max
+  lazy val maxY = allPts.map(_.y).max
 
   lazy val originPoint: Point = Point(minX, minY)
   lazy val maxPoint: Point = Point(maxX, maxY)
