@@ -3,10 +3,11 @@ package tv.pluto.icfp
 import java.io.ByteArrayInputStream
 
 import tv.pluto.icfpGaming.Solution
-
+import tv.pluto.icfp.Parser.parserProblem
 import sys.process._
-
 import ConvexHull.Tupler
+
+import scala.io.Source
 
 object Visualizer {
 
@@ -32,7 +33,14 @@ object Visualizer {
   }
 
   def main(args: Array[String]) {
-    visualize(List(Edge(Point(1, 2), Point(3, 4)), Edge(Point(2, -1), Point(3, 4)), Edge(Point(1, 2), Point(-3, 4))))
+//    visualize(List(Edge(Point(1, 2), Point(3, 4)), Edge(Point(2, -1), Point(3, 4)), Edge(Point(1, 2), Point(-3, 4))))
+
+    val filename: String = "ls problems".lineStream.filter(_.contains("1452")).toList.head
+    val problemCase: String = Source.fromFile("problems/" + filename).getLines().mkString("\n")
+
+    val parsedEdges: Iterable[Edge] = parserProblem(problemCase).edges
+    visualize(parsedEdges)
   }
+
 
 }
