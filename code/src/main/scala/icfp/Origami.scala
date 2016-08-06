@@ -1,11 +1,18 @@
 package icfp;
 
 import scala.math.BigInt
+import scala.math.sqrt
 
 import spire.math.Rational
 
 case class Point(x: Rational, y: Rational) {
   def -(that: Point): Point = Point(this.x-that.x, this.y-that.y)
+
+  def dot(that: Point): Double = (this.x*that.x + this.y*that.y).doubleValue
+
+  def length: Double = sqrt(this.dot(this))
+
+  def cosineAngleTo(that: Point): Double = this.dot(that) / (sqrt(this.length) * sqrt(that.length))
 }
 
 object Point {
@@ -80,15 +87,19 @@ case class Skeleton(edges: Seq[LineSegment]) {
 }
 
 case class Problem(silh: Silhouette, skel: Skeleton) {
+  lazy val allPts: Seq[Point] = this.silh.polys.flatMap(_.pts)
+
+  lazy val minX = allPts.map(_.x).reduce(_ min _)
+  lazy val minY = allPts.map(_.y).reduce(_ min _)
+  lazy val maxX = allPts.map(_.x).reduce(_ max _)
+  lazy val maxY = allPts.map(_.y).reduce(_ max _)
+
+  lazy val originPoint: Point = Point(minX, minY)
+  lazy val maxPoint: Point = Point(maxX, maxY)
+
   def translate(p: Point): Problem = Problem(silh.translate(p), skel.translate(p))
 
-  def normalize: Problem = {
-    val orig = silh.originPoint
-    val xAligned = this.translate(orig)
-    val ys = xAligned.silh.polys.flatMap(poly => poly.pts map (_.y))
-    val minY = ys.tail.foldLeft(ys.head)(_ min _)
-    xAligned.translate(Point(0,minY))
-  }
+  def normalize: Problem = this.translate(originPoint)
 
 }
 
