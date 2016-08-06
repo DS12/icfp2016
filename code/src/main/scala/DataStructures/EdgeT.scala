@@ -20,7 +20,7 @@ trait EdgeT {
 
 }
 
-case class Vertex(p:Point,q:Point) extends EdgeT
+//case class Vertex(p:PointT,q:PointT) extends EdgeT
 
-case class Edge(p:Point,q:Point) extends EdgeT
+case class Edge(p:PointT,q:PointT) extends EdgeT
 

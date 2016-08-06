@@ -12,7 +12,7 @@ trait PointT {
 
 }
 
-case class Point(x:FractionPointCoordinate,y:FractionPointCoordinate) extends PointT
+case class Point(x:FractionT,y:FractionT) extends PointT
 
 
 object PointExample extends App {

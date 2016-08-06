@@ -51,6 +51,21 @@ case class FractionPointCoordinate(num:Int, den:Int) extends FractionT {
 
   override def *(i: Int): FractionT = this / FractionPointCoordinate(1,i).reduce
 
+  override def sqrt(precision: Int) : FractionT = {
+    val den = Math.pow(10, precision).toInt
+    FractionPointCoordinate({Math.sqrt(this.num.toDouble / this.den) * den}.toInt, den).reduce
+  }
+
+  override def abs : FractionT = {
+    if (this.num * this.den >= 0) this
+    else FractionPointCoordinate(-this.num, this.den)
+  }
+
+  override def < (other: FractionT) : Boolean = (this.num * other.den) < (this.den * other.num)
+
+  override def == (other: FractionT) : Boolean = (this.num * other.den) == (this.den * other.num)
+
+  override def <= (other: FractionT) : Boolean = (this < other) || (this == other)
 }
 
 abstract class InfiniteFraction extends FractionT {
@@ -64,6 +79,13 @@ abstract class InfiniteFraction extends FractionT {
   override def - (i:Int):FractionT = this
   override def / (i:Int):FractionT = this
   override def * (i:Int):FractionT = this
+
+  override def sqrt(precision: Int) : FractionT = this
+  override def abs : FractionT = this
+
+  override def < (other: FractionT) = false
+  override def == (other: FractionT) = false
+  override def <= (other: FractionT) = false
 }
 
 object PosInfinitePoint extends InfiniteFraction {
@@ -96,6 +118,11 @@ object PosInfinitePoint extends InfiniteFraction {
     case NegInfinitePoint => NegInfinitePoint
     case _ => this
   }
+
+  override def sqrt(precision: Int) = this match {
+    case PosInfinitePoint => PosInfinitePoint
+    case _ => this
+  }
 }
 
 object NegInfinitePoint extends InfiniteFraction {
@@ -125,6 +152,11 @@ object NegInfinitePoint extends InfiniteFraction {
 
   override def *(f: FractionT): FractionT = f match {
     case NegInfinitePoint => PosInfinitePoint
+    case _ => this
+  }
+
+  override def sqrt(precision: Int) : FractionT = this match {
+    case NegInfinitePoint => throw new Error("Square root of negative value")
     case _ => this
   }
 

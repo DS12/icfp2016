@@ -8,7 +8,7 @@
 [debug] == resolving dependencies for icfp#icfp$sources_2.11;1.0 [compile]
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->org.scala-lang#scala-library;2.11.8 [compile->default(compile)]
 [info] Resolving org.scala-lang#scala-library;2.11.8 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@7ee814d9
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@37d93e62
 [debug] sbt-chain: module revision found in cache: org.scala-lang#scala-library;2.11.8
 [debug] 	found org.scala-lang#scala-library;2.11.8 in sbt-chain
 [debug] 	[2.11.8] org.scala-lang#scala-library;2.11.8
@@ -17,7 +17,7 @@
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->org.scala-lang#scala-library;2.11.8 [compile->master]
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->org.scalaj#scalaj-http_2.11;2.3.0 [compile->default(compile)]
 [info] Resolving org.scalaj#scalaj-http_2.11;2.3.0 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@1b333c70
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@e6079bf
 [debug] sbt-chain: module revision found in cache: org.scalaj#scalaj-http_2.11;2.3.0
 [debug] 	found org.scalaj#scalaj-http_2.11;2.3.0 in sbt-chain
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->org.scalaj#scalaj-http_2.11;2.3.0 [compile->runtime]
@@ -25,7 +25,7 @@
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->org.scalaj#scalaj-http_2.11;2.3.0 [compile->master]
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->org.typelevel#cats_2.11;0.6.1 [compile->default(compile)]
 [info] Resolving org.typelevel#cats_2.11;0.6.1 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@68eabb90
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@1db7922
 [debug] sbt-chain: module revision found in cache: org.typelevel#cats_2.11;0.6.1
 [debug] 	found org.typelevel#cats_2.11;0.6.1 in sbt-chain
 [debug] 	[0.6.1] org.typelevel#cats_2.11;0.6.1
@@ -34,7 +34,7 @@
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->org.typelevel#cats_2.11;0.6.1 [compile->master]
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->org.typelevel#cats-macros_2.11;0.6.1 [compile->default(compile)]
 [info] Resolving org.typelevel#cats-macros_2.11;0.6.1 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@1854cb72
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@6d2bf43d
 [debug] sbt-chain: module revision found in cache: org.typelevel#cats-macros_2.11;0.6.1
 [debug] 	found org.typelevel#cats-macros_2.11;0.6.1 in sbt-chain
 [debug] 	[0.6.1] org.typelevel#cats-macros_2.11;0.6.1
@@ -43,7 +43,7 @@
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->org.typelevel#cats-macros_2.11;0.6.1 [compile->master]
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->com.github.mpilquist#simulacrum_2.11;0.7.0 [compile->default(compile)]
 [info] Resolving com.github.mpilquist#simulacrum_2.11;0.7.0 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@2258456c
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@337c9e70
 [debug] sbt-chain: module revision found in cache: com.github.mpilquist#simulacrum_2.11;0.7.0
 [debug] 	found com.github.mpilquist#simulacrum_2.11;0.7.0 in sbt-chain
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->com.github.mpilquist#simulacrum_2.11;0.7.0 [compile->runtime]
@@ -51,7 +51,7 @@
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->com.github.mpilquist#simulacrum_2.11;0.7.0 [compile->master]
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->org.typelevel#macro-compat_2.11;1.1.0 [compile->default(compile)]
 [info] Resolving org.typelevel#macro-compat_2.11;1.1.0 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@3367618e
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@3fd16045
 [debug] sbt-chain: module revision found in cache: org.typelevel#macro-compat_2.11;1.1.0
 [debug] 	found org.typelevel#macro-compat_2.11;1.1.0 in sbt-chain
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->org.typelevel#macro-compat_2.11;1.1.0 [compile->runtime]
@@ -59,7 +59,7 @@
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->org.typelevel#macro-compat_2.11;1.1.0 [compile->master]
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->org.typelevel#machinist_2.11;0.4.1 [compile->default(compile)]
 [info] Resolving org.typelevel#machinist_2.11;0.4.1 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@56fb8e68
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@26339c61
 [debug] sbt-chain: module revision found in cache: org.typelevel#machinist_2.11;0.4.1
 [debug] 	found org.typelevel#machinist_2.11;0.4.1 in sbt-chain
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->org.typelevel#machinist_2.11;0.4.1 [compile->runtime]
@@ -67,7 +67,7 @@
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->org.typelevel#machinist_2.11;0.4.1 [compile->master]
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->org.scala-lang#scala-reflect;2.11.7 [compile->default(compile)]
 [info] Resolving org.scala-lang#scala-reflect;2.11.7 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@6252c9bf
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@5041e7d8
 [debug] sbt-chain: module revision found in cache: org.scala-lang#scala-reflect;2.11.7
 [debug] 	found org.scala-lang#scala-reflect;2.11.7 in sbt-chain
 [debug] 	[2.11.7] org.scala-lang#scala-reflect;2.11.7
@@ -76,7 +76,7 @@
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->org.scala-lang#scala-reflect;2.11.7 [compile->master]
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->org.typelevel#cats-kernel_2.11;0.6.1 [compile->default(compile)]
 [info] Resolving org.typelevel#cats-kernel_2.11;0.6.1 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@183fa0d6
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@437047a7
 [debug] sbt-chain: module revision found in cache: org.typelevel#cats-kernel_2.11;0.6.1
 [debug] 	found org.typelevel#cats-kernel_2.11;0.6.1 in sbt-chain
 [debug] 	[0.6.1] org.typelevel#cats-kernel_2.11;0.6.1
@@ -85,7 +85,7 @@
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->org.typelevel#cats-kernel_2.11;0.6.1 [compile->master]
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->org.typelevel#cats-kernel-laws_2.11;0.6.1 [compile->default(compile)]
 [info] Resolving org.typelevel#cats-kernel-laws_2.11;0.6.1 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@bf1de54
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@4b23490f
 [debug] sbt-chain: module revision found in cache: org.typelevel#cats-kernel-laws_2.11;0.6.1
 [debug] 	found org.typelevel#cats-kernel-laws_2.11;0.6.1 in sbt-chain
 [debug] 	[0.6.1] org.typelevel#cats-kernel-laws_2.11;0.6.1
@@ -94,7 +94,7 @@
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->org.typelevel#cats-kernel-laws_2.11;0.6.1 [compile->master]
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->org.scalacheck#scalacheck_2.11;1.12.5 [compile->default(compile)]
 [info] Resolving org.scalacheck#scalacheck_2.11;1.12.5 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@134ca845
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@23ff9398
 [debug] sbt-chain: module revision found in cache: org.scalacheck#scalacheck_2.11;1.12.5
 [debug] 	found org.scalacheck#scalacheck_2.11;1.12.5 in sbt-chain
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->org.scalacheck#scalacheck_2.11;1.12.5 [compile->runtime]
@@ -102,7 +102,7 @@
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->org.scalacheck#scalacheck_2.11;1.12.5 [compile->master]
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->org.scala-sbt#test-interface;1.0 [compile->default(compile)]
 [info] Resolving org.scala-sbt#test-interface;1.0 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@3e011468
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@7e51c357
 [debug] sbt-chain: module revision found in cache: org.scala-sbt#test-interface;1.0
 [debug] 	found org.scala-sbt#test-interface;1.0 in sbt-chain
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->org.scala-sbt#test-interface;1.0 [compile->runtime]
@@ -110,7 +110,7 @@
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->org.scala-sbt#test-interface;1.0 [compile->master]
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->org.typelevel#discipline_2.11;0.4 [compile->default(compile)]
 [info] Resolving org.typelevel#discipline_2.11;0.4 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@3ae16938
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@5e892ab3
 [debug] sbt-chain: module revision found in cache: org.typelevel#discipline_2.11;0.4
 [debug] 	found org.typelevel#discipline_2.11;0.4 in sbt-chain
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->org.typelevel#discipline_2.11;0.4 [compile->runtime]
@@ -118,7 +118,7 @@
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->org.typelevel#discipline_2.11;0.4 [compile->master]
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->org.typelevel#catalysts-platform_2.11;0.0.2 [compile->default(compile)]
 [info] Resolving org.typelevel#catalysts-platform_2.11;0.0.2 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@c831746
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@5d4ea748
 [debug] sbt-chain: module revision found in cache: org.typelevel#catalysts-platform_2.11;0.0.2
 [debug] 	found org.typelevel#catalysts-platform_2.11;0.0.2 in sbt-chain
 [debug] 	[0.0.2] org.typelevel#catalysts-platform_2.11;0.0.2
@@ -127,7 +127,7 @@
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->org.typelevel#catalysts-platform_2.11;0.0.2 [compile->master]
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->org.typelevel#catalysts-macros_2.11;0.0.2 [compile->default(compile)]
 [info] Resolving org.typelevel#catalysts-macros_2.11;0.0.2 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@3e73724a
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@63cb5144
 [debug] sbt-chain: module revision found in cache: org.typelevel#catalysts-macros_2.11;0.0.2
 [debug] 	found org.typelevel#catalysts-macros_2.11;0.0.2 in sbt-chain
 [debug] 	[0.0.2] org.typelevel#catalysts-macros_2.11;0.0.2
@@ -136,7 +136,7 @@
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->org.typelevel#catalysts-macros_2.11;0.0.2 [compile->master]
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->org.typelevel#cats-core_2.11;0.6.1 [compile->default(compile)]
 [info] Resolving org.typelevel#cats-core_2.11;0.6.1 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@2f7dfc11
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@4af5f34f
 [debug] sbt-chain: module revision found in cache: org.typelevel#cats-core_2.11;0.6.1
 [debug] 	found org.typelevel#cats-core_2.11;0.6.1 in sbt-chain
 [debug] 	[0.6.1] org.typelevel#cats-core_2.11;0.6.1
@@ -145,7 +145,7 @@
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->org.typelevel#cats-core_2.11;0.6.1 [compile->master]
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->org.typelevel#cats-laws_2.11;0.6.1 [compile->default(compile)]
 [info] Resolving org.typelevel#cats-laws_2.11;0.6.1 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@569e8d89
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@6f6da89
 [debug] sbt-chain: module revision found in cache: org.typelevel#cats-laws_2.11;0.6.1
 [debug] 	found org.typelevel#cats-laws_2.11;0.6.1 in sbt-chain
 [debug] 	[0.6.1] org.typelevel#cats-laws_2.11;0.6.1
@@ -154,7 +154,7 @@
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->org.typelevel#cats-laws_2.11;0.6.1 [compile->master]
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->org.typelevel#cats-free_2.11;0.6.1 [compile->default(compile)]
 [info] Resolving org.typelevel#cats-free_2.11;0.6.1 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@2a87be4b
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@4a19b390
 [debug] sbt-chain: module revision found in cache: org.typelevel#cats-free_2.11;0.6.1
 [debug] 	found org.typelevel#cats-free_2.11;0.6.1 in sbt-chain
 [debug] 	[0.6.1] org.typelevel#cats-free_2.11;0.6.1
@@ -163,7 +163,7 @@
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->org.typelevel#cats-free_2.11;0.6.1 [compile->master]
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->com.typesafe.play#play-json_2.11;2.5.3 [compile->default(compile)]
 [info] Resolving com.typesafe.play#play-json_2.11;2.5.3 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@2928d3a2
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@32a7eb46
 [debug] sbt-chain: module revision found in cache: com.typesafe.play#play-json_2.11;2.5.3
 [debug] 	found com.typesafe.play#play-json_2.11;2.5.3 in sbt-chain
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->com.typesafe.play#play-json_2.11;2.5.3 [compile->runtime]
@@ -171,7 +171,7 @@
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->com.typesafe.play#play-json_2.11;2.5.3 [compile->master]
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->com.typesafe.play#play-iteratees_2.11;2.5.3 [compile->default(compile)]
 [info] Resolving com.typesafe.play#play-iteratees_2.11;2.5.3 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@67bac1e
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@962f97
 [debug] sbt-chain: module revision found in cache: com.typesafe.play#play-iteratees_2.11;2.5.3
 [debug] 	found com.typesafe.play#play-iteratees_2.11;2.5.3 in sbt-chain
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->com.typesafe.play#play-iteratees_2.11;2.5.3 [compile->runtime]
@@ -179,7 +179,7 @@
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->com.typesafe.play#play-iteratees_2.11;2.5.3 [compile->master]
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->org.scala-stm#scala-stm_2.11;0.7 [compile->default(compile)]
 [info] Resolving org.scala-stm#scala-stm_2.11;0.7 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@2539fa90
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@25a3721a
 [debug] sbt-chain: module revision found in cache: org.scala-stm#scala-stm_2.11;0.7
 [debug] 	found org.scala-stm#scala-stm_2.11;0.7 in sbt-chain
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->org.scala-stm#scala-stm_2.11;0.7 [compile->runtime]
@@ -187,7 +187,7 @@
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->org.scala-stm#scala-stm_2.11;0.7 [compile->master]
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->com.typesafe#config;1.3.0 [compile->default(compile)]
 [info] Resolving com.typesafe#config;1.3.0 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@26546eea
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@3701689a
 [debug] sbt-chain: module revision found in cache: com.typesafe#config;1.3.0
 [debug] 	found com.typesafe#config;1.3.0 in sbt-chain
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->com.typesafe#config;1.3.0 [compile->runtime]
@@ -195,7 +195,7 @@
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->com.typesafe#config;1.3.0 [compile->master]
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->com.typesafe.play#play-functional_2.11;2.5.3 [compile->default(compile)]
 [info] Resolving com.typesafe.play#play-functional_2.11;2.5.3 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@1a4b5083
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@3b6109db
 [debug] sbt-chain: module revision found in cache: com.typesafe.play#play-functional_2.11;2.5.3
 [debug] 	found com.typesafe.play#play-functional_2.11;2.5.3 in sbt-chain
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->com.typesafe.play#play-functional_2.11;2.5.3 [compile->runtime]
@@ -203,7 +203,7 @@
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->com.typesafe.play#play-functional_2.11;2.5.3 [compile->master]
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->com.typesafe.play#play-datacommons_2.11;2.5.3 [compile->default(compile)]
 [info] Resolving com.typesafe.play#play-datacommons_2.11;2.5.3 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@439584a4
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@51be8371
 [debug] sbt-chain: module revision found in cache: com.typesafe.play#play-datacommons_2.11;2.5.3
 [debug] 	found com.typesafe.play#play-datacommons_2.11;2.5.3 in sbt-chain
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->com.typesafe.play#play-datacommons_2.11;2.5.3 [compile->runtime]
@@ -211,7 +211,7 @@
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->com.typesafe.play#play-datacommons_2.11;2.5.3 [compile->master]
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->joda-time#joda-time;2.9.2 [compile->default(compile)]
 [info] Resolving joda-time#joda-time;2.9.2 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@158bcf84
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@3e9b374
 [debug] sbt-chain: module revision found in cache: joda-time#joda-time;2.9.2
 [debug] 	found joda-time#joda-time;2.9.2 in sbt-chain
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->joda-time#joda-time;2.9.2 [compile->runtime]
@@ -219,7 +219,7 @@
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->joda-time#joda-time;2.9.2 [compile->master]
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->org.joda#joda-convert;1.8.1 [compile->default(compile)]
 [info] Resolving org.joda#joda-convert;1.8.1 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@20305fdf
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@70e7640f
 [debug] sbt-chain: module revision found in cache: org.joda#joda-convert;1.8.1
 [debug] 	found org.joda#joda-convert;1.8.1 in sbt-chain
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->org.joda#joda-convert;1.8.1 [compile->runtime]
@@ -227,7 +227,7 @@
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->org.joda#joda-convert;1.8.1 [compile->master]
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->com.fasterxml.jackson.core#jackson-core;2.7.1 [compile->default(compile)]
 [info] Resolving com.fasterxml.jackson.core#jackson-core;2.7.1 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@1ce8608d
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@246f7395
 [debug] sbt-chain: module revision found in cache: com.fasterxml.jackson.core#jackson-core;2.7.1
 [debug] 	found com.fasterxml.jackson.core#jackson-core;2.7.1 in sbt-chain
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->com.fasterxml.jackson.core#jackson-core;2.7.1 [compile->runtime]
@@ -235,7 +235,7 @@
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->com.fasterxml.jackson.core#jackson-core;2.7.1 [compile->master]
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->com.fasterxml.jackson.core#jackson-annotations;2.7.1 [compile->default(compile)]
 [info] Resolving com.fasterxml.jackson.core#jackson-annotations;2.7.1 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@bcf23ac
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@4e9ccb6
 [debug] sbt-chain: module revision found in cache: com.fasterxml.jackson.core#jackson-annotations;2.7.1
 [debug] 	found com.fasterxml.jackson.core#jackson-annotations;2.7.1 in sbt-chain
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->com.fasterxml.jackson.core#jackson-annotations;2.7.1 [compile->runtime]
@@ -243,7 +243,7 @@
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->com.fasterxml.jackson.core#jackson-annotations;2.7.1 [compile->master]
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->com.fasterxml.jackson.core#jackson-databind;2.7.1 [compile->default(compile)]
 [info] Resolving com.fasterxml.jackson.core#jackson-databind;2.7.1 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@204c0fb1
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@29990bc4
 [debug] sbt-chain: module revision found in cache: com.fasterxml.jackson.core#jackson-databind;2.7.1
 [debug] 	found com.fasterxml.jackson.core#jackson-databind;2.7.1 in sbt-chain
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->com.fasterxml.jackson.core#jackson-databind;2.7.1 [compile->runtime]
@@ -251,7 +251,7 @@
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->com.fasterxml.jackson.core#jackson-databind;2.7.1 [compile->master]
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->com.fasterxml.jackson.datatype#jackson-datatype-jdk8;2.7.1 [compile->default(compile)]
 [info] Resolving com.fasterxml.jackson.datatype#jackson-datatype-jdk8;2.7.1 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@61038b9c
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@42fb67f
 [debug] sbt-chain: module revision found in cache: com.fasterxml.jackson.datatype#jackson-datatype-jdk8;2.7.1
 [debug] 	found com.fasterxml.jackson.datatype#jackson-datatype-jdk8;2.7.1 in sbt-chain
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->com.fasterxml.jackson.datatype#jackson-datatype-jdk8;2.7.1 [compile->runtime]
@@ -259,7 +259,7 @@
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->com.fasterxml.jackson.datatype#jackson-datatype-jdk8;2.7.1 [compile->master]
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->com.fasterxml.jackson.datatype#jackson-datatype-jsr310;2.7.1 [compile->default(compile)]
 [info] Resolving com.fasterxml.jackson.datatype#jackson-datatype-jsr310;2.7.1 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@21abc8c6
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@3a8953e1
 [debug] sbt-chain: module revision found in cache: com.fasterxml.jackson.datatype#jackson-datatype-jsr310;2.7.1
 [debug] 	found com.fasterxml.jackson.datatype#jackson-datatype-jsr310;2.7.1 in sbt-chain
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->com.fasterxml.jackson.datatype#jackson-datatype-jsr310;2.7.1 [compile->runtime]
@@ -267,7 +267,7 @@
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->com.fasterxml.jackson.datatype#jackson-datatype-jsr310;2.7.1 [compile->master]
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->com.github.wookietreiber#scala-chart_2.11;0.5.0 [compile->default(compile)]
 [info] Resolving com.github.wookietreiber#scala-chart_2.11;0.5.0 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@57e1be7b
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@47fa1c25
 [debug] sbt-chain: module revision found in cache: com.github.wookietreiber#scala-chart_2.11;0.5.0
 [debug] 	found com.github.wookietreiber#scala-chart_2.11;0.5.0 in sbt-chain
 [debug] 	[0.5.0] com.github.wookietreiber#scala-chart_2.11;0.5.0
@@ -276,7 +276,7 @@
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->com.github.wookietreiber#scala-chart_2.11;0.5.0 [compile->master]
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->org.jfree#jfreechart;1.0.19 [compile->default(compile)]
 [info] Resolving org.jfree#jfreechart;1.0.19 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@1a8ddb7b
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@11b6b5dd
 [debug] sbt-chain: module revision found in cache: org.jfree#jfreechart;1.0.19
 [debug] 	found org.jfree#jfreechart;1.0.19 in sbt-chain
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->org.jfree#jfreechart;1.0.19 [compile->runtime]
@@ -284,7 +284,7 @@
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->org.jfree#jfreechart;1.0.19 [compile->master]
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->org.jfree#jcommon;1.0.23 [compile->default(compile)]
 [info] Resolving org.jfree#jcommon;1.0.23 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@76cebb5c
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@462b2268
 [debug] sbt-chain: module revision found in cache: org.jfree#jcommon;1.0.23
 [debug] 	found org.jfree#jcommon;1.0.23 in sbt-chain
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->org.jfree#jcommon;1.0.23 [compile->runtime]
@@ -292,7 +292,7 @@
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->org.jfree#jcommon;1.0.23 [compile->master]
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->org.scala-lang.modules#scala-swing_2.11;1.0.2 [compile->default(compile)]
 [info] Resolving org.scala-lang.modules#scala-swing_2.11;1.0.2 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@197f07c2
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@40315fb
 [debug] sbt-chain: module revision found in cache: org.scala-lang.modules#scala-swing_2.11;1.0.2
 [debug] 	found org.scala-lang.modules#scala-swing_2.11;1.0.2 in sbt-chain
 [debug] == resolving dependencies icfp#icfp$sources_2.11;1.0->org.scala-lang.modules#scala-swing_2.11;1.0.2 [compile->runtime]
@@ -2369,10 +2369,10 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#test-interface;1.0!test-interface.jar(src)
 [debug] 	[NOT REQUIRED] org.typelevel#discipline_2.11;0.4!discipline_2.11.jar
 [debug] 	[NOT REQUIRED] org.typelevel#discipline_2.11;0.4!discipline_2.11.jar(src)
-[debug] 	[NOT REQUIRED] org.typelevel#catalysts-platform_2.11;0.0.2!catalysts-platform_2.11.jar(src)
 [debug] 	[NOT REQUIRED] org.typelevel#catalysts-platform_2.11;0.0.2!catalysts-platform_2.11.jar
-[debug] 	[NOT REQUIRED] org.typelevel#catalysts-macros_2.11;0.0.2!catalysts-macros_2.11.jar(src)
+[debug] 	[NOT REQUIRED] org.typelevel#catalysts-platform_2.11;0.0.2!catalysts-platform_2.11.jar(src)
 [debug] 	[NOT REQUIRED] org.typelevel#catalysts-macros_2.11;0.0.2!catalysts-macros_2.11.jar
+[debug] 	[NOT REQUIRED] org.typelevel#catalysts-macros_2.11;0.0.2!catalysts-macros_2.11.jar(src)
 [debug] 	[NOT REQUIRED] org.typelevel#cats-core_2.11;0.6.1!cats-core_2.11.jar
 [debug] 	[NOT REQUIRED] org.typelevel#cats-core_2.11;0.6.1!cats-core_2.11.jar(src)
 [debug] 	[NOT REQUIRED] org.typelevel#cats-laws_2.11;0.6.1!cats-laws_2.11.jar(src)
@@ -2383,10 +2383,10 @@
 [debug] 	[NOT REQUIRED] com.typesafe.play#play-json_2.11;2.5.3!play-json_2.11.jar
 [debug] 	[NOT REQUIRED] com.typesafe.play#play-iteratees_2.11;2.5.3!play-iteratees_2.11.jar(src)
 [debug] 	[NOT REQUIRED] com.typesafe.play#play-iteratees_2.11;2.5.3!play-iteratees_2.11.jar
-[debug] 	[NOT REQUIRED] org.scala-stm#scala-stm_2.11;0.7!scala-stm_2.11.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-stm#scala-stm_2.11;0.7!scala-stm_2.11.jar
-[debug] 	[NOT REQUIRED] com.typesafe#config;1.3.0!config.jar
+[debug] 	[NOT REQUIRED] org.scala-stm#scala-stm_2.11;0.7!scala-stm_2.11.jar(src)
 [debug] 	[NOT REQUIRED] com.typesafe#config;1.3.0!config.jar(src)
+[debug] 	[NOT REQUIRED] com.typesafe#config;1.3.0!config.jar
 [debug] 	[NOT REQUIRED] com.typesafe.play#play-functional_2.11;2.5.3!play-functional_2.11.jar
 [debug] 	[NOT REQUIRED] com.typesafe.play#play-functional_2.11;2.5.3!play-functional_2.11.jar(src)
 [debug] 	[NOT REQUIRED] com.typesafe.play#play-datacommons_2.11;2.5.3!play-datacommons_2.11.jar
@@ -2397,16 +2397,16 @@
 [debug] 	[NOT REQUIRED] org.joda#joda-convert;1.8.1!joda-convert.jar
 [debug] 	[NOT REQUIRED] com.fasterxml.jackson.core#jackson-core;2.7.1!jackson-core.jar(src)
 [debug] 	[NOT REQUIRED] com.fasterxml.jackson.core#jackson-core;2.7.1!jackson-core.jar
-[debug] 	[NOT REQUIRED] com.fasterxml.jackson.core#jackson-annotations;2.7.1!jackson-annotations.jar(src)
 [debug] 	[NOT REQUIRED] com.fasterxml.jackson.core#jackson-annotations;2.7.1!jackson-annotations.jar
+[debug] 	[NOT REQUIRED] com.fasterxml.jackson.core#jackson-annotations;2.7.1!jackson-annotations.jar(src)
 [debug] 	[NOT REQUIRED] com.fasterxml.jackson.core#jackson-databind;2.7.1!jackson-databind.jar
 [debug] 	[NOT REQUIRED] com.fasterxml.jackson.core#jackson-databind;2.7.1!jackson-databind.jar(src)
 [debug] 	[NOT REQUIRED] com.fasterxml.jackson.datatype#jackson-datatype-jdk8;2.7.1!jackson-datatype-jdk8.jar(src)
 [debug] 	[NOT REQUIRED] com.fasterxml.jackson.datatype#jackson-datatype-jdk8;2.7.1!jackson-datatype-jdk8.jar
-[debug] 	[NOT REQUIRED] com.fasterxml.jackson.datatype#jackson-datatype-jsr310;2.7.1!jackson-datatype-jsr310.jar(src)
 [debug] 	[NOT REQUIRED] com.fasterxml.jackson.datatype#jackson-datatype-jsr310;2.7.1!jackson-datatype-jsr310.jar
-[debug] 	[NOT REQUIRED] com.github.wookietreiber#scala-chart_2.11;0.5.0!scala-chart_2.11.jar(src)
+[debug] 	[NOT REQUIRED] com.fasterxml.jackson.datatype#jackson-datatype-jsr310;2.7.1!jackson-datatype-jsr310.jar(src)
 [debug] 	[NOT REQUIRED] com.github.wookietreiber#scala-chart_2.11;0.5.0!scala-chart_2.11.jar
+[debug] 	[NOT REQUIRED] com.github.wookietreiber#scala-chart_2.11;0.5.0!scala-chart_2.11.jar(src)
 [debug] 	[NOT REQUIRED] org.jfree#jfreechart;1.0.19!jfreechart.jar
 [debug] 	[NOT REQUIRED] org.jfree#jfreechart;1.0.19!jfreechart.jar(src)
 [debug] 	[NOT REQUIRED] org.jfree#jcommon;1.0.23!jcommon.jar(src)
@@ -2418,18 +2418,18 @@
 [debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.11;1.0.4!scala-xml_2.11.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-parser-combinators_2.11;1.0.4!scala-parser-combinators_2.11.jar(src)
 [debug] 	[NOT REQUIRED] jline#jline;2.12.1!jline.jar(src)
-[debug] :: resolution report :: resolve 660ms :: artifacts dl 55ms
-[debug] 	report for icfp#icfp$sources_2.11;1.0 compile produced in /Users/greddy/Documents/ICPF/icfp2016/code/target/resolution-cache/reports/icfp-icfp$sources_2.11-compile.xml
-[debug] 	report for icfp#icfp$sources_2.11;1.0 runtime produced in /Users/greddy/Documents/ICPF/icfp2016/code/target/resolution-cache/reports/icfp-icfp$sources_2.11-runtime.xml
-[debug] 	report for icfp#icfp$sources_2.11;1.0 test produced in /Users/greddy/Documents/ICPF/icfp2016/code/target/resolution-cache/reports/icfp-icfp$sources_2.11-test.xml
-[debug] 	report for icfp#icfp$sources_2.11;1.0 provided produced in /Users/greddy/Documents/ICPF/icfp2016/code/target/resolution-cache/reports/icfp-icfp$sources_2.11-provided.xml
-[debug] 	report for icfp#icfp$sources_2.11;1.0 optional produced in /Users/greddy/Documents/ICPF/icfp2016/code/target/resolution-cache/reports/icfp-icfp$sources_2.11-optional.xml
-[debug] 	report for icfp#icfp$sources_2.11;1.0 compile-internal produced in /Users/greddy/Documents/ICPF/icfp2016/code/target/resolution-cache/reports/icfp-icfp$sources_2.11-compile-internal.xml
-[debug] 	report for icfp#icfp$sources_2.11;1.0 runtime-internal produced in /Users/greddy/Documents/ICPF/icfp2016/code/target/resolution-cache/reports/icfp-icfp$sources_2.11-runtime-internal.xml
-[debug] 	report for icfp#icfp$sources_2.11;1.0 test-internal produced in /Users/greddy/Documents/ICPF/icfp2016/code/target/resolution-cache/reports/icfp-icfp$sources_2.11-test-internal.xml
-[debug] 	report for icfp#icfp$sources_2.11;1.0 plugin produced in /Users/greddy/Documents/ICPF/icfp2016/code/target/resolution-cache/reports/icfp-icfp$sources_2.11-plugin.xml
-[debug] 	report for icfp#icfp$sources_2.11;1.0 sources produced in /Users/greddy/Documents/ICPF/icfp2016/code/target/resolution-cache/reports/icfp-icfp$sources_2.11-sources.xml
-[debug] 	report for icfp#icfp$sources_2.11;1.0 docs produced in /Users/greddy/Documents/ICPF/icfp2016/code/target/resolution-cache/reports/icfp-icfp$sources_2.11-docs.xml
-[debug] 	report for icfp#icfp$sources_2.11;1.0 pom produced in /Users/greddy/Documents/ICPF/icfp2016/code/target/resolution-cache/reports/icfp-icfp$sources_2.11-pom.xml
-[debug] 	report for icfp#icfp$sources_2.11;1.0 scala-tool produced in /Users/greddy/Documents/ICPF/icfp2016/code/target/resolution-cache/reports/icfp-icfp$sources_2.11-scala-tool.xml
-[debug] 	resolve done (660ms resolve - 55ms download)
+[debug] :: resolution report :: resolve 644ms :: artifacts dl 45ms
+[debug] 	report for icfp#icfp$sources_2.11;1.0 compile produced in /Users/wzhao/Documents/DS12/Course/Capstone/Waze_Traffic/ICPF/icfp2016/code/target/resolution-cache/reports/icfp-icfp$sources_2.11-compile.xml
+[debug] 	report for icfp#icfp$sources_2.11;1.0 runtime produced in /Users/wzhao/Documents/DS12/Course/Capstone/Waze_Traffic/ICPF/icfp2016/code/target/resolution-cache/reports/icfp-icfp$sources_2.11-runtime.xml
+[debug] 	report for icfp#icfp$sources_2.11;1.0 test produced in /Users/wzhao/Documents/DS12/Course/Capstone/Waze_Traffic/ICPF/icfp2016/code/target/resolution-cache/reports/icfp-icfp$sources_2.11-test.xml
+[debug] 	report for icfp#icfp$sources_2.11;1.0 provided produced in /Users/wzhao/Documents/DS12/Course/Capstone/Waze_Traffic/ICPF/icfp2016/code/target/resolution-cache/reports/icfp-icfp$sources_2.11-provided.xml
+[debug] 	report for icfp#icfp$sources_2.11;1.0 optional produced in /Users/wzhao/Documents/DS12/Course/Capstone/Waze_Traffic/ICPF/icfp2016/code/target/resolution-cache/reports/icfp-icfp$sources_2.11-optional.xml
+[debug] 	report for icfp#icfp$sources_2.11;1.0 compile-internal produced in /Users/wzhao/Documents/DS12/Course/Capstone/Waze_Traffic/ICPF/icfp2016/code/target/resolution-cache/reports/icfp-icfp$sources_2.11-compile-internal.xml
+[debug] 	report for icfp#icfp$sources_2.11;1.0 runtime-internal produced in /Users/wzhao/Documents/DS12/Course/Capstone/Waze_Traffic/ICPF/icfp2016/code/target/resolution-cache/reports/icfp-icfp$sources_2.11-runtime-internal.xml
+[debug] 	report for icfp#icfp$sources_2.11;1.0 test-internal produced in /Users/wzhao/Documents/DS12/Course/Capstone/Waze_Traffic/ICPF/icfp2016/code/target/resolution-cache/reports/icfp-icfp$sources_2.11-test-internal.xml
+[debug] 	report for icfp#icfp$sources_2.11;1.0 plugin produced in /Users/wzhao/Documents/DS12/Course/Capstone/Waze_Traffic/ICPF/icfp2016/code/target/resolution-cache/reports/icfp-icfp$sources_2.11-plugin.xml
+[debug] 	report for icfp#icfp$sources_2.11;1.0 sources produced in /Users/wzhao/Documents/DS12/Course/Capstone/Waze_Traffic/ICPF/icfp2016/code/target/resolution-cache/reports/icfp-icfp$sources_2.11-sources.xml
+[debug] 	report for icfp#icfp$sources_2.11;1.0 docs produced in /Users/wzhao/Documents/DS12/Course/Capstone/Waze_Traffic/ICPF/icfp2016/code/target/resolution-cache/reports/icfp-icfp$sources_2.11-docs.xml
+[debug] 	report for icfp#icfp$sources_2.11;1.0 pom produced in /Users/wzhao/Documents/DS12/Course/Capstone/Waze_Traffic/ICPF/icfp2016/code/target/resolution-cache/reports/icfp-icfp$sources_2.11-pom.xml
+[debug] 	report for icfp#icfp$sources_2.11;1.0 scala-tool produced in /Users/wzhao/Documents/DS12/Course/Capstone/Waze_Traffic/ICPF/icfp2016/code/target/resolution-cache/reports/icfp-icfp$sources_2.11-scala-tool.xml
+[debug] 	resolve done (644ms resolve - 45ms download)

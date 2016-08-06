@@ -32,8 +32,15 @@ trait FractionT {
   def / (i:Int):FractionT
   def * (i:Int):FractionT
 
+  def sqrt(precision: Int) : FractionT
+  def abs : FractionT
+
   def inverse:FractionT
   def negate:FractionT
+
+  def < (other: FractionT) : Boolean
+  def == (other: FractionT) : Boolean
+  def <= (other: FractionT) : Boolean
 
   def gcd:Int = {
     gcd(this.num,this.den)
