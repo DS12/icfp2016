@@ -1,4 +1,4 @@
-package icfp;
+package icfp
 
 import Geometry._
 
@@ -39,6 +39,8 @@ case class Silhouette(polys: Seq[Polygon]) {
 
 
 case class Skeleton(edges: Seq[LineSegment]) {
+  def apply(facets: Seq[Facet]): Skeleton = Skeleton(facets.flatMap(_.edges))
+
   def translate(p: Point): Skeleton = Skeleton(edges map (_.translate(p)))
   val vertices: Seq[Point] = edgeToVertex(edges)
   def boundary = genBoundary(edges)

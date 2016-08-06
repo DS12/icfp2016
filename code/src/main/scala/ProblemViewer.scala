@@ -1,6 +1,5 @@
-package icfp;
-
-import OrigamiParse._
+import icfp.Geometry.Point
+import icfp.OrigamiParse._
 
 import scalax.chart.XYChart
 import scalax.chart.api._

@@ -37,6 +37,24 @@ object icfp2016 {
 
     def unfold(edge: LineSegment): List[SilhouetteState] = ???
 
+    def unfoldOneFacet(edge: LineSegment, facet: Facet): SilhouetteState = {
+      // add new lines
+      val newEdges: Seq[LineSegment] = edge.reflect(facet).edges
+      // erase old lines
+      val movedEdges: Seq[LineSegment] = facet.edges.filter(!this.skeleton.boundary.contains(_))
+      val newSkeleton: Skeleton = Skeleton((this.skeleton.edges.filter(!movedEdges.contains(_)) ++ newEdges).distinct)
+
+      // if the points is in the Silhoette, then it must be a boundary point, so no points will be removed.
+      val newPoints: Seq[Point] = newEdges.flatMap((edge: LineSegment) => edge.endpoints)
+      val newSilhouette: Silhouette = Silhouette(
+        this.silhouette.polys.map { (polygon: Polygon) =>
+          if (polygon.pts.contains(edge.p1)) Polygon((polygon.pts ++ newPoints).distinct)
+          else polygon
+        }
+      )
+
+      SilhouetteState(newSilhouette, newSkeleton, ???)
+    }
 
     def deFacet(facets: List[Facet], ske: Skeleton): (List[Facet], Skeleton) = {
       println(ske)

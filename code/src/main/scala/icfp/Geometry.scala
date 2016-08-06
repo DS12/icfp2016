@@ -1,4 +1,4 @@
-package icfp;
+package icfp
 
 import spire.math.Rational
 import scala.math._
@@ -44,7 +44,7 @@ object Geometry {
 
     lazy val pts = sort(points)
 
-    def apply(points: Seq[Point]): ccwPoints = new ccwPoints(pts)
+    def apply(points: Seq[Point]): ccwPoints = ccwPoints(pts)
 
   }
 
@@ -83,6 +83,10 @@ object Geometry {
         Point(2 * d - p.x, 2 * d * a - p.y + 2 * c)
       }
     }
+
+    def reflect(l: LineSegment): LineSegment = LineSegment(this.reflect(l.p1), this.reflect(l.p2))
+
+    def reflect(f: Facet): Facet = Facet(ccwPoints(f.vertices.points.map(this.reflect)))
 
     def translate(p: Point): LineSegment = LineSegment(p1 - p, p2 - p)
 

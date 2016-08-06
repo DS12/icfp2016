@@ -1,7 +1,8 @@
-package icfp;
+package icfp
 
 import cats.Eval
 import cats.data.{State, StateT}
+import icfp.Geometry.{LineSegment, Point}
 
 import scala.math.BigInt
 import spire.math.Rational
@@ -11,9 +12,9 @@ object OrigamiParse {
 
   def tokenize(str: String): List[String] = str.split("""(\s|,)""").toList
 
-  def repeat[A](n: Int)(p: Parse[A]): Parse[List[A]] = 
-    if (n==0) State.pure(Nil)
-    else p flatMap { a => repeat(n-1)(p) map (a :: _) }
+  def repeat[A](n: Int)(p: Parse[A]): Parse[List[A]] =
+    if (n == 0) State.pure(Nil)
+    else p flatMap { a => repeat(n - 1)(p) map (a :: _) }
 
   val parseNum: Parse[BigInt] =
     State { (toks: List[String]) =>
@@ -29,10 +30,11 @@ object OrigamiParse {
       } else {
         Rational(BigInt(tok), BigInt(1))
       }
-    )
+      )
   }
+
   val parseRational: Parse[Rational] = State(runParseRational)
-  val parsePoint: Parse[Point] = repeat(2)(parseRational) map (Point(_:_*))
+  val parsePoint: Parse[Point] = repeat(2)(parseRational) map (Point(_: _*))
   val parseLineSegment: Parse[LineSegment] = repeat(2)(parsePoint) map {
     case p1 :: p2 :: Nil => LineSegment(p1, p2)
   }
@@ -74,7 +76,7 @@ object OrigamiParseExample extends App {
 1/2,1/2 0,1/2
 0,1/2 0,0
 0,0 1/2,1/2
-"""
+    """
 
   val initToks = tokenize(ex)
   println(s"initToks = $initToks")
