@@ -104,24 +104,13 @@ object ICFPGamingRect {
 
     // All the source vertices, indexed
     val indexedVertices: Map[Int, (Rational, Rational)] = points.zipWithIndex.toMap.map(_.swap)
-    //    indexedVertices foreach println
 
     val indexListLength = indexedVertices.size
-//    val numIndicesOnOneSide = math.sqrt(indexListLength).toInt
 
     val numIndicesAlongX = splits(dX).length
     val numIndicesAlongY = splits(dY).length
 
     // --- Generating facets
-//    val facets: List[List[Int]] = for {
-//      x <- (0 until numIndicesOnOneSide - 1).toList.map(_ * numIndicesOnOneSide)
-//      y = (x until (x + numIndicesOnOneSide)).tuple
-//      yPair <- y
-//      yPairRevTrans = yPair.reverse.map {
-//        _ + numIndicesOnOneSide
-//      }
-//    } yield yPair ++ yPairRevTrans
-
     val facets: List[List[Int]] = for {
       x <- (0 until numIndicesAlongX - 1).toList.map(_ * numIndicesAlongY)
       y = (x until (x + numIndicesAlongY)).tuple
@@ -130,9 +119,6 @@ object ICFPGamingRect {
         _ + numIndicesAlongY
       }
     } yield yPair ++ yPairRevTrans
-
-//    facets foreach println
-
 
     // --- Generating silhouette
 
@@ -162,9 +148,7 @@ object ICFPGamingRect {
 //    shiftedXIndexedPointGroups.foreach(println(_))
 
     val shiftedXIndexedPoints: List[(Int, Point)] = shiftedXIndexedPointGroups.flatten.map{ x => (x._2, x._1)}
-//    println(shiftedXIndexedPoints)
     val shiftedXMap: Map[Int, Point] = shiftedXIndexedPoints.toMap
-//    println(shiftedXMap)
 
     val yIndexedPointGroups: List[List[(Point, Int)]] =
       yIndicesGroups.map { aGroup: List[Int] =>
