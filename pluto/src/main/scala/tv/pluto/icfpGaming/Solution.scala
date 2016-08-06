@@ -8,7 +8,7 @@ case class Solution(skeleton: List[Point], facets: List[List[Int]], silhouette: 
        |${skeleton.size}
        |${skeleton.mkString("\n")}
        |${facets.size}
-       |${facets.map(l => l.size :: l).map(_.mkString(" ")).mkString("\n")}
+       |${facets.map(l => (l.size :: l).mkString(" ")).mkString("\n")}
        |${silhouette.mkString("\n")}
-    """.stripMargin
+    """.stripMargin.trim
 }

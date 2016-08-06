@@ -18,10 +18,6 @@ object NaiveSolWriter {
 
     val writer = new PrintWriter(new File(fileDest))
 
-//    source.foreach{ line => writer.write(line) }
-//    facets.foreach{ line => writer.write(line) }
-//    destination.foreach{ line => writer.write(line) }
-
     writer.write(source)
     writer.write(facets)
     writer.write(destination)
