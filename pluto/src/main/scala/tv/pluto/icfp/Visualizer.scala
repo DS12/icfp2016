@@ -1,9 +1,25 @@
 package tv.pluto.icfp
 
 import java.io.ByteArrayInputStream
+
+import tv.pluto.icfpGaming.Solution
+
 import sys.process._
 
+import ConvexHull.Tupler
+
 object Visualizer {
+
+  def plotSolution(solution: Solution): Unit = {
+    val points = solution.silhouette.zipWithIndex.map(_.swap).toMap
+    val edges = solution.facets.flatMap {
+      case ints => (ints.last :: ints).map(points).tuple
+    }.map {
+      case (p1, p2) => Edge(p1, p2)
+    }
+
+    visualize(edges)
+  }
 
   def visualize(edges: Iterable[Edge]): Unit = {
     val input = edges.map(edge => {
