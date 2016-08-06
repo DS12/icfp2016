@@ -7,15 +7,22 @@ object Geometry {
 
   case class Point(x: Rational, y: Rational) {
     def -(that: Point): Point = Point(this.x - that.x, this.y - that.y)
+
     def dot(that: Point): Double = (this.x * that.x + this.y * that.y).doubleValue
+
     def length: Double = sqrt(this.dot(this))
+
     def cosineAngleTo(that: Point): Double = this.dot(that) / (sqrt(this.length) * sqrt(that.length))
+
+    def distanceFrom(that: Point): Double = (this - that).length
 
     // true if point is at the left hand side of the line, false if point is on or at the right hand side of the line.
     def isAtLeft(line: LineSegment): Boolean = {
-      if (line.slope == Double.PositiveInfinity) {if (line.p1.y < line.p2.y) x < 0 else x > 0}
-      else y > line.slope * x
+      if (line.slope == Double.PositiveInfinity) {
+        if (line.p1.y < line.p2.y) x < 0 else x > 0
       }
+      else y > line.slope * x
+    }
 
     // find out closest points among otherPoints to this point
     def closestPoints(otherPoints: Seq[Point]): Seq[Point] = {
@@ -28,10 +35,10 @@ object Geometry {
     def apply(coords: Rational*) = new Point(coords(0), coords(1))
   }
 
-  case class ccwPoints(points: Seq[Point]){
+  case class ccwPoints(points: Seq[Point]) {
     def sort(input: Seq[Point]): Seq[Point] = {
       val first = points.filter(_.x == points.map(_.x).min).minBy(_.y)
-      val second = points.filter(_!=first).map(p => (p, LineSegment(first, p).slope)).maxBy(_._2)._1
+      val second = points.filter(_ != first).map(p => (p, LineSegment(first, p).slope)).maxBy(_._2)._1
       def go(prev: Point, current: Point, left: Seq[Point], sorted: Seq[Point]): Seq[Point] = {
         if (left.isEmpty) current +: sorted
         else {
@@ -39,7 +46,7 @@ object Geometry {
           go(current, next, left.filter(_ != next), current +: sorted)
         }
       }
-      go(first, second, points.filter(p => p!=first && p!=second), Seq(first))
+      go(first, second, points.filter(p => p != first && p != second), Seq(first))
     }
 
     lazy val pts = sort(points)
@@ -59,12 +66,12 @@ object Geometry {
 
     // None if line segment is vertical.
     def slopeIntForm: Option[(Rational, Rational)] =
-      if ((p2.x - p1.x).isZero) None
-      else {
-        val slope = (p2.y - p1.y) / (p2.x - p1.x)
-        val intercept = p1.y - slope * p1.x
-        Some((slope, intercept))
-      }
+    if ((p2.x - p1.x).isZero) None
+    else {
+      val slope = (p2.y - p1.y) / (p2.x - p1.x)
+      val intercept = p1.y - slope * p1.x
+      Some((slope, intercept))
+    }
 
     def slope: Double = slopeIntForm match {
       case Some((slope, _)) => slope.toDouble
@@ -73,15 +80,13 @@ object Geometry {
 
     // http://stackoverflow.com/questions/3306838/algorithm-for-reflecting-a-point-across-a-line
     def reflect(p: Point): Point = this.slopeIntForm match {
-      case None => {
+      case None =>
         val commonX = this.p1.x
         val dx = p.x - commonX
         Point(p.x - 2 * dx, p.y)
-      }
-      case Some((a, c)) => {
+      case Some((a, c)) =>
         val d = (p.x + (p.y - c) * a) / (1 + a * a)
         Point(2 * d - p.x, 2 * d * a - p.y + 2 * c)
-      }
     }
 
     def reflect(l: LineSegment): LineSegment = LineSegment(this.reflect(l.p1), this.reflect(l.p2))
@@ -139,7 +144,7 @@ object Geometry {
 
   // require vertices.length >= 2
   def vertexToEdge(vertices: Seq[Point]): Seq[LineSegment] = {
-    if (vertices.length == 2) Seq(LineSegment(vertices(0), vertices(1)))
+    if (vertices.length == 2) Seq(LineSegment(vertices.head, vertices(1)))
     else {
       val completeGraph = for {
         va <- vertices
