@@ -63,11 +63,21 @@ object Parser {
   }
 }
 
+object Point {
+
+  def apply(x: Long, y: Long): Point = Point(BigInt(x), BigInt(y))
+
+}
+
 case class Problem(polygons: List[List[Point]], edges: Set[Edge])
 
 case class Point(x: Rational, y: Rational) {
 
+  def subtract(otherPoint: Point) = Point(this.x - otherPoint.x, this.y - otherPoint.y)
+
   def add(otherPoint: Point) = Point(this.x + otherPoint.x, this.y + otherPoint.y)
+
+  def multiply(m: Int) = Point(this.x * m, this.y * m)
 
   def divide(divisor: Int) = Point(this.x / divisor, this.y / divisor)
 
@@ -75,7 +85,13 @@ case class Point(x: Rational, y: Rational) {
 
 }
 
-case class Edge(p1: Point, p2: Point)
+case class Edge(p1: Point, p2: Point) {
+
+  def center = p1.add(p2) divide 2
+
+  def subtract(p: Point) = Edge(p1 subtract p, p2 subtract p)
+
+}
 
 
 

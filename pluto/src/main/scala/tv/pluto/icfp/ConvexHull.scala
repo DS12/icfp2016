@@ -9,11 +9,17 @@ import scala.collection.mutable.ListBuffer
   */
 object ConvexHull {
 
+  implicit class Tupler[T](seq: Seq[T]) {
+    def tuple: Iterator[(T, T)] = seq.flatMap(x => List(x, x)).tail.grouped(2).filter(_.size == 2).map {
+      case Seq(a, b) => (a, b)
+    }
+  }
+
   def edgesOnConvexHull(points: Set[Point]): Set[Edge] = {
     val hull: Seq[Point] = ConvexHull.convexHull(points.toSeq)
 
-    (hull :+ hull.head).flatMap(x => List(x, x)).tail.grouped(2).filter(_.size == 2).map(_.toList).map {
-      case Seq(p1, p2) => Edge(p1, p2)
+    (hull :+ hull.head).tuple.map {
+      case (p1, p2) => Edge(p1, p2)
     }.toSet
   }
 
