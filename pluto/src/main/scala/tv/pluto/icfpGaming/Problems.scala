@@ -1,5 +1,7 @@
 package tv.pluto.icfpGaming
 
+import java.io.{File, PrintWriter}
+
 import spire.math.Rational
 import tv.pluto.icfp.{Edge, Point, Visualizer}
 import tv.pluto.icfp.ConvexHull.Tupler
@@ -36,16 +38,8 @@ object Problems {
 
     val lines = lowerTriangular ++ upperTriangular
 
-    val linesNumber = lines.zipWithIndex.flatMap {
-      case (e: Edge, i: Int) => List(e.p1, e.p2).map(p => (p, i))
-    }.toMap
-
-    val centers: Map[Int, Point] = lines.map(_.center).zipWithIndex.map(_.swap).toMap
-
     val skeleton = List(Point(0, 0)) ++ lines.flatMap(e => List(e.p1, e.p2)) ++ List(Point(1, 1))
     val indices = skeleton.zipWithIndex.toMap
-
-    Visualizer.visualize(lines ++ skeleton.map(p => Edge(p, p add Point(Rational(0.1), Rational(0.1)))))
 
     val facets = {
       val first = Point(0, 0)
@@ -83,29 +77,33 @@ object Problems {
         List((Point(0, 0), indices(point)))
     }.toList.sortBy(_._2).map(_._1)
 
-    Visualizer.visualize(skeleton.zip(silhouette).map {
-      case (Point(x1, y1), Point(x2, y2)) =>
-        val d: Rational = 0.001 * new Random().nextInt(100)
-        Edge(Point(x1 + d, y1), Point(x2 + d, y2))
-    }.toList)
-
-
-    val pSk = indices.map(_.swap).toMap
-    val pSi = silhouette.zipWithIndex.map(_.swap).toMap
-
-    val xx = facets.map {
-      case ints => (ints.last :: ints).map(pSi).tuple.toList.map {
-        case (p1, p2) => Edge(p1, p2)
-      }
-    }
-
-    Visualizer.visualize(xx.flatten)
-
     Solution(skeleton, facets, silhouette)
   }
 
   def main(args: Array[String]) {
-    println(generateStripe(8))
+
+    val solutions = for {
+      sx <- List(-1, 1)
+      sy <- List(-1, 1)
+      tx <- List(0, 3)
+      i <- 22 to 25
+    } yield {
+      def projectToHell(point: Point) = point match {
+        case Point(x, y) => Point(sx * x + tx, sy * y)
+      }
+
+      val sol = generateStripe(i)
+      Solution(sol.skeleton, sol.facets, sol.silhouette.map(projectToHell)).toString
+    }
+
+    solutions.zipWithIndex.foreach {
+      case (content, index) =>
+        val writer = new PrintWriter(s"questions/$index.txt")
+
+        writer.println(content)
+        writer.close()
+    }
+
   }
 
 }
