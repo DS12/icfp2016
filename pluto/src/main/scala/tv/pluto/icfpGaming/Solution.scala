@@ -10,5 +10,5 @@ case class Solution(skeleton: List[Point], facets: List[List[Int]], silhouette: 
        |${facets.size}
        |${facets.map(l => (l.size :: l).mkString(" ")).mkString("\n")}
        |${silhouette.mkString("\n")}
-    """.stripMargin
+    """.stripMargin.trim
 }
