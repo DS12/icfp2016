@@ -24,7 +24,7 @@ object icfp2016 {
     val isSolved: Boolean = silhouette.polys.length == 1 && destination.forall(silhouette.polys.head.pts.contains(_))
     val isLegal: Boolean = ???
     val vertices: Set[Point] = skeleton.edges.flatMap(_.endpoints).toSet
-    val boundaries: Seq[LineSegment] = skeleton.boundary
+    val boundaries: Set[LineSegment] = skeleton.boundary
 
 
     def unfold(edge: LineSegment): List[SilhouetteState] = ???
