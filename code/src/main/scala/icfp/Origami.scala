@@ -22,7 +22,7 @@ object Point {
 case class LineSegment(p1: Point, p2: Point){
   def ==(that: LineSegment): Boolean = (this.p1 == that.p1 && this.p2 == that.p2) || (this.p1 == that.p2 && this.p2 == that.p1)
 
-  def endpoints: Seq[Point] = p1 :: p2 :: Nil
+  def endpoints: Set[Point] = Set(p1, p2)
 
   // None if line segment is vertical.
   def slopeIntForm: Option[(Rational, Rational)] =
@@ -49,6 +49,8 @@ case class LineSegment(p1: Point, p2: Point){
   }
 
   def reflect(l: LineSegment): LineSegment = LineSegment(this.reflect(l.p1), this.reflect(l.p2))
+
+  def reflect(f: Facet): Facet = Facet(f.edges.map(this.reflect))
 
   def translate(p: Point): LineSegment = LineSegment(p1-p, p2-p)
 
@@ -84,6 +86,8 @@ case class Silhouette(polys: Set[Polygon]) {
 }
 
 case class Skeleton(edges: Set[LineSegment]) {
+  def apply(facets: Set[Facet]): Skeleton = Skeleton(facets.flatMap(_.edges))
+
   def translate(p: Point): Skeleton = Skeleton(edges map (_.translate(p)))
   val boundary: Set[LineSegment] = Set()
 }
@@ -121,6 +125,8 @@ object OrigamiReflectExample extends App {
   val ex3 = Point( 1.4, 0.1)
   val rex3 = ident.reflect(ex3)
   println(s"reflected ${ex3.x.doubleValue}, ${ex3.y.doubleValue} over ident to get ${rex3.x.doubleValue}, ${rex3.y.doubleValue}")
+
+
 }
 
 object OrigamiOutThere extends App {
