@@ -82,7 +82,10 @@ case class Problem(silh: Silhouette, skel: Skeleton) {
 
   def normalize: Problem = {
     val orig = silh.originPoint
-    this.translate(orig)
+    val xAligned = this.translate(orig)
+    val ys = xAligned.silh.polys.flatMap(poly => poly.pts map (_.y))
+    val minY = ys.tail.foldLeft(ys.head)(_ min _)
+    xAligned.translate(Point(0,minY))
   }
 
 }
@@ -105,7 +108,7 @@ object OrigamiReflectExample extends App {
   println(s"reflected ${ex3.x.doubleValue}, ${ex3.y.doubleValue} over ident to get ${rex3.x.doubleValue}, ${rex3.y.doubleValue}")
 }
 
-object OrigamiOutThere {
+object OrigamiOutThere extends App {
 
   import OrigamiParse._
 
@@ -126,6 +129,16 @@ object OrigamiOutThere {
 10000000000000000000000000000000000000000000000000000000000000000000000001,1/3 30000000000000000000000000000000000000000000000000000000000000000000000001/3,1
 10000000000000000000000000000000000000000000000000000000000000000000000000,1 30000000000000000000000000000000000000000000000000000000000000000000000001/3,1
     """.stripMargin
-  val prob = parseProblem.run(tokenize(farAway)).value._2
-  println(prob.silh.normalize)
+  val farAway2 = """1
+4
+-1 -1
+1 -1
+-1 1
+1 1
+2
+-1 -1 1 1
+-1 1 1 -1
+"""
+  val prob = parseProblem.run(tokenize(farAway2)).value._2
+  println(prob.normalize)
 }
