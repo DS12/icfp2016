@@ -18,117 +18,10 @@ object ICFPGamingRect {
   implicit def tuple2ToList[T](t: (T, T)): List[T] = List(t._1, t._2)
 
   def main(args: Array[String]): Unit = {
-    val problemFileNames: List[String] = "ls problems".lineStream.filter(_.contains("101")).toList
-    val problemCase: String = Source.fromFile("problems/" + problemFileNames.head).getLines().mkString("\n")
+//    val problemFileNames: List[String] = "ls problems".lineStream.filter(_.contains("13")).toList
+    val problemFileNames: List[String] = "ls problems".lineStream.take(10).toList
 
-    val parsedVertices = parserProblem(problemCase).polygons.head
-
-    val minX = parsedVertices.map(_.x.toDouble).min
-    val maxX = parsedVertices.map(_.x.toDouble).max
-    val minY = parsedVertices.map(_.y.toDouble).min
-    val maxY = parsedVertices.map(_.y.toDouble).max
-
-    def ceil(d: Double, m: Int): Rational = Rational(BigInt(math.ceil(d * m).toLong), BigInt(m))
-
-    val dX = ceil(maxX - minX, 20)
-    val dY = ceil(maxY - minY, 20)
-
-    def splits(fraction: Rational) = Stream
-      .iterate(0)(_ + 1)
-      .takeWhile(i => ((fraction * i) - 1) < fraction)
-      .toList
-
-    val points = for {
-      i <- splits(dX)
-      j <- splits(dY)
-      x = i * dX
-      y = j * dY
-    } yield {
-      val xb = if (x >= 1) Rational.one else x
-      val yb = if (y >= 1) Rational.one else y
-
-      println(s"point: $xb,$yb")
-
-      (xb, yb)
-    }
-
-    // All the source vertices, indexed
-    val indexedVertices: Map[Int, (Rational, Rational)] = points.zipWithIndex.toMap.map(_.swap)
-    //    indexedVertices foreach println
-
-    val indexListLength = indexedVertices.size
-    val numIndicesOnOneSide = math.sqrt(indexListLength).toInt
-
-    // --- Generating facets
-    val facets: List[List[Int]] = for {
-      y <- (0 until numIndicesOnOneSide - 1).toList.map(_ * numIndicesOnOneSide) // 0, 3
-      x = (y until (y + numIndicesOnOneSide)).tuple
-      xPair <- x
-      xPairRevTrans = xPair.reverse.map {
-        _ + numIndicesOnOneSide
-      }
-    } yield (xPair ++ xPairRevTrans).toList
-    //    facets foreach println
-
-
-    // --- Generating silhouette
-
-    // Source vertex indices grouped along x or y axis
-    val yIndicesGroups: List[List[Int]] = (0 until indexListLength).toList.grouped(numIndicesOnOneSide).toList
-    val firstXIndexGroup: List[Int] = (0 until numIndicesOnOneSide).toList.map(_ * numIndicesOnOneSide)
-    val xIndicesGroups: List[List[Int]] = (0 until numIndicesOnOneSide).toList.map { i => firstXIndexGroup.map(_ + i) }
-
-    val xIndexedPointGroups: List[List[(Point, Int)]] =
-      xIndicesGroups.map { aGroup: List[Int] =>
-        aGroup.map { index: Int => {
-          val thePoint: (Rational, Rational) = indexedVertices(index)
-          (Point(thePoint._1, thePoint._2), index)
-        }
-        }
-      }
-
-    println("--- original points:")
-    xIndexedPointGroups.foreach(println(_))
-
-    val shiftedXIndexedPointGroups: List[List[(Point, Int)]] =
-      xIndexedPointGroups.map { group: List[(Point, Int)] =>
-        translateX(group.take(2), group.drop(2), dX)
-      }
-
-    println("--- original points shifted along x:")
-    shiftedXIndexedPointGroups.foreach(println(_))
-
-    val shiftedXIndexedPoints: List[(Point, Int)] = shiftedXIndexedPointGroups.flatten
-    val shiftedXMap: Map[Int, Point] = shiftedXIndexedPoints.toMap.map(_.swap)
-
-    val yIndexedPointGroups: List[List[(Point, Int)]] =
-      yIndicesGroups.map { aGroup: List[Int] =>
-        aGroup.map { index: Int => (shiftedXMap(index), index) }
-      }
-
-    val shiftedYIndexedPointGroups: List[List[(Point, Int)]] =
-      yIndexedPointGroups.map { group: List[(Point, Int)] =>
-        translateY(group.take(2), group.drop(2), dY)
-      }
-
-    println("--- original points shifted along both x and y:")
-    shiftedYIndexedPointGroups.foreach(println(_))
-
-    val shiftedIndexedPoints: List[(Point, Int)] = shiftedYIndexedPointGroups.flatten
-    val silhouette: List[Point] =
-      shiftedIndexedPoints
-        .sortBy(_._2)
-        .map(_._1)
-        .map { aPoint: Point => Point(aPoint.x + minX, aPoint.y + minY) }
-
-    val skeleton: List[Point] = xIndexedPointGroups.flatten.sortBy(_._2).map(_._1)
-
-    val solved: String = Solution(skeleton, facets, silhouette).toString
-
-    val fileDest = "./solutionsRect/" + problemFileNames.head
-    val writer = new PrintWriter(new File(fileDest))
-    writer.write(solved)
-    writer.close()
+    problemFileNames foreach { fn => println(fn); pipeline(fn) }
   }
 
   // Call this function with first two points of group in "front", the rest in "end"
@@ -178,34 +71,127 @@ object ICFPGamingRect {
     // A list of vertices of the polygon (only one polygon for now,
     // not dealing with polygons with holes)
     val parsedVertices = parserProblem(problemCase).polygons.head
-    val center = findCentroid(parsedVertices)
-    val square = unitSquareCentroid(center)
 
-    NaiveSolWriter.writeSol(square, filename.split("\\.").head)
-  }
+    val minX = parsedVertices.map(_.x.toDouble).min
+    val maxX = parsedVertices.map(_.x.toDouble).max
+    val minY = parsedVertices.map(_.y.toDouble).min
+    val maxY = parsedVertices.map(_.y.toDouble).max
 
-  // Naive centroid by summing all points and dividing by num of points
-  def findCentroid(points: List[Point]): Point = {
-    val numPoints = points.length
-    val pointsSum: Point = points.fold(Point(0.0, 0.0)) {
-      _.add(_)
+    def ceil(d: Double, m: Int): Rational = Rational(BigInt(math.ceil(d * m).toLong), BigInt(m))
+
+    val dX = ceil(maxX - minX, 20)
+    val dY = ceil(maxY - minY, 20)
+
+    def splits(fraction: Rational) = Stream
+      .iterate(0)(_ + 1)
+      .takeWhile(i => ((fraction * i) - 1) < fraction)
+      .toList
+
+    val points = for {
+      i <- splits(dX)
+      j <- splits(dY)
+      x = i * dX
+      y = j * dY
+    } yield {
+      val xb = if (x >= 1) Rational.one else x
+      val yb = if (y >= 1) Rational.one else y
+
+      println(s"point: $xb,$yb")
+
+      (xb, yb)
     }
 
-    pointsSum.divide(numPoints)
+    // All the source vertices, indexed
+    val indexedVertices: Map[Int, (Rational, Rational)] = points.zipWithIndex.toMap.map(_.swap)
+    //    indexedVertices foreach println
+
+    val indexListLength = indexedVertices.size
+//    val numIndicesOnOneSide = math.sqrt(indexListLength).toInt
+
+    val numIndicesAlongX = splits(dX).length
+    val numIndicesAlongY = splits(dY).length
+
+    // --- Generating facets
+//    val facets: List[List[Int]] = for {
+//      x <- (0 until numIndicesOnOneSide - 1).toList.map(_ * numIndicesOnOneSide)
+//      y = (x until (x + numIndicesOnOneSide)).tuple
+//      yPair <- y
+//      yPairRevTrans = yPair.reverse.map {
+//        _ + numIndicesOnOneSide
+//      }
+//    } yield yPair ++ yPairRevTrans
+
+    val facets: List[List[Int]] = for {
+      x <- (0 until numIndicesAlongX - 1).toList.map(_ * numIndicesAlongY)
+      y = (x until (x + numIndicesAlongY)).tuple
+      yPair <- y
+      yPairRevTrans = yPair.reverse.map {
+        _ + numIndicesAlongY
+      }
+    } yield yPair ++ yPairRevTrans
+
+    facets foreach println
+
+
+    // --- Generating silhouette
+
+    // Source vertex indices grouped along x or y axis
+    val firstXIndexGroup: List[Int] = (0 until numIndicesAlongX).toList.map(_ * numIndicesAlongY)
+    val xIndicesGroups: List[List[Int]] = (0 until numIndicesAlongY).toList.map { i => firstXIndexGroup.map(_ + i) }
+    val yIndicesGroups: List[List[Int]] = (0 until indexListLength).toList.grouped(numIndicesAlongY).toList
+
+    val xIndexedPointGroups: List[List[(Point, Int)]] =
+      xIndicesGroups.map { aGroup: List[Int] =>
+        aGroup.map { index: Int => {
+          val thePoint: (Rational, Rational) = indexedVertices(index)
+          (Point(thePoint._1, thePoint._2), index)
+        }
+        }
+      }
+
+    println("--- original points:")
+    xIndexedPointGroups.foreach(println(_))
+
+    val shiftedXIndexedPointGroups: List[List[(Point, Int)]] =
+      xIndexedPointGroups.map { group: List[(Point, Int)] =>
+        translateX(group.take(2), group.drop(2), dX)
+      }
+
+    println("--- original points shifted along x:")
+    shiftedXIndexedPointGroups.foreach(println(_))
+
+    val shiftedXIndexedPoints: List[(Int, Point)] = shiftedXIndexedPointGroups.flatten.map{ x => (x._2, x._1)}
+    println(shiftedXIndexedPoints)
+    val shiftedXMap: Map[Int, Point] = shiftedXIndexedPoints.toMap
+    println(shiftedXMap)
+
+    val yIndexedPointGroups: List[List[(Point, Int)]] =
+      yIndicesGroups.map { aGroup: List[Int] =>
+        aGroup.map { index: Int => (shiftedXMap(index), index) }
+      }
+
+    val shiftedYIndexedPointGroups: List[List[(Point, Int)]] =
+      yIndexedPointGroups.map { group: List[(Point, Int)] =>
+        translateY(group.take(2), group.drop(2), dY)
+      }
+
+    println("--- original points shifted along both x and y:")
+    shiftedYIndexedPointGroups.foreach(println(_))
+
+    val shiftedIndexedPoints: List[(Point, Int)] = shiftedYIndexedPointGroups.flatten
+    val silhouette: List[Point] =
+      shiftedIndexedPoints
+        .sortBy(_._2)
+        .map(_._1)
+        .map { aPoint: Point => Point(aPoint.x + minX, aPoint.y + minY) }
+
+    val skeleton: List[Point] = xIndexedPointGroups.flatten.sortBy(_._2).map(_._1)
+
+    val solved: String = Solution(skeleton, facets, silhouette).toString
+
+    val fileDest = "./solutionsRect/" + filename
+    val writer = new PrintWriter(new File(fileDest))
+    writer.write(solved)
+    writer.close()
   }
-
-  // Given a centroid point, return a unit square around this point
-  // List of four Points from bottom left, ccw
-  def unitSquareCentroid(centroid: Point): List[Point] = {
-    val x = centroid.x
-    val y = centroid.y
-
-    List(
-      Point(x - 0.5, y - 0.5),
-      Point(x + 0.5, y - 0.5),
-      Point(x + 0.5, y + 0.5),
-      Point(x - 0.5, y + 0.5)
-    )
-  }
-
 }
