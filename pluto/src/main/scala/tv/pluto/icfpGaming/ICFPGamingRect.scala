@@ -95,7 +95,7 @@ object ICFPGamingRect {
       }
     }
     val silhouette = labeledPoints.map {
-      case ((i, j), (xb, yb)) =>
+      case ((i, j), Point(xb, yb)) =>
         val x = arrangeSilhouette(i, xb, dX, splitsX.last)
         val y = arrangeSilhouette(j, yb, dY, splitsY.last)
 
