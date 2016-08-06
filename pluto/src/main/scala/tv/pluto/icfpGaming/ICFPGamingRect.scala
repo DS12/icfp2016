@@ -1,10 +1,11 @@
 package tv.pluto.icfpGaming
 
-import spire.math.Rational
+import spire.math.{Rational, SafeLong}
 import tv.pluto.icfp.Parser._
 import tv.pluto.icfp._
 import tv.pluto.icfp.ConvexHull.Tupler
 import java.io._
+
 import scala.io.Source
 import scala.sys.process._
 import tv.pluto.icfp.Visualizer.plotSolution
@@ -19,7 +20,7 @@ object ICFPGamingRect {
   implicit def tuple2ToList[T](t: (T, T)): List[T] = List(t._1, t._2)
 
   def main(args: Array[String]): Unit = {
-//    val problemFileNames: List[String] = "ls problems".lineStream.filter(_.contains("16")).toList
+    //    val problemFileNames: List[String] = "ls problems".lineStream.filter(_.contains("16")).toList
     val problemFileNames: List[String] = "ls problems".lineStream.take(10).toList
 
     problemFileNames foreach { fn => println(fn); pipeline(fn) }
@@ -73,12 +74,12 @@ object ICFPGamingRect {
     // not dealing with polygons with holes)
     val parsedVertices = parserProblem(problemCase).polygons.head
 
-    val minX = parsedVertices.map(_.x.toDouble).min
-    val maxX = parsedVertices.map(_.x.toDouble).max
-    val minY = parsedVertices.map(_.y.toDouble).min
-    val maxY = parsedVertices.map(_.y.toDouble).max
+    val minX = parsedVertices.map(_.x).min
+    val maxX = parsedVertices.map(_.x).max
+    val minY = parsedVertices.map(_.y).min
+    val maxY = parsedVertices.map(_.y).max
 
-    def ceil(d: Double, m: Int): Rational = Rational(BigInt(math.ceil(d * m).toLong), BigInt(m))
+    def ceil(r: Rational, d: Int) = (r * d).ceil / d
 
     val dX = ceil(maxX - minX, 20)
     val dY = ceil(maxY - minY, 20)
@@ -136,18 +137,18 @@ object ICFPGamingRect {
         }
       }
 
-//    println("--- original points:")
-//    xIndexedPointGroups.foreach(println(_))
+    //    println("--- original points:")
+    //    xIndexedPointGroups.foreach(println(_))
 
     val shiftedXIndexedPointGroups: List[List[(Point, Int)]] =
       xIndexedPointGroups.map { group: List[(Point, Int)] =>
         translateX(group.take(2), group.drop(2), dX)
       }
 
-//    println("--- original points shifted along x:")
-//    shiftedXIndexedPointGroups.foreach(println(_))
+    //    println("--- original points shifted along x:")
+    //    shiftedXIndexedPointGroups.foreach(println(_))
 
-    val shiftedXIndexedPoints: List[(Int, Point)] = shiftedXIndexedPointGroups.flatten.map{ x => (x._2, x._1)}
+    val shiftedXIndexedPoints: List[(Int, Point)] = shiftedXIndexedPointGroups.flatten.map { x => (x._2, x._1) }
     val shiftedXMap: Map[Int, Point] = shiftedXIndexedPoints.toMap
 
     val yIndexedPointGroups: List[List[(Point, Int)]] =
@@ -160,8 +161,8 @@ object ICFPGamingRect {
         translateY(group.take(2), group.drop(2), dY)
       }
 
-//    println("--- original points shifted along both x and y:")
-//    shiftedYIndexedPointGroups.foreach(println(_))
+    //    println("--- original points shifted along both x and y:")
+    //    shiftedYIndexedPointGroups.foreach(println(_))
 
     val shiftedIndexedPoints: List[(Point, Int)] = shiftedYIndexedPointGroups.flatten
     val silhouette: List[Point] =
@@ -174,7 +175,7 @@ object ICFPGamingRect {
 
     val solved: String = Solution(skeleton, facets, silhouette).toString
 
-//    plotSolution(Solution(skeleton, facets, silhouette))
+    //    plotSolution(Solution(skeleton, facets, silhouette))
 
     val fileDest = "./solutionsRect/" + filename
     val writer = new PrintWriter(new File(fileDest))
