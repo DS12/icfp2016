@@ -35,11 +35,14 @@ object icfp2016 {
 
     def unfold(edge: LineSegment): List[SilhouetteState] = ???
 
-    def findFacet(edge: LineSegment): Facet = {
-      ???
-    }
 
     def deFacet(facets: List[Facet], ske: Skeleton): (List[Facet], Skeleton) = {
+      def findFacet(edge: LineSegment): Facet = {
+        def choose(available: Seq[LineSegment]): LineSegment = ???
+        val available = ske.edges.filter(ls => ls.endpoints.contains(edge.p2) && !ls.endpoints.contains(edge.p1))
+        val theRightWay = choose(available)
+      }
+
       if (ske.edges.length < 3) (facets, ske)
       else {
         val facetToGo = findFacet(ske.edges.head)
