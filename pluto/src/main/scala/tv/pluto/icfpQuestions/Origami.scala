@@ -10,9 +10,12 @@ case class Origami(vertexMap: Map[String, Point], edgeList: List[VertexEdge]) {
   // Given two points that are known to be on two edges,
   // fold along the edge between these two points
   def simpleFold(pointX: Point, edgeX: VertexEdge, pointY: Point, edgeY: VertexEdge) = {
-    
+
   }
 
+  def lineEqn(pointX: Point, pointY: Point) = {
+
+  }
 
 }
 
