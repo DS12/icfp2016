@@ -30,15 +30,22 @@ object icfp2016 {
     val isSolved: Boolean = silhouette.polys.length == 1 && destination.forall(silhouette.polys.head.pts.contains(_))
     val isLegal: Boolean = ???
     val vertices: Set[Point] = skeleton.edges.flatMap(_.endpoints).toSet
-    val boundaries: Seq[LineSegment] = skeleton.boundary
+    val boundaries: Set[LineSegment] = skeleton.boundary
 
 
     def unfold(edge: LineSegment): List[SilhouetteState] = ???
 
+    def findFacet(edge: LineSegment): Facet = {
+      ???
+    }
+
     def deFacet(facets: List[Facet], ske: Skeleton): (List[Facet], Skeleton) = {
       if (ske.edges.length < 3) (facets, ske)
       else {
-        
+        val facetToGo = findFacet(ske.edges.head)
+        val edgesToDel = facetToGo.edges.filter(boundaries.contains)
+        val skeletonLeft = Skeleton(ske.edges.filter(!edgesToDel.contains(_)))
+        deFacet(findFacet(ske.edges.head) :: facets, skeletonLeft)
       }
     }
 

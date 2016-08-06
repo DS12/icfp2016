@@ -51,7 +51,9 @@ case class Polygon(pts: Seq[Point]) {
   def isCCW: Boolean = ???
 }
 
-case class Facet(vertices: Seq[Point])
+case class Facet(edges: Seq[LineSegment]){
+  val vertices: Set[Point] = edges.flatMap(_.endpoints).toSet
+}
 
 
 case class Silhouette(polys: Seq[Polygon]) {
