@@ -7,6 +7,7 @@ import tv.pluto.icfp.ConvexHull.Tupler
 import java.io._
 import scala.io.Source
 import scala.sys.process._
+import tv.pluto.icfp.Visualizer.plotSolution
 
 /**
   * Generates naive solutions of smallest unrotated rectangle that fits around the silhouette.
@@ -18,7 +19,7 @@ object ICFPGamingRect {
   implicit def tuple2ToList[T](t: (T, T)): List[T] = List(t._1, t._2)
 
   def main(args: Array[String]): Unit = {
-//    val problemFileNames: List[String] = "ls problems".lineStream.filter(_.contains("13")).toList
+//    val problemFileNames: List[String] = "ls problems".lineStream.filter(_.contains("16")).toList
     val problemFileNames: List[String] = "ls problems".lineStream.take(10).toList
 
     problemFileNames foreach { fn => println(fn); pipeline(fn) }
@@ -130,7 +131,7 @@ object ICFPGamingRect {
       }
     } yield yPair ++ yPairRevTrans
 
-    facets foreach println
+//    facets foreach println
 
 
     // --- Generating silhouette
@@ -149,21 +150,21 @@ object ICFPGamingRect {
         }
       }
 
-    println("--- original points:")
-    xIndexedPointGroups.foreach(println(_))
+//    println("--- original points:")
+//    xIndexedPointGroups.foreach(println(_))
 
     val shiftedXIndexedPointGroups: List[List[(Point, Int)]] =
       xIndexedPointGroups.map { group: List[(Point, Int)] =>
         translateX(group.take(2), group.drop(2), dX)
       }
 
-    println("--- original points shifted along x:")
-    shiftedXIndexedPointGroups.foreach(println(_))
+//    println("--- original points shifted along x:")
+//    shiftedXIndexedPointGroups.foreach(println(_))
 
     val shiftedXIndexedPoints: List[(Int, Point)] = shiftedXIndexedPointGroups.flatten.map{ x => (x._2, x._1)}
-    println(shiftedXIndexedPoints)
+//    println(shiftedXIndexedPoints)
     val shiftedXMap: Map[Int, Point] = shiftedXIndexedPoints.toMap
-    println(shiftedXMap)
+//    println(shiftedXMap)
 
     val yIndexedPointGroups: List[List[(Point, Int)]] =
       yIndicesGroups.map { aGroup: List[Int] =>
@@ -175,8 +176,8 @@ object ICFPGamingRect {
         translateY(group.take(2), group.drop(2), dY)
       }
 
-    println("--- original points shifted along both x and y:")
-    shiftedYIndexedPointGroups.foreach(println(_))
+//    println("--- original points shifted along both x and y:")
+//    shiftedYIndexedPointGroups.foreach(println(_))
 
     val shiftedIndexedPoints: List[(Point, Int)] = shiftedYIndexedPointGroups.flatten
     val silhouette: List[Point] =
@@ -188,6 +189,8 @@ object ICFPGamingRect {
     val skeleton: List[Point] = xIndexedPointGroups.flatten.sortBy(_._2).map(_._1)
 
     val solved: String = Solution(skeleton, facets, silhouette).toString
+
+//    plotSolution(Solution(skeleton, facets, silhouette))
 
     val fileDest = "./solutionsRect/" + filename
     val writer = new PrintWriter(new File(fileDest))
