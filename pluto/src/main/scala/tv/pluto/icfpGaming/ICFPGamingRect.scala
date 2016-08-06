@@ -82,7 +82,6 @@ object ICFPGamingRect {
     } yield yPair ++ yPairRevTrans
 
     // --- Generating silhouette
-
     def arrangeSilhouette(i: Int, x: Rational, step: Rational, last: Int) = {
       if (i == last) {
         if (i % 2 == 0) {
