@@ -5,15 +5,15 @@ package DataStructures
   */
 trait PointT {
 
-  val x:FractionPointCoordinate
-  val y:FractionPointCoordinate
+  val x:FractionT
+  val y:FractionT
 
   override def toString:String =  x.toString + "," + y.toString
 
 }
 
-case class Point(x:FractionPointCoordinate,y:FractionPointCoordinate) extends PointT
-
+//case class Point(x:FractionPointCoordinate,y:FractionPointCoordinate) extends PointT
+case class Point(x:FractionT,y:FractionT) extends PointT
 
 object PointExample extends App {
 

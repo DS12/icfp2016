@@ -14,8 +14,7 @@ case class Slope(value:FractionT)  {
   override def toString:String =  "Slope with value (m) = " + value.toString
 
   def isInfinity:Boolean = value match {
-    case PosInfinitePoint => true
-    case NegInfinitePoint => true
+    case FractionPointCoordinate(_,0) => true
     case _ => false
   }
 

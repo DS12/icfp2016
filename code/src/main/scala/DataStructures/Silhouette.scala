@@ -12,16 +12,9 @@ trait SilhouetteT {
 
 
   override def toString = {
-
-    def makeOnePoly(p: PolygonT) : String = p.toString + "\n"
-
-    val nPoly = polyList.length
-    val tempPolyString = polyList.map(p => makeOnePoly(p)).mkString("")
-    val len = tempPolyString.length
-    nPoly.toString + "\n" + tempPolyString.slice(0, len-1)
+    polyList.length + "\n" + polyList.map(_.toString).mkString("\n")
   }
 
 }
 
-
-case class Silhouette(polyList: List[PolygonT])  extends SilhouetteT {}
+case class Silhouette(polyList: Seq[PolygonT])  extends SilhouetteT {}

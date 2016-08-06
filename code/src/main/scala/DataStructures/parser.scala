@@ -84,12 +84,12 @@ case class ReadInput(fileName: String) {
   val (hil: SilhouetteT, cur: Int) = readHil(lines)
   val ske : Skeleton = readSke(lines, cur)
 
-  val input = Problem(hil, ske)
+  val problem = Problem(hil, ske)
 }
 
 object test extends App {
   val addr = "input.txt"
-  val input = ReadInput(addr).input
+  val input = ReadInput(addr).problem
   println("Printing Sample Input ")
   println(input.toString)
 }

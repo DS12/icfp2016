@@ -13,14 +13,8 @@ trait PolygonT {
   //def getArea:FractionT =
 
   override def toString : String = {
-
-    def makeOneVertex(v: PointT) = v.toString + "\n"
-
-    val tempString = vertices.length.toString + "\n" +
-      vertices.map(v => makeOneVertex(v)).mkString("")
-    val len = tempString.length
-    tempString.slice(0, len - 1)
-
+    vertices.length.toString + "\n" +
+    vertices.map(_.toString).mkString("\n")
   }
 
 }

@@ -22,15 +22,26 @@ trait FractionT {
   def signReduce:FractionT
   def gcdReduce:FractionT
 
+  def abs:FractionT
+
   def + (f:FractionT):FractionT
   def - (f:FractionT):FractionT
   def / (f:FractionT):FractionT
   def * (f:FractionT):FractionT
 
+  def == (f:FractionT):Boolean
+  def != (f:FractionT):Boolean = !(this == f)
+  def > (f:FractionT):Boolean
+  def < (f:FractionT):Boolean
+
   def + (i:Int):FractionT
   def - (i:Int):FractionT
   def / (i:Int):FractionT
   def * (i:Int):FractionT
+
+  def == (i:Int):Boolean
+  def > (i:Int):Boolean
+  def < (i:Int):Boolean
 
   def inverse:FractionT
   def negate:FractionT

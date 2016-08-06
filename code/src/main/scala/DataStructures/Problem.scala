@@ -13,3 +13,12 @@ trait ProblemT {
 }
 
 case class Problem(silhouette: SilhouetteT, skeleton: SkeletonT) extends ProblemT
+
+object ProblemExample extends App {
+
+  val addr = "input.txt"
+  val problem = ReadInput(addr).problem
+
+  println("A simple problem ")
+  println(problem)
+}

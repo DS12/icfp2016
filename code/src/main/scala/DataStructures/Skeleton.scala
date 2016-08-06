@@ -6,22 +6,16 @@ package DataStructures
 
 trait SkeletonT {
 
-  val segList:Seq[EdgeT]
-  val numOfEdges = segList.size
+  val edges:Seq[EdgeT]
+  val numOfEdges = edges.size
 
   override def toString:String = {
-
-    def makeOneSeg(seg: EdgeT) = seg.toString + "\n"
-
-    val nSeg = segList.length
-    val tempSegString = segList.map(makeOneSeg).mkString("")
-    val len = tempSegString.length
-    nSeg.toString + "\n" + tempSegString.slice(0, len-1)
+    edges.length + "\n" + edges.map(_.toString).mkString("\n")
   }
 
 }
 
-case class Skeleton(segList: List[EdgeT]) extends SkeletonT {}
+case class Skeleton(edges: List[EdgeT]) extends SkeletonT {}
 
 
 
