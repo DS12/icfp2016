@@ -73,11 +73,9 @@ object icfp2016 {
 
     def deFacet(facets: List[Facet], ske: Skeleton): (List[Facet], Skeleton) = {
       println(ske)
-      // ??? if we reached here there must be something wrong
-      if (ske.edges.length < 3) (facets, ske)
+      if (ske.edges.isEmpty) (facets, ske)
       else {
         val facetToGo: Facet = genFacet(ske.edges.head, ske.edges)
-        //??? what if there're not edges to delete? i.e., all edges are already boundaries.
         val edgesToDel: Seq[LineSegment] = facetToGo.edges.filter(ske.boundary.contains)
         val skeletonLeft: Skeleton = Skeleton(ske.edges.filter(!edgesToDel.contains(_)))
         deFacet(facetToGo :: facets, skeletonLeft)
@@ -96,7 +94,7 @@ object icfp2016 {
 
   case class Solution(sil: SilhouetteState) {
     require(sil.isSolved)
-//    val facets: List[Facet] = sil.deFacet(List(), sil.skeleton)._1
+    val facets: List[Facet] = sil.deFacet(List(), sil.skeleton)._1
 
     override def toString: String = {
       "is solved"

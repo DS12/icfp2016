@@ -45,9 +45,9 @@ case class Skeleton(edges: Seq[LineSegment]) {
 
   def translate(p: Point): Skeleton = Skeleton(edges map (_.translate(p)))
 
-  val vertices: Seq[Point] = edgeToVertex(edges)
-  val boundary: Seq[LineSegment] = genBoundary(edges)
-  val boundaryPoints: Seq[Point] = this.boundary.flatMap((segment: LineSegment) => segment.endpoints).distinct
+  lazy val vertices: Seq[Point] = edgeToVertex(edges)
+  lazy val boundary: Seq[LineSegment] = genBoundary(edges)
+  lazy val boundaryPoints: Seq[Point] = this.boundary.flatMap((segment: LineSegment) => segment.endpoints).distinct
 }
 
 
