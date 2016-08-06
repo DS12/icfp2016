@@ -82,7 +82,6 @@ object ICFPGamingRect {
     } yield yPair ++ yPairRevTrans
 
     // --- Generating silhouette
-
     def arrangeSilhouette(i: Int, x: Rational, step: Rational, last: Int) = {
       if (i == last) {
         if (i % 2 == 0) {
@@ -95,7 +94,7 @@ object ICFPGamingRect {
       }
     }
     val silhouette = labeledPoints.map {
-      case ((i, j), (xb, yb)) =>
+      case ((i, j), Point(xb, yb)) =>
         val x = arrangeSilhouette(i, xb, dX, splitsX.last)
         val y = arrangeSilhouette(j, yb, dY, splitsY.last)
 
