@@ -2,54 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc2426d4-321e-4d16-b87b-f9e750b46680" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.11/output_dsp" afterPath="$PROJECT_DIR$/code/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.11/output_dsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/target/streams/$global/update/$global/streams/update_cache_2.11/inputs" afterPath="$PROJECT_DIR$/code/target/streams/$global/update/$global/streams/update_cache_2.11/inputs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/target/streams/$global/update/$global/streams/update_cache_2.11/output" afterPath="$PROJECT_DIR$/code/target/streams/$global/update/$global/streams/update_cache_2.11/output" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/.idea/modules/code-build.iml" afterPath="$PROJECT_DIR$/code/.idea/modules/code-build.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/.idea/modules/code.iml" afterPath="$PROJECT_DIR$/code/.idea/modules/code.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/src/main/scala/DataStructures/EdgeT.scala" afterPath="$PROJECT_DIR$/code/src/main/scala/DataStructures/EdgeT.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/src/main/scala/DataStructures/FractionPointCoordinate.scala" afterPath="$PROJECT_DIR$/code/src/main/scala/DataStructures/FractionPointCoordinate.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/src/main/scala/DataStructures/FractionT.scala" afterPath="$PROJECT_DIR$/code/src/main/scala/DataStructures/FractionT.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/src/main/scala/DataStructures/Point.scala" afterPath="$PROJECT_DIR$/code/src/main/scala/DataStructures/Point.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/target/resolution-cache/icfp/icfp$sources_2.11/1.0/resolved.xml.properties" afterPath="$PROJECT_DIR$/code/target/resolution-cache/icfp/icfp$sources_2.11/1.0/resolved.xml.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/target/resolution-cache/icfp/icfp$sources_2.11/1.0/resolved.xml.xml" afterPath="$PROJECT_DIR$/code/target/resolution-cache/icfp/icfp$sources_2.11/1.0/resolved.xml.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/target/resolution-cache/icfp/icfp_2.11/1.0/resolved.xml.properties" afterPath="$PROJECT_DIR$/code/target/resolution-cache/icfp/icfp_2.11/1.0/resolved.xml.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/target/resolution-cache/icfp/icfp_2.11/1.0/resolved.xml.xml" afterPath="$PROJECT_DIR$/code/target/resolution-cache/icfp/icfp_2.11/1.0/resolved.xml.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/target/resolution-cache/reports/icfp-icfp$sources_2.11-compile-internal.xml" afterPath="$PROJECT_DIR$/code/target/resolution-cache/reports/icfp-icfp$sources_2.11-compile-internal.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/target/resolution-cache/reports/icfp-icfp$sources_2.11-compile.xml" afterPath="$PROJECT_DIR$/code/target/resolution-cache/reports/icfp-icfp$sources_2.11-compile.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/target/resolution-cache/reports/icfp-icfp$sources_2.11-docs.xml" afterPath="$PROJECT_DIR$/code/target/resolution-cache/reports/icfp-icfp$sources_2.11-docs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/target/resolution-cache/reports/icfp-icfp$sources_2.11-optional.xml" afterPath="$PROJECT_DIR$/code/target/resolution-cache/reports/icfp-icfp$sources_2.11-optional.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/target/resolution-cache/reports/icfp-icfp$sources_2.11-plugin.xml" afterPath="$PROJECT_DIR$/code/target/resolution-cache/reports/icfp-icfp$sources_2.11-plugin.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/target/resolution-cache/reports/icfp-icfp$sources_2.11-pom.xml" afterPath="$PROJECT_DIR$/code/target/resolution-cache/reports/icfp-icfp$sources_2.11-pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/target/resolution-cache/reports/icfp-icfp$sources_2.11-provided.xml" afterPath="$PROJECT_DIR$/code/target/resolution-cache/reports/icfp-icfp$sources_2.11-provided.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/target/resolution-cache/reports/icfp-icfp$sources_2.11-runtime-internal.xml" afterPath="$PROJECT_DIR$/code/target/resolution-cache/reports/icfp-icfp$sources_2.11-runtime-internal.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/target/resolution-cache/reports/icfp-icfp$sources_2.11-runtime.xml" afterPath="$PROJECT_DIR$/code/target/resolution-cache/reports/icfp-icfp$sources_2.11-runtime.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/target/resolution-cache/reports/icfp-icfp$sources_2.11-scala-tool.xml" afterPath="$PROJECT_DIR$/code/target/resolution-cache/reports/icfp-icfp$sources_2.11-scala-tool.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/target/resolution-cache/reports/icfp-icfp$sources_2.11-sources.xml" afterPath="$PROJECT_DIR$/code/target/resolution-cache/reports/icfp-icfp$sources_2.11-sources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/target/resolution-cache/reports/icfp-icfp$sources_2.11-test-internal.xml" afterPath="$PROJECT_DIR$/code/target/resolution-cache/reports/icfp-icfp$sources_2.11-test-internal.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/target/resolution-cache/reports/icfp-icfp$sources_2.11-test.xml" afterPath="$PROJECT_DIR$/code/target/resolution-cache/reports/icfp-icfp$sources_2.11-test.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/target/resolution-cache/reports/icfp-icfp_2.11-compile-internal.xml" afterPath="$PROJECT_DIR$/code/target/resolution-cache/reports/icfp-icfp_2.11-compile-internal.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/target/resolution-cache/reports/icfp-icfp_2.11-compile.xml" afterPath="$PROJECT_DIR$/code/target/resolution-cache/reports/icfp-icfp_2.11-compile.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/target/resolution-cache/reports/icfp-icfp_2.11-docs.xml" afterPath="$PROJECT_DIR$/code/target/resolution-cache/reports/icfp-icfp_2.11-docs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/target/resolution-cache/reports/icfp-icfp_2.11-optional.xml" afterPath="$PROJECT_DIR$/code/target/resolution-cache/reports/icfp-icfp_2.11-optional.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/target/resolution-cache/reports/icfp-icfp_2.11-plugin.xml" afterPath="$PROJECT_DIR$/code/target/resolution-cache/reports/icfp-icfp_2.11-plugin.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/target/resolution-cache/reports/icfp-icfp_2.11-pom.xml" afterPath="$PROJECT_DIR$/code/target/resolution-cache/reports/icfp-icfp_2.11-pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/target/resolution-cache/reports/icfp-icfp_2.11-provided.xml" afterPath="$PROJECT_DIR$/code/target/resolution-cache/reports/icfp-icfp_2.11-provided.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/target/resolution-cache/reports/icfp-icfp_2.11-runtime-internal.xml" afterPath="$PROJECT_DIR$/code/target/resolution-cache/reports/icfp-icfp_2.11-runtime-internal.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/target/resolution-cache/reports/icfp-icfp_2.11-runtime.xml" afterPath="$PROJECT_DIR$/code/target/resolution-cache/reports/icfp-icfp_2.11-runtime.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/target/resolution-cache/reports/icfp-icfp_2.11-scala-tool.xml" afterPath="$PROJECT_DIR$/code/target/resolution-cache/reports/icfp-icfp_2.11-scala-tool.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/target/resolution-cache/reports/icfp-icfp_2.11-sources.xml" afterPath="$PROJECT_DIR$/code/target/resolution-cache/reports/icfp-icfp_2.11-sources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/target/resolution-cache/reports/icfp-icfp_2.11-test-internal.xml" afterPath="$PROJECT_DIR$/code/target/resolution-cache/reports/icfp-icfp_2.11-test-internal.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/target/resolution-cache/reports/icfp-icfp_2.11-test.xml" afterPath="$PROJECT_DIR$/code/target/resolution-cache/reports/icfp-icfp_2.11-test.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/target/streams/$global/$global/dumpStructure/$global/streams/out" afterPath="$PROJECT_DIR$/code/target/streams/$global/$global/dumpStructure/$global/streams/out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/target/streams/$global/update/$global/streams/out" afterPath="$PROJECT_DIR$/code/target/streams/$global/update/$global/streams/out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/target/streams/$global/updateClassifiers/$global/streams/out" afterPath="$PROJECT_DIR$/code/target/streams/$global/updateClassifiers/$global/streams/out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/target/streams/compile/externalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/code/target/streams/compile/externalDependencyClasspath/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/target/streams/compile/managedClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/code/target/streams/compile/managedClasspath/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/target/streams/runtime/externalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/code/target/streams/runtime/externalDependencyClasspath/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/target/streams/runtime/managedClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/code/target/streams/runtime/managedClasspath/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/target/streams/test/externalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/code/target/streams/test/externalDependencyClasspath/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/target/streams/test/managedClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/code/target/streams/test/managedClasspath/$global/streams/export" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/src/main/scala/Operations/Geometry.scala" afterPath="$PROJECT_DIR$/code/src/main/scala/Operations/Geometry.scala" />
     </list>
     <ignored path="icfp2016.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -87,38 +44,18 @@
       <file leaf-file-name="Geometry.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/code/src/main/scala/Operations/Geometry.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="472">
-              <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+            <state relative-caret-position="430">
+              <caret line="223" column="19" selection-start-line="223" selection-start-column="19" selection-end-line="223" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FractionPointCoordinate.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code/src/main/scala/DataStructures/FractionPointCoordinate.scala">
+      <file leaf-file-name="Point.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/code/src/main/scala/DataStructures/Point.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FractionT.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code/src/main/scala/DataStructures/FractionT.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LineFunction.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code/src/main/scala/DataStructures/LineFunction.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+            <state relative-caret-position="225">
+              <caret line="15" column="77" selection-start-line="15" selection-start-column="77" selection-end-line="15" selection-end-column="77" />
               <folding />
             </state>
           </provider>
@@ -137,11 +74,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/code/src/main/scala/DataStructures/Point.scala" />
         <option value="$PROJECT_DIR$/code/src/main/scala/DataStructures/LineFunction.scala" />
         <option value="$PROJECT_DIR$/code/src/main/scala/DataStructures/EdgeT.scala" />
         <option value="$PROJECT_DIR$/code/src/main/scala/DataStructures/FractionT.scala" />
         <option value="$PROJECT_DIR$/code/src/main/scala/DataStructures/FractionPointCoordinate.scala" />
+        <option value="$PROJECT_DIR$/code/src/main/scala/DataStructures/Point.scala" />
         <option value="$PROJECT_DIR$/code/src/main/scala/Operations/Geometry.scala" />
       </list>
     </option>
@@ -300,6 +237,74 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="DataStructures" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="icfp2016" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="icfp2016" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scala" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DataStructures" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Polygon.scala" />
+              <option name="myItemType" value="org.jetbrains.plugins.scala.components.ScalaDefsProjectViewProvider$ScalaFileTreeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="icfp2016" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="icfp2016" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scala" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DataStructures" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Point.scala" />
+              <option name="myItemType" value="org.jetbrains.plugins.scala.components.ScalaDefsProjectViewProvider$ScalaFileTreeNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -857,12 +862,12 @@
       <workItem from="1470442508668" duration="836000" />
       <workItem from="1470455266456" duration="6000" />
       <workItem from="1470455616004" duration="5000" />
-      <workItem from="1470455860210" duration="11209000" />
+      <workItem from="1470455860210" duration="19678000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12056000" />
+    <option name="totallyTimeSpent" value="20525000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="41" y="23" width="1337" height="736" extended-state="0" />
@@ -877,7 +882,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24942085" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -894,6 +899,33 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="SBT" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24942085" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -929,18 +961,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/src/main/scala/DataStructures/LineFunction.scala">
+    <entry file="file://$PROJECT_DIR$/code/src/main/scala/DataStructures/FractionPointCoordinate.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+        <state relative-caret-position="2070">
+          <caret line="138" column="39" selection-start-line="138" selection-start-column="39" selection-end-line="138" selection-end-column="39" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/code/src/main/scala/DataStructures/EdgeT.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        <state relative-caret-position="360">
+          <caret line="24" column="11" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
           <folding />
         </state>
       </provider>
@@ -953,34 +985,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/src/main/scala/DataStructures/Point.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/code/src/main/scala/DataStructures/FractionT.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+        <state relative-caret-position="202">
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/src/main/scala/DataStructures/FractionPointCoordinate.scala">
+    <entry file="file://$PROJECT_DIR$/code/src/main/scala/DataStructures/LineFunction.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        <state relative-caret-position="60">
+          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/src/main/scala/DataStructures/Point.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="77" selection-start-line="15" selection-start-column="77" selection-end-line="15" selection-end-column="77" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/code/src/main/scala/Operations/Geometry.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="472">
-          <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+        <state relative-caret-position="430">
+          <caret line="223" column="19" selection-start-line="223" selection-start-column="19" selection-end-line="223" selection-end-column="19" />
           <folding />
         </state>
       </provider>

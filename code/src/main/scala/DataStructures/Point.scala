@@ -12,7 +12,9 @@ trait PointT {
 
 }
 
-case class Point(x:FractionT,y:FractionT) extends PointT
+case class Point(x:FractionT,y:FractionT) extends PointT {
+  def == (other: PointT) : Boolean = (this.x == other.x && this.y == other.y)
+}
 
 
 object PointExample extends App {

@@ -41,6 +41,8 @@ trait FractionT {
   def < (other: FractionT) : Boolean
   def == (other: FractionT) : Boolean
   def <= (other: FractionT) : Boolean
+  def > (other: FractionT) : Boolean
+  def >= (other: FractionT) : Boolean
 
   def gcd:Int = {
     gcd(this.num,this.den)

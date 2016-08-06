@@ -66,6 +66,10 @@ case class FractionPointCoordinate(num:Int, den:Int) extends FractionT {
   override def == (other: FractionT) : Boolean = (this.num * other.den) == (this.den * other.num)
 
   override def <= (other: FractionT) : Boolean = (this < other) || (this == other)
+
+  override def > (other: FractionT) : Boolean = (this.num * other.den) > (this.den * other.num)
+
+  override def >= (other: FractionT) : Boolean = (this > other) || (this == other)
 }
 
 abstract class InfiniteFraction extends FractionT {
@@ -86,6 +90,8 @@ abstract class InfiniteFraction extends FractionT {
   override def < (other: FractionT) = false
   override def == (other: FractionT) = false
   override def <= (other: FractionT) = false
+  override def > (other: FractionT) = false
+  override def >= (other: FractionT) = false
 }
 
 object PosInfinitePoint extends InfiniteFraction {
