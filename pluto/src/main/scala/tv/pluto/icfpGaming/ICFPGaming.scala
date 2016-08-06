@@ -1,7 +1,9 @@
 package tv.pluto.icfpGaming
 
+import spire.math.Rational
 import tv.pluto.icfp._
 import tv.pluto.icfp.Parser._
+
 import sys.process._
 import scala.io.Source
 
@@ -14,49 +16,50 @@ import scala.io.Source
 object ICFPGaming {
 
   def main(args: Array[String]): Unit = {
-    val problemFileNames: List[String] = "ls problems".lineStream.take(10).toList
 
-    problemFileNames foreach { fn => pipeline(fn) }
+    val problemFileNames: List[String] = "ls problems".lineStream.take(101).toList
 
-    /*
-        val test = List(Point(1.0, 1.0), Point(2.0, 2.0), Point(3.0, 3.0))
-        println("Test case points:")
-        test foreach println
-        val center = findCentroid(test)
-        println(s"Center is $center")
-        val square = unitSquareCentroid(center)
-        println("Coordinates of square around center:")
-        square foreach println
+    problemFileNames foreach { fn => println(fn);pipeline(fn) }
 
-        // --- test from parsing
-        val example =
-          """
-            |1
-            |4
-            |-1/2,-1/2
-            |1/2,-1/2
-            |1/2,1/2
-            |-1/2,1/2
-            |4
-            |-1/2,-1/2 1/2,-1/2
-            |-1/2,-1/2 -1/2,1/2
-            |1/2,-1/2 1/2,1/2
-            |-1/2,1/2 1/2,1/2
-          """.stripMargin
+/*
+    val test = List(Point(1.0, 1.0), Point(2.0, 2.0), Point(3.0, 3.0))
+    println("Test case points:")
+    test foreach println
+    val center = findCentroid(test)
+    println(s"Center is $center")
+    val square = unitSquareCentroid(center)
+    println("Coordinates of square around center:")
+    square foreach println
 
-        // A list of vertices of the polygon (only one polygon for now,
-        // not dealing with polygons with holes)
-        val parsedEx: List[Point] = parserProblem(example).polygons.head
-        println("Example case points:")
-        parsedEx foreach println
-        val centerEx = findCentroid(parsedEx)
-        println(s"Center is $centerEx")
-        val squareEx = unitSquareCentroid(centerEx)
-        println("Coordinates of square around center:")
-        squareEx foreach println
+    // --- test from parsing
+    val example =
+      """
+        |1
+        |4
+        |-1/2,-1/2
+        |1/2,-1/2
+        |1/2,1/2
+        |-1/2,1/2
+        |4
+        |-1/2,-1/2 1/2,-1/2
+        |-1/2,-1/2 -1/2,1/2
+        |1/2,-1/2 1/2,1/2
+        |-1/2,1/2 1/2,1/2
+      """.stripMargin
 
-        NaiveSolWriter.writeSol(squareEx, "testOutput")
-    */
+    // A list of vertices of the polygon (only one polygon for now,
+    // not dealing with polygons with holes)
+    val parsedEx: List[Point] = parserProblem(example).polygons.head
+    println("Example case points:")
+    parsedEx foreach println
+    val centerEx = findCentroid(parsedEx)
+    println(s"Center is $centerEx")
+    val squareEx = unitSquareCentroid(centerEx)
+    println("Coordinates of square around center:")
+    squareEx foreach println
+
+    NaiveSolWriter.writeSol(squareEx, "testOutput")
+*/
   }
 
   def pipeline(filename: String) = {
@@ -93,5 +96,6 @@ object ICFPGaming {
 
     List(Point(x - 0.5, y - 0.5), Point(x + 0.5, y - 0.5), Point(x + 0.5, y + 0.5), Point(x - 0.5, y + 0.5))
   }
+
 
 }
