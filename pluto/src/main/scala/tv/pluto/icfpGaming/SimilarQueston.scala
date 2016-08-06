@@ -14,14 +14,15 @@ import scala.io.Source
 object SimilarQuestions {
 
   def main(args: Array[String]) {
-    val problemFileNames: List[String] = "ls problems".lineStream.take(101).toList
-    val allProblems = problemFileNames.map{
+    val problemFileNames: List[String] = "ls problems".lineStream.toList
+    val allParsedProblems = problemFileNames.map{
       fn =>
         val problem = Source.fromFile("problems/" + fn).getLines().mkString("\n")
-        (problem,fn)
+        println(fn)
+        (parserProblem(problem),fn)
     }
 
-    val allParsedProblems = allProblems.map(x => (parserProblem(x._1),x._2))
+    //val allParsedProblems = allProblems.map(x => (parserProblem(x._1),x._2))
 
     val translatedParsedProblems = allParsedProblems.map(p => (translateProblem(p._1, computeMinPoint(p._1)),(p._2,computeMinPoint(p._1))))
 
@@ -32,7 +33,9 @@ object SimilarQuestions {
       .filter(_._2.size > 1)
       .sortBy(_._2.size).reverse
 
-    recurringProblems.foreach(println)
+    recurringProblems.foreach(x => Visualizer.visualize(x._1.edges))
+
+
 
   }
 
