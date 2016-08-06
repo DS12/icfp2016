@@ -8,7 +8,7 @@ trait PointT {
   val x:FractionPointCoordinate
   val y:FractionPointCoordinate
 
-  override def toString:String = "x = " + x.toString + " y = " + y.toString
+  override def toString:String =  x.toString + "," + y.toString
 
 }
 
