@@ -1,6 +1,7 @@
 package icfp
 
 import spire.math.Rational
+import Geometry._
 
 object implicits {
 

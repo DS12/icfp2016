@@ -1,56 +1,7 @@
 package icfp;
 
-import scala.math.BigInt
-import scala.math.sqrt
+import Geometry._
 
-import spire.math.Rational
-
-case class Point(x: Rational, y: Rational) {
-  def -(that: Point): Point = Point(this.x-that.x, this.y-that.y)
-
-  def dot(that: Point): Double = (this.x*that.x + this.y*that.y).doubleValue
-
-  def length: Double = sqrt(this.dot(this))
-
-  def cosineAngleTo(that: Point): Double = this.dot(that) / (sqrt(this.length) * sqrt(that.length))
-}
-
-object Point {
-  def apply(coords: Rational*) = new Point(coords(0), coords(1))
-}
-
-case class LineSegment(p1: Point, p2: Point){
-  def ==(that: LineSegment): Boolean = (this.p1 == that.p1 && this.p2 == that.p2) || (this.p1 == that.p2 && this.p2 == that.p1)
-
-  def endpoints: Seq[Point] = p1 :: p2 :: Nil
-
-  // None if line segment is vertical.
-  def slopeIntForm: Option[(Rational, Rational)] =
-    if ((p2.x - p1.x).isZero) None
-    else {
-      val slope = (p2.y - p1.y) / (p2.x - p1.x)
-      val intercept = p1.y - slope*p1.x
-      Some((slope, intercept))
-    }
-
-  // http://stackoverflow.com/questions/3306838/algorithm-for-reflecting-a-point-across-a-line
-  def reflect(p: Point): Point = this.slopeIntForm match {
-    case None =>
-      {
-        val commonX = this.p1.x
-        val dx = p.x - commonX
-        Point( p.x-2*dx , p.y)
-      }
-    case Some((a, c)) =>
-      {
-        val d = (p.x + (p.y - c)*a) / (1 + a*a)
-        Point(2*d - p.x, 2*d*a - p.y + 2*c)
-      }
-  }
-
-  def translate(p: Point): LineSegment = LineSegment(p1-p, p2-p)
-
-}
 
 case class Polygon(pts: Seq[Point]) {
   def translate(p: Point): Polygon = Polygon(pts.map(_-p))
@@ -58,8 +9,13 @@ case class Polygon(pts: Seq[Point]) {
   def isCCW: Boolean = ???
 }
 
-case class Facet(edges: Seq[LineSegment]){
-  val vertices: Set[Point] = edges.flatMap(_.endpoints).toSet
+// vertices of a facet should always be ordered ccw
+case class Facet(vertices: ccwPoints){
+  require(vertices.pts.length >= 3)
+  def edges: Seq[LineSegment] = {
+    val shift = vertices.pts.tail :+ vertices.pts.head
+    vertices.pts.zip(shift).map(p => LineSegment(p._1, p._2))
+  }
 }
 
 
@@ -81,18 +37,21 @@ case class Silhouette(polys: Seq[Polygon]) {
 
 }
 
+
 case class Skeleton(edges: Seq[LineSegment]) {
   def translate(p: Point): Skeleton = Skeleton(edges map (_.translate(p)))
-  val boundary: Set[LineSegment] = Set()
+  val vertices: Seq[Point] = edgeToVertex(edges)
+  def boundary = genBoundary(edges)
 }
+
 
 case class Problem(silh: Silhouette, skel: Skeleton) {
   lazy val allPts: Seq[Point] = this.silh.polys.flatMap(_.pts)
 
-  lazy val minX = allPts.map(_.x).reduce(_ min _)
-  lazy val minY = allPts.map(_.y).reduce(_ min _)
-  lazy val maxX = allPts.map(_.x).reduce(_ max _)
-  lazy val maxY = allPts.map(_.y).reduce(_ max _)
+  lazy val minX = allPts.map(_.x).min
+  lazy val minY = allPts.map(_.y).min
+  lazy val maxX = allPts.map(_.x).max
+  lazy val maxY = allPts.map(_.y).max
 
   lazy val originPoint: Point = Point(minX, minY)
   lazy val maxPoint: Point = Point(maxX, maxY)
@@ -102,6 +61,7 @@ case class Problem(silh: Silhouette, skel: Skeleton) {
   def normalize: Problem = this.translate(originPoint)
 
 }
+
 
 object OrigamiReflectExample extends App {
 
