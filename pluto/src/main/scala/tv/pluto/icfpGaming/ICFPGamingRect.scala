@@ -1,14 +1,14 @@
 package tv.pluto.icfpGaming
 
-import spire.math.{Rational, SafeLong}
+import java.io._
+
+import spire.math.Rational
+import tv.pluto.icfp.ConvexHull.Tupler
 import tv.pluto.icfp.Parser._
 import tv.pluto.icfp._
-import tv.pluto.icfp.ConvexHull.Tupler
-import java.io._
 
 import scala.io.Source
 import scala.sys.process._
-import tv.pluto.icfp.Visualizer.plotSolution
 
 /**
   * Generates naive solutions of smallest unrotated rectangle that fits around the silhouette.
@@ -20,52 +20,11 @@ object ICFPGamingRect {
   implicit def tuple2ToList[T](t: (T, T)): List[T] = List(t._1, t._2)
 
   def main(args: Array[String]): Unit = {
-//        val problemFileNames: List[String] = "ls problems".lineStream.filter(_.contains("1452")).toList
+    //    val problemFileNames: List[String] = "ls problems".lineStream.filter(_.contains("1452")).toList
     val problemFileNames: List[String] = "ls problems".lineStream.take(10).toList
 
     problemFileNames foreach { fn => println(fn); pipeline(fn) }
   }
-
-  // Call this function with first two points of group in "front", the rest in "end"
-  def translateX(front: List[(Point, Int)], end: List[(Point, Int)], shiftBy: Rational): List[(Point, Int)] = end match {
-    case Nil => front
-    case x :: Nil => {
-      val lastPoint: Point = x._1
-      val lastIndex: Int = x._2
-      val extraLength: Rational = lastPoint.x - shiftBy / (-2)
-      val shiftedEnd: List[(Point, Int)] = List((Point(shiftBy / (-2) - extraLength, lastPoint.y), lastIndex))
-
-      front ++ shiftedEnd
-    }
-    case _ => {
-      val shiftedEnd = end.map { case (aPoint: Point, index: Int) => (Point(aPoint.x + shiftBy, aPoint.y), index) }
-      val newFront = front ++ shiftedEnd.take(2)
-      val newEnd = shiftedEnd.drop(2)
-
-      translateX(newFront, newEnd, shiftBy)
-    }
-  }
-
-  // Call this function with first two points of group in "front", the rest in "end"
-  def translateY(front: List[(Point, Int)], end: List[(Point, Int)], shiftBy: Rational): List[(Point, Int)] = end match {
-    case Nil => front
-    case x :: Nil => {
-      val lastPoint: Point = x._1
-      val lastIndex: Int = x._2
-      val extraLength: Rational = lastPoint.y - shiftBy / (-2)
-      val shiftedEnd: List[(Point, Int)] = List((Point(lastPoint.x, shiftBy / (-2) - extraLength), lastIndex))
-
-      front ++ shiftedEnd
-    }
-    case _ => {
-      val shiftedEnd = end.map { case (aPoint: Point, index: Int) => (Point(aPoint.x, aPoint.y + shiftBy), index) }
-      val newFront = front ++ shiftedEnd.take(2)
-      val newEnd = shiftedEnd.drop(2)
-
-      translateY(newFront, newEnd, shiftBy)
-    }
-  }
-
 
   def pipeline(filename: String) = {
     val problemCase: String = Source.fromFile("problems/" + filename).getLines().mkString("\n")
@@ -89,9 +48,12 @@ object ICFPGamingRect {
       .takeWhile(i => ((fraction * i) - 1) < fraction)
       .toList
 
-    val points = for {
-      i <- splits(dX)
-      j <- splits(dY)
+    val splitsX: List[Int] = splits(dX)
+    val splitsY: List[Int] = splits(dY)
+
+    val labeledPoints = for {
+      i <- splitsX
+      j <- splitsY
       x = i * dX
       y = j * dY
     } yield {
@@ -100,16 +62,14 @@ object ICFPGamingRect {
 
       println(s"point: $xb,$yb")
 
-      (xb, yb)
+      ((i, j), Point(xb, yb))
     }
 
+    val skeleton = labeledPoints.map(_._2)
+
     // All the source vertices, indexed
-    val indexedVertices: Map[Int, (Rational, Rational)] = points.zipWithIndex.toMap.map(_.swap)
-
-    val indexListLength = indexedVertices.size
-
-    val numIndicesAlongX = splits(dX).length
-    val numIndicesAlongY = splits(dY).length
+    val numIndicesAlongX = splitsX.length
+    val numIndicesAlongY = splitsY.length
 
     // --- Generating facets
     val facets: List[List[Int]] = for {
@@ -123,59 +83,29 @@ object ICFPGamingRect {
 
     // --- Generating silhouette
 
-    // Source vertex indices grouped along x or y axis
-    val firstXIndexGroup: List[Int] = (0 until numIndicesAlongX).toList.map(_ * numIndicesAlongY)
-    val xIndicesGroups: List[List[Int]] = (0 until numIndicesAlongY).toList.map { i => firstXIndexGroup.map(_ + i) }
-    val yIndicesGroups: List[List[Int]] = (0 until indexListLength).toList.grouped(numIndicesAlongY).toList
-
-    val xIndexedPointGroups: List[List[(Point, Int)]] =
-      xIndicesGroups.map { aGroup: List[Int] =>
-        aGroup.map { index: Int => {
-          val thePoint: (Rational, Rational) = indexedVertices(index)
-          (Point(thePoint._1, thePoint._2), index)
+    def arrangeSilhouette(i: Int, x: Rational, step: Rational, last: Int) = {
+      if (i == last) {
+        if (i % 2 == 0) {
+          dX - (x % dX)
+        } else {
+          x % dX
         }
-        }
+      } else {
+        dX * (i % 2)
       }
+    }
+    val silhouette = labeledPoints.map {
+      case ((i, j), Point(xb, yb)) =>
+        val x = arrangeSilhouette(i, xb, dX, splitsX.last)
+        val y = arrangeSilhouette(j, yb, dY, splitsY.last)
 
-//        println("--- original points:")
-//        xIndexedPointGroups.foreach(println(_))
-
-    val shiftedXIndexedPointGroups: List[List[(Point, Int)]] =
-      xIndexedPointGroups.map { group: List[(Point, Int)] =>
-        translateX(group.take(2), group.drop(2), -2 * dX)
-      }
-
-//        println("--- original points shifted along x:")
-//        shiftedXIndexedPointGroups.foreach(println(_))
-
-    val shiftedXIndexedPoints: List[(Int, Point)] = shiftedXIndexedPointGroups.flatten.map { x => (x._2, x._1) }
-    val shiftedXMap: Map[Int, Point] = shiftedXIndexedPoints.toMap
-
-    val yIndexedPointGroups: List[List[(Point, Int)]] =
-      yIndicesGroups.map { aGroup: List[Int] =>
-        aGroup.map { index: Int => (shiftedXMap(index), index) }
-      }
-
-    val shiftedYIndexedPointGroups: List[List[(Point, Int)]] =
-      yIndexedPointGroups.map { group: List[(Point, Int)] =>
-        translateY(group.take(2), group.drop(2), -2 * dY)
-      }
-
-//        println("--- original points shifted along both x and y:")
-//        shiftedYIndexedPointGroups.foreach(println(_))
-
-    val shiftedIndexedPoints: List[(Point, Int)] = shiftedYIndexedPointGroups.flatten
-    val silhouette: List[Point] =
-      shiftedIndexedPoints
-        .sortBy(_._2)
-        .map(_._1)
-        .map { aPoint: Point => Point(aPoint.x + minX, aPoint.y + minY) }
-
-    val skeleton: List[Point] = xIndexedPointGroups.flatten.sortBy(_._2).map(_._1)
+        Point(x + minX, y + minY)
+    }
 
     val solved: String = Solution(skeleton, facets, silhouette).toString
 
-//        plotSolution(Solution(skeleton, facets, silhouette))
+    println(Solution(skeleton, facets, silhouette))
+    //    plotSolution(Solution(skeleton, facets, silhouette))
 
     val fileDest = "./solutionsRect/" + filename
     val writer = new PrintWriter(new File(fileDest))
