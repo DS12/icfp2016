@@ -12,11 +12,13 @@ case class Polygon(pts: Seq[Point]) {
 
 // vertices of a facet should always be ordered ccw
 case class Facet(vertices: ccwPoints) {
-  require(vertices.pts.length >= 3)
+  require(vertices.points.length >= 3)
+
+  def sort: Facet = Facet(ccwPoints(vertices.sortedPoints))
 
   def edges: Seq[LineSegment] = {
-    val shift = vertices.pts.tail :+ vertices.pts.head
-    vertices.pts.zip(shift).map(p => LineSegment(p._1, p._2))
+    val shift = vertices.sortedPoints.tail :+ vertices.sortedPoints.head
+    vertices.sortedPoints.zip(shift).map(p => LineSegment(p._1, p._2))
   }
 }
 

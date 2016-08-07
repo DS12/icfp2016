@@ -5,6 +5,7 @@ package icfp
   */
 
 import Geometry._
+import vizTools.ProblemViewer.{GraphicProblemViewer, SkeletonViewer}
 
 object icfp2016 {
 
@@ -43,10 +44,10 @@ object icfp2016 {
       this.skeleton.boundary.flatMap(unfold(_)).toList
     }
 
-    def unfold(edge: LineSegment): List[SilhouetteState] = {
+    def unfold(edge: LineSegment): Seq[SilhouetteState] = {
       // currently only deal with one facet
       val oneFacet = genFacet(edge, this.skeleton.edges)
-      List(unfoldOneFacet(edge, oneFacet))
+      Seq(unfoldOneFacet(edge, oneFacet))
     }
 
     def unfoldOneFacet(edge: LineSegment, facet: Facet): SilhouetteState = {
@@ -71,16 +72,34 @@ object icfp2016 {
       SilhouetteState(newSilhouette, newSkeleton, newMap)
     }
 
-    def deFacet(facets: List[Facet], ske: Skeleton): (List[Facet], Skeleton) = {
-      println(ske)
-      if (ske.edges.isEmpty) (facets, ske)
-      else {
-        val facetToGo: Facet = genFacet(ske.edges.head, ske.edges)
-        val edgesToDel: Seq[LineSegment] = facetToGo.edges.filter(ske.boundary.contains)
-        val skeletonLeft: Skeleton = Skeleton(ske.edges.filter(!edgesToDel.contains(_)))
-        deFacet(facetToGo :: facets, skeletonLeft)
-      }
+    lazy val facets: Seq[Facet] = {
+      val ske = this.skeleton
+      val reversedEdges: Seq[LineSegment] = ske.edges.map((l: LineSegment) => LineSegment(l.p2, l.p1))
+      val doubleSkeloton: Skeleton = Skeleton((ske.edges ++ reversedEdges).distinct)
+      val allPossibleFacets: Seq[Facet] = ske.edges.map { (l: LineSegment) => genFacet(l, doubleSkeloton.edges) }
+      allPossibleFacets.map(_.sort.sort).distinct
     }
+
+
+    //    def deFacet(facets: List[Facet], ske: Skeleton): (List[Facet], Skeleton) = {
+    //      facets.foreach(println)
+    //      println("======")
+    //      SkeletonViewer(ske)
+    //      if (ske.edges.isEmpty || ske.edges.size < 3) (facets, ske)
+    //      else {
+    //        val facetToGo: Facet = genFacet(ske.edges.head, ske.edges)
+    //        println(facetToGo)
+    //        println("==")
+    //        val edgesToDel: Seq[LineSegment] = facetToGo.edges.filter(ske.boundary.contains)
+    //        println(edgesToDel)
+    //        println("==")
+    //        val skeletonLeft: Skeleton = Skeleton(ske.edges.filter(!edgesToDel.contains(_)))
+    //        println(skeletonLeft)
+    //        println("==")
+    //        deFacet(facetToGo :: facets, skeletonLeft)
+    //      }
+    //    }
+
   }
 
   //(silh, skel) => silhState
@@ -94,7 +113,11 @@ object icfp2016 {
 
   case class Solution(sil: SilhouetteState) {
     require(sil.isSolved)
-    val facets: List[Facet] = sil.deFacet(List(), sil.skeleton)._1
+    sil.skeleton.edges.foreach(println)
+//    val facets: List[Facet] = sil.deFacet(List(), sil.skeleton)._1
+
+    val facets: Seq[Facet] = sil.facets
+    facets.foreach(println)
 
     override def toString: String = {
       "is solved"
@@ -107,7 +130,7 @@ object icfp2016 {
       println("xxxxxxxxx")
       (for {
         edge <- problem.boundaries // boundary edges
-        progress <- problem.unfold(edge).filter(_.isLegal): List[SilhouetteState]
+        progress <- problem.unfold(edge).filter(_.isLegal)
       } yield solve(progress)).head
     }
   }
@@ -123,14 +146,12 @@ object icfp2016 {
 
 }
 
-object solve extends App {
+object exampleSolve extends App {
 
   import implicits._
 
   import icfp2016._
   import OrigamiParse._
-
-  println("======")
 
   val ex =
     """1
@@ -159,16 +180,12 @@ object solve extends App {
 1/2,0 1/2,1/2
 0,1/2 1/2,1/2
     """
+  GraphicProblemViewer(prob8)
 
   val initToks = tokenize(prob8)
-  println("======")
   val problem = parseProblem.run(initToks).value._2
-  println("======")
   val initialState: SilhouetteState = analyze(problem)
-  println("======")
   val solution: Solution = icfp2016.solve(Seq(initialState))
-//  val solution: Solution = icfp2016.solve(initialState)
-  println("======")
-  println(solution)
+  //  println(solution)
 
 }

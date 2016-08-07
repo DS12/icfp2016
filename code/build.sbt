@@ -16,3 +16,7 @@ libraryDependencies += "com.github.wookietreiber" %% "scala-chart" % "latest.int
 
 // for Rational
 libraryDependencies += "org.spire-math" %% "spire" % "0.11.0"
+
+// for test
+val scalaTestVersion = "3.0.0-M15"
+libraryDependencies += "org.scalatest" %% "scalatest" % scalaTestVersion

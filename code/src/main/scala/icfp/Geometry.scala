@@ -49,9 +49,7 @@ object Geometry {
       go(first, second, points.filter(p => p != first && p != second), Seq(first))
     }
 
-    lazy val pts = sort(points)
-
-    def apply(points: Seq[Point]): ccwPoints = ccwPoints(pts)
+    lazy val sortedPoints = sort(points)
 
   }
 
@@ -62,7 +60,7 @@ object Geometry {
 
     def endpoints: Seq[Point] = p1 :: p2 :: Nil
 
-    def UTurn: LineSegment = LineSegment(p2, p1)
+    def reverse: LineSegment = LineSegment(p2, p1)
 
     // None if line segment is vertical.
     def slopeIntForm: Option[(Rational, Rational)] =
@@ -120,7 +118,7 @@ object Geometry {
   def genFacet(edge: LineSegment, allEdges: Seq[LineSegment]): Facet = {
     // check if the picture is on the left.
     val directionCorrect = edgeToVertex(allEdges).exists(_.isAtLeft(edge))
-    if (!directionCorrect) genFacet(edge.UTurn, allEdges)
+    if (!directionCorrect) genFacet(edge.reverse, allEdges)
     else {
       def go(currEdge: LineSegment, acc: Seq[LineSegment]): Seq[LineSegment] = {
         if (acc.contains(currEdge)) acc
