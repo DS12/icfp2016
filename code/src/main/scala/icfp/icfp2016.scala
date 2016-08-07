@@ -72,14 +72,6 @@ object icfp2016 {
       SilhouetteState(newSilhouette, newSkeleton, newMap)
     }
 
-    lazy val facets: Seq[Facet] = {
-      val ske = this.skeleton
-      val reversedEdges: Seq[LineSegment] = ske.edges.map((l: LineSegment) => LineSegment(l.p2, l.p1))
-      val doubleSkeloton: Skeleton = Skeleton((ske.edges ++ reversedEdges).distinct)
-      val allPossibleFacets: Seq[Facet] = ske.edges.map { (l: LineSegment) => genFacet(l, doubleSkeloton.edges) }
-      allPossibleFacets.map(_.sort.sort).distinct
-    }
-
 
     //    def deFacet(facets: List[Facet], ske: Skeleton): (List[Facet], Skeleton) = {
     //      facets.foreach(println)
@@ -110,14 +102,29 @@ object icfp2016 {
     SilhouetteState(problem.silh, problem.skel, initLabel)
   }
 
+  def parseSolution(silhouetteState: SilhouetteState): Solution = {
+    ???
+  }
+
+  case class Source(skeleton: Skeleton) {
+    val points: Seq[Point] = ???
+
+    val facets: Seq[Facet] = {
+      val reversedEdges: Seq[LineSegment] = skeleton.edges.map((l: LineSegment) => LineSegment(l.p2, l.p1))
+      val doubleSkeloton: Skeleton = Skeleton((skeleton.edges ++ reversedEdges).distinct)
+      val allPossibleFacets: Seq[Facet] = skeleton.edges.map { (l: LineSegment) => genFacet(l, doubleSkeloton.edges) }
+      allPossibleFacets.map(_.sort.sort).distinct
+    }
+
+  }
 
   case class Solution(sil: SilhouetteState) {
     require(sil.isSolved)
     sil.skeleton.edges.foreach(println)
-//    val facets: List[Facet] = sil.deFacet(List(), sil.skeleton)._1
+    //    val facets: List[Facet] = sil.deFacet(List(), sil.skeleton)._1
 
-    val facets: Seq[Facet] = sil.facets
-    facets.foreach(println)
+
+//    facets.foreach(println)
 
     override def toString: String = {
       "is solved"
