@@ -34,18 +34,13 @@ case class SimpleFold(problemString: String)(xScale: Double = 1.0, yScale: Doubl
 
   }
 
-  val normalizedProblemPoints: ProblemPoints = ProblemPoints(problem.normalize.allPts)
-
   def areaOfRotatedProblems(pp: ProblemPoints)(lines: Seq[LineSegment]): Seq[Rational] = {
     val allRotation: Seq[ProblemPoints] = lines.map((l: LineSegment) => ProblemPoints(pp.allPts.map(l.reflect)))
     allRotation.map((pp: ProblemPoints) => pp.area)
   }
 
-  val pinPoints: Seq[Point] = (-10 to -5).map((i: Int) => Point(i, 10 + i))
-  val rotationLines: Seq[LineSegment] = pinPoints.map((p: Point) => LineSegment(Point(0, 0), p))
-
-  def pickRotationLine(pp: ProblemPoints): LineSegment = {
-    val areas = areaOfRotatedProblems(pp)(rotationLines)
+  def pickRotationLine(pp: ProblemPoints)(lines: Seq[LineSegment]): LineSegment = {
+    val areas = areaOfRotatedProblems(pp)(lines)
     val minArea = areas.min
     val index = areas.indexWhere((r: Rational) => r == minArea)
     rotationLines(index)
@@ -59,10 +54,10 @@ case class SimpleFold(problemString: String)(xScale: Double = 1.0, yScale: Doubl
     s"$stringx,$stringy"
   }
 
-  case class SolutionSource(problem: Problem) {
+  case class SolutionSource(pp: ProblemPoints) {
     // get the naive area of the problem, and decide grid
-    val naiveWidth: Rational = problem.maxX - problem.minX
-    val naiveHeight: Rational = problem.maxY - problem.minY
+    val naiveWidth: Rational = pp.maxX - pp.minX
+    val naiveHeight: Rational = pp.maxY - pp.minY
     // the number of grids, will equal to the number of folds:
     // if the width(height) is larger than 1, don't fold, otherwise the fold should be the 1/width + 1
     // the additional line is used to adjust the first grid to a scale of the problem area.
@@ -204,17 +199,24 @@ case class SimpleFold(problemString: String)(xScale: Double = 1.0, yScale: Doubl
   }
 
   // pipeline
-  val solutionSource = SolutionSource(problem)
-  val solutionDestination = SolutionDestination(solutionSource.foldedPoints)(problem)
+  // normalize problem
+  val normalizedProblem: Problem = problem.normalize
+  val normalizedProblemPoints: ProblemPoints = ProblemPoints(normalizedProblem.allPts)
+  // generate a bounch of rotation lines and pick one of them
+  val pinPoints: Seq[Point] = (-10 to -5).map((i: Int) => Point(i, 10 + i))
+  val rotationLines: Seq[LineSegment] = pinPoints.map((p: Point) => LineSegment(Point(0, 0), p))
+  val linePicked: LineSegment = pickRotationLine(normalizedProblemPoints)(rotationLines)
+  // flip the normalized problem by the line picked
+  val flipedProblemPoints: ProblemPoints = ProblemPoints(normalizedProblemPoints.allPts.map(linePicked.reflect))
+  // solve the fliped problem
+  val solutionSource = SolutionSource(flipedProblemPoints)
+  // flip the folded points back
+  val flipBackFoldedPoints: Seq[Point] = solutionSource.foldedPoints.map(linePicked.reflect)
+  // move the destination to the original problem
+  val solutionDestination = SolutionDestination(flipBackFoldedPoints)(problem)
 
   // Print out the solution
   val solution: String = solutionSource.sourceString + solutionDestination.destinationString
-  //  val solution: String = s"$numPoints \n" +
-  //    (0 until numPoints).map { i: Int => pointToString(sourcePoints(i)) + "\n": String }.reduce(_ + _) +
-  //    s"$numFacets \n" +
-  //    (0 until numFacets).map { i: Int => facets(i): String }.fold("")(_ + _) +
-  //    (0 until numPoints).map { i: Int => pointToString(destinationPoints(i)) + "\n": String }.reduce(_ + _)
-
 }
 
 
