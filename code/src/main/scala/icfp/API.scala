@@ -1,6 +1,6 @@
 package icfp
 
-import scalaj.http.{Http, HttpRequest}
+import scalaj.http.{Http, HttpRequest, HttpOptions}
 import play.api.libs.json._
 
 object API {
@@ -15,7 +15,7 @@ object API {
 
 
   def basicGET(url: String): JsValue = Json.parse(
-    Http(url).headers(keyHeader, encHeader).asString.body
+    Http(url).headers(keyHeader, encHeader).option(HttpOptions.followRedirects(true)).asString.body
   )
 
   def helloWorld: JsValue = basicGET(helloWorldURL)

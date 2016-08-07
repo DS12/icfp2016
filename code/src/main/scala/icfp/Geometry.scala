@@ -10,7 +10,12 @@ object Geometry {
       (f, (curr - prev).cosineAngleTo(f - prev))
     }
   }
-
+/*
+  def inUnitSqBdry(ls: LineSegment): Boolean = {
+    if (List(ls.p1.x, ls.p1.y, ls.p2.x, ls.p2.y) forall (x => (x <= 1) && (x >= 0)))
+      ls.stdForm
+  }
+ */
 }
 
 
