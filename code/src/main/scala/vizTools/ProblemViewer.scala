@@ -17,7 +17,7 @@ object ProblemViewer {
     val initToks = tokenize(problem)
     val prob = parseProblem.run(initToks).value._2
 
-    skeletonToGraph(prob.skel)
+    skeletonToGraph(prob.normalize.skel)
   }
 
   def skeletonToGraph(skeleton: Skeleton): XYChart = {

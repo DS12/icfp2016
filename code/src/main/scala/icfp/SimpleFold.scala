@@ -19,8 +19,8 @@ case class SimpleFold(problemString: String)(xOffset: Int = 0, yOffset: Int = 0)
   val naiveWidth: Rational = problem.maxX - problem.minX
   val naiveHeight: Rational = problem.maxY - problem.minY
   // the number of grids, will equal to the number of folds
-  val gridXnum: Int = (Rational(1) / naiveWidth).toInt + xOffset
-  val gridYnum: Int = (Rational(1) / naiveHeight).toInt + yOffset
+  val gridXnum: Int = math.max(1, (Rational(1) / naiveWidth).toInt) + xOffset
+  val gridYnum: Int = math.max(1, (Rational(1) / naiveHeight).toInt) + yOffset
   // indices are used to calculate the source points
   val pointsXindex: Int = gridXnum
   val pointsYindex: Int = gridYnum
@@ -131,11 +131,11 @@ case class SimpleFold(problemString: String)(xOffset: Int = 0, yOffset: Int = 0)
 
   // align the left lower conner with the problem
   val referencePoint: Point = Point(
-    foldedPoints.map(_.x).min + foldedPoints.map(_.x).max,
-    foldedPoints.map(_.y).min + foldedPoints.map(_.y).max)
+    (foldedPoints.map(_.x).min + foldedPoints.map(_.x).max)/2.0,
+    (foldedPoints.map(_.y).min + foldedPoints.map(_.y).max)/2.0)
   private val problemCenterx2: Point = Point(
-    problem.minX + problem.maxX,
-    problem.minY + problem.maxY)
+    (problem.minX + problem.maxX)/2.0,
+    (problem.minY + problem.maxY)/2.0)
   private val moveToAlign: Point = problemCenterx2 - referencePoint
   val destinationPoints: Seq[Point] = foldedPoints.map(_ + moveToAlign)
 
