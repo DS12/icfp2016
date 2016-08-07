@@ -65,8 +65,8 @@ case class SimpleFold(problemString: String)(xScale: Double = 1.0, yScale: Doubl
   val numFacets: Int = (n - 1) * (m - 1)
   val facets: Seq[String] =
     for {
-      i <- 1 to n - 1
-      j <- 1 to m - 1
+      i <- 1 until n
+      j <- 1 until m
     } yield {
       val p1: Int = i + (j - 1) * n - 1
       val p2: Int = p1 + 1
@@ -80,7 +80,7 @@ case class SimpleFold(problemString: String)(xScale: Double = 1.0, yScale: Doubl
   // fold the paper to left
   val foldLinesX: Seq[LineSegment] =
   for {
-    x <- (1 to n - 2)
+    x <- 1 to n - 2
   } yield {
     LineSegment(Point(xValues(x), 0), Point(xValues(x), 1))
   }
@@ -100,7 +100,7 @@ case class SimpleFold(problemString: String)(xScale: Double = 1.0, yScale: Doubl
   // fold the paper to down
   val foldLinesY: Seq[LineSegment] =
   for {
-    y <- (1 to m - 2)
+    y <- 1 to m - 2
   } yield {
     LineSegment(Point(0, yValues(y)), Point(1, yValues(y)))
   }
