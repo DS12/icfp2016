@@ -43,7 +43,7 @@ case class SimpleFold(problemString: String)(xScale: Double = 1.0, yScale: Doubl
     val areas = areaOfRotatedProblems(pp)(lines)
     val minArea = areas.min
     val index = areas.indexWhere((r: Rational) => r == minArea)
-    rotationLines(index)
+    lines(index)
   }
 
   def pointToString(p: Point): String = {
@@ -221,7 +221,7 @@ case class SimpleFold(problemString: String)(xScale: Double = 1.0, yScale: Doubl
 
 
 object simpleFoldExample extends App {
-  val problem = Problems.prob51
+  val problem = Problems.prob9
 
   private val solving: String = problem.stripMargin('|')
 
