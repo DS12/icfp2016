@@ -67,6 +67,8 @@ object Point {
 
   def apply(x: Long, y: Long): Point = Point(BigInt(x), BigInt(y))
 
+  implicit val ordering = Ordering.by[Point, (Rational, Rational)](p => (p.x, p.y))
+
 }
 
 case class Problem(polygons: List[List[Point]], edges: Set[Edge])
