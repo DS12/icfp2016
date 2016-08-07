@@ -56,8 +56,8 @@ case class SimpleFold(problemString: String)(xScale: Double = 1.0, yScale: Doubl
 
   case class SolutionSource(pp: ProblemPoints) {
     // get the naive area of the problem, and decide grid
-    val naiveWidth: Rational = pp.maxX - pp.minX
-    val naiveHeight: Rational = pp.maxY - pp.minY
+    val naiveWidth: Rational = pp.width
+    val naiveHeight: Rational = pp.height
     // the number of grids, will equal to the number of folds:
     // if the width(height) is larger than 1, don't fold, otherwise the fold should be the 1/width + 1
     // the additional line is used to adjust the first grid to a scale of the problem area.
@@ -76,14 +76,14 @@ case class SimpleFold(problemString: String)(xScale: Double = 1.0, yScale: Doubl
     val xValues: Seq[Rational] =
       (0 to pointsXindex).map {
         (i: Int) => i match {
-          case 1 => Rational(naiveWidth * xSmartScale) // the first line is fitting the problem
+          case 1 => if (naiveWidth >= 1.0) Rational(1) else Rational(naiveWidth * xSmartScale) // the first line is fitting the problem
           case _ => Rational(i.toDouble / pointsXindex)
         }
       }
     val yValues: Seq[Rational] =
       (0 to pointsYindex).map {
         (i: Int) => i match {
-          case 1 => Rational(naiveHeight * ySmartScale) // the first line is fitting the problem
+          case 1 => if (naiveHeight >= 1.0) Rational(1) else Rational(naiveHeight * ySmartScale) // the first line is fitting the problem
           case _ => Rational(i.toDouble / pointsYindex)
         }
       }
@@ -226,7 +226,7 @@ object simpleFoldExample extends App {
   private val solving: String = problem.stripMargin('|')
 
   GraphicProblemViewer(solving)
-  val sF = SimpleFold(solving)(0.8, 0.9)
+  val sF = SimpleFold(solving)()
   println("===")
   println(sF.solution)
 }
