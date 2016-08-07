@@ -1,6 +1,6 @@
 package tv.pluto.icfpGaming
 
-import tv.pluto.icfp.{Edge, Parser, Point, Problem}
+import tv.pluto.icfp.Parser
 
 object ManuallySolved {
 
@@ -20,6 +20,6 @@ object ManuallySolved {
       |0,0 1/2,1/2""".stripMargin.trim
   )
 
-   val solA = ("", "")
+  //   val solA =
 
 }

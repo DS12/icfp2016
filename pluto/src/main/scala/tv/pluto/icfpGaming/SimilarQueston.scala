@@ -1,12 +1,11 @@
 package tv.pluto.icfpGaming
 
-import scala.io.Source
-import tv.pluto.icfp._
-import spire.math.Rational
 import tv.pluto.icfp.Parser._
-import Point.ordering
-import sys.process._
+import tv.pluto.icfp.Point.ordering
+import tv.pluto.icfp._
+
 import scala.io.Source
+import scala.sys.process._
 
 /**
   * Created by kamalgurala on 8/5/16.
@@ -16,11 +15,14 @@ object SimilarQuestions {
   def main(args: Array[String]) {
     val problemFileNames: List[String] = "ls problems".lineStream.toList
     val allParsedProblems = problemFileNames.map {
-      fn =>
-        val problem = Source.fromFile("problems/" + fn).getLines().mkString("\n")
-        println(fn)
-        (parserProblem(problem), fn)
-    }
+      case fn =>
+        (Source.fromFile("problems/" + fn).getLines().mkString("\n"), fn)
+    }.filter(_._1.nonEmpty)
+      .map {
+        case (problem, fn) =>
+          println(fn)
+          (parserProblem(problem), fn)
+      }
 
     val translatedParsedProblems = allParsedProblems
       .map(p => (translateProblem(p._1, computeMinPoint(p._1)), (p._2, computeMinPoint(p._1))))

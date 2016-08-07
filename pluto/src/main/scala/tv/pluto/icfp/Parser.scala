@@ -1,10 +1,7 @@
 package tv.pluto.icfp
 
-import java.io.PrintWriter
-
 import spire.math.Rational
 
-import scala.io.Source
 import scala.util.control.NonFatal
 
 object Parser {
