@@ -10,7 +10,7 @@ import vizTools.Problems
 /**
   * Created by tianxia on 8/7/16.
   */
-case class SimpleFold(problemString: String)(xOffset: Int = 0, yOffset: Int = 0) {
+case class SimpleFold(problemString: String)(xScale: Double = 1.0, yScale: Double = 1.0) {
   // To approximate all the problems that have some folds.
   // parse in the problem
   val initToks = tokenize(problemString)
@@ -20,8 +20,8 @@ case class SimpleFold(problemString: String)(xOffset: Int = 0, yOffset: Int = 0)
   val naiveWidth: Rational = problem.maxX - problem.minX
   val naiveHeight: Rational = problem.maxY - problem.minY
   // the number of grids, will equal to the number of folds
-  val gridXnum: Int = math.max(1, (Rational(1) / naiveWidth).toInt) + xOffset
-  val gridYnum: Int = math.max(1, (Rational(1) / naiveHeight).toInt) + yOffset
+  val gridXnum: Int = math.max(1, (Rational(1) / naiveWidth).toInt) + 1
+  val gridYnum: Int = math.max(1, (Rational(1) / naiveHeight).toInt) + 1
   // indices are used to calculate the source points
   val pointsXindex: Int = gridXnum
   val pointsYindex: Int = gridYnum
@@ -30,8 +30,20 @@ case class SimpleFold(problemString: String)(xOffset: Int = 0, yOffset: Int = 0)
   val m = pointsYindex + 1
   val numPoints: Int = n * m
 
-  val xValues: Seq[Rational] = (0 to pointsXindex).map((i: Int) => Rational(i.toDouble / pointsXindex))
-  val yValues: Seq[Rational] = (0 to pointsYindex).map((i: Int) => Rational(i.toDouble / pointsYindex))
+  val xValues: Seq[Rational] =
+    (0 to pointsXindex).map {
+      (i: Int) => i match {
+        case 1 => Rational(naiveWidth * xScale)
+        case _ => Rational(i.toDouble / pointsXindex)
+      }
+    }
+  val yValues: Seq[Rational] =
+    (0 to pointsYindex).map {
+      (i: Int) => i match {
+        case 1 => Rational(naiveHeight * yScale)
+        case _ => Rational(i.toDouble / pointsYindex)
+      }
+    }
 
   val sourcePoints: Seq[Point] =
     for {
@@ -132,11 +144,11 @@ case class SimpleFold(problemString: String)(xOffset: Int = 0, yOffset: Int = 0)
 
   // align the left lower conner with the problem
   val referencePoint: Point = Point(
-    (foldedPoints.map(_.x).min + foldedPoints.map(_.x).max)/2.0,
-    (foldedPoints.map(_.y).min + foldedPoints.map(_.y).max)/2.0)
+    (foldedPoints.map(_.x).min + foldedPoints.map(_.x).max) / 2.0,
+    (foldedPoints.map(_.y).min + foldedPoints.map(_.y).max) / 2.0)
   private val problemCenterx2: Point = Point(
-    (problem.minX + problem.maxX)/2.0,
-    (problem.minY + problem.maxY)/2.0)
+    (problem.minX + problem.maxX) / 2.0,
+    (problem.minY + problem.maxY) / 2.0)
   private val moveToAlign: Point = problemCenterx2 - referencePoint
   val destinationPoints: Seq[Point] = foldedPoints.map(_ + moveToAlign)
 
@@ -156,7 +168,7 @@ object simpleFoldExample extends App {
   private val solving: String = problem.stripMargin('|')
 
   GraphicProblemViewer(solving)
-  val sF = SimpleFold(solving)(0, 0)
+  val sF = SimpleFold(solving)(0.9, 0.9)
   println(sF.foldedPoints)
   println("===")
   println(sF.solution)
