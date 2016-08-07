@@ -81,7 +81,22 @@ object Point {
 
 }
 
-case class Problem(polygons: List[List[Point]], edges: Set[Edge])
+case class Problem(polygons: List[List[Point]], edges: Set[Edge]) {
+
+  private def formatPolygon(points: List[Point]): String =
+    s"""
+       |${points.size}
+       |${points.mkString("\n")}
+      """.stripMargin.trim
+
+  override def toString: String =
+    s"""
+       |${polygons.size}
+       |${polygons.map(formatPolygon).mkString("\n")}
+       |${edges.size}
+       |${edges.mkString("\n")}
+     """.stripMargin.trim
+}
 
 case class Point(x: Rational, y: Rational) {
 
@@ -93,7 +108,7 @@ case class Point(x: Rational, y: Rational) {
 
   def divide(divisor: Int) = Point(this.x / divisor, this.y / divisor)
 
-  override def toString = x + "," + y
+  override def toString = s"$x,$y"
 
 }
 
@@ -102,6 +117,8 @@ case class Edge(p1: Point, p2: Point) {
   def center = p1.add(p2) divide 2
 
   def subtract(p: Point) = Edge(p1 subtract p, p2 subtract p)
+
+  override def toString: String = s"$p1 $p2"
 
 }
 

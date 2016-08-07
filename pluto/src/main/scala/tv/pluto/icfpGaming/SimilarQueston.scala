@@ -33,9 +33,7 @@ object SimilarQuestions {
       .filter(_._2.size > 1)
       .sortBy(_._2.size).reverse
 
-    recurringProblems.foreach{x => Visualizer.visualize(x._1.edges); println(x._2.size)}
-
-
+    recurringProblems.foreach { x => println(x._2.size); println(x.toString); Visualizer.visualize(x._1.edges); }
   }
 
   def computeMinPoint(p: Problem): Point = {
@@ -65,12 +63,12 @@ object SimilarQuestions {
         val double = poly ++ poly
         double.slice(minPointIndex, minPointIndex + poly.size)
     }
-    val swappedEdges = p.edges.map{e =>
-      val ls = List(e.p1,e.p2).sorted
-      Edge(ls.head,ls(1))
+    val swappedEdges = p.edges.map { e =>
+      val ls = List(e.p1, e.p2).sorted
+      Edge(ls.head, ls(1))
     }
-    val sortedEdges = swappedEdges.toList.sortBy(e => (e.p1,e.p2)).toSet
-    Problem(permutedPolygons,sortedEdges)
+    val sortedEdges = swappedEdges.toList.sortBy(e => (e.p1, e.p2)).toSet
+    Problem(permutedPolygons, sortedEdges)
 
   }
 
