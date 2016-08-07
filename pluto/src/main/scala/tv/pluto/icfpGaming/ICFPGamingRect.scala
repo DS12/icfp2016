@@ -20,10 +20,20 @@ object ICFPGamingRect {
   implicit def tuple2ToList[T](t: (T, T)): List[T] = List(t._1, t._2)
 
   def main(args: Array[String]): Unit = {
-    //    val problemFileNames: List[String] = "ls problems".lineStream.filter(_.contains("1452")).toList
-    val problemFileNames: List[String] = "ls problems".lineStream.take(10).toList
+    //    val problemFileNames: List[String] = "ls problems".lineStream.filter(_.contains("1180")).toList
+    val problemFileNames: List[String] = "ls problems".lineStream.toList
 
-    problemFileNames foreach { fn => println(fn); pipeline(fn) }
+    problemFileNames foreach {
+      fn =>
+        try {
+          println(fn)
+          pipeline(fn)
+        } catch {
+          case nfe: IllegalArgumentException =>
+            System.err.println(s"Could not parse input: $fn" + nfe)
+            nfe.printStackTrace()
+        }
+    }
   }
 
   def pipeline(filename: String) = {
@@ -60,8 +70,7 @@ object ICFPGamingRect {
       val xb = if (x >= 1) Rational.one else x
       val yb = if (y >= 1) Rational.one else y
 
-      println(s"point: $xb,$yb")
-
+      //      println(s"point: $xb,$yb")
       ((i, j), Point(xb, yb))
     }
 
@@ -83,14 +92,14 @@ object ICFPGamingRect {
 
     // --- Generating silhouette
     def arrangeSilhouette(i: Int, x: Rational, step: Rational, last: Int) = {
-      if (i == last) {
+      if (i == last && (x % step) != 0) {
         if (i % 2 == 0) {
-          dX - (x % dX)
+          step - (x % step)
         } else {
-          x % dX
+          x % step
         }
       } else {
-        dX * (i % 2)
+        step * (i % 2)
       }
     }
     val silhouette = labeledPoints.map {
@@ -103,7 +112,7 @@ object ICFPGamingRect {
 
     val solved: String = Solution(skeleton, facets, silhouette).toString
 
-    println(Solution(skeleton, facets, silhouette))
+    //    println(Solution(skeleton, facets, silhouette))
     //    plotSolution(Solution(skeleton, facets, silhouette))
 
     val fileDest = "./solutionsRect/" + filename

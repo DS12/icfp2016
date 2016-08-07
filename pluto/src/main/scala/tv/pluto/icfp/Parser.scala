@@ -5,6 +5,7 @@ import java.io.PrintWriter
 import spire.math.Rational
 
 import scala.io.Source
+import scala.util.control.NonFatal
 
 object Parser {
 
@@ -23,6 +24,15 @@ object Parser {
   }
 
   def parserProblem(string: String): Problem = {
+    try {
+      parserProblemUnsafe(string)
+    } catch {
+      case NonFatal(e: Throwable) =>
+        throw new IllegalArgumentException("File could not be parsed", e)
+    }
+  }
+
+  private def parserProblemUnsafe(string: String): Problem = {
     var lines = string.split('\n').toList.map(_.trim).filter(_.nonEmpty)
     val nPoly = lines.head.toInt
 
