@@ -4,6 +4,7 @@ import OrigamiParse._
 
 import scalax.chart.XYChart
 import scalax.chart.api._
+import org.jfree.ui.RectangleInsets
 
 object ProblemViewer {
 
@@ -30,6 +31,27 @@ object ProblemViewer {
 
     val chart = XYLineChart(data.toList)
     chart
+  }
+
+  def plotLines(
+    ls: Seq[LineSegment],
+    xm: Double = -0.2,
+    xM: Double = 1.2,
+    ym: Double = -0.2,
+    yM: Double = 1.2
+  ): XYChart = {
+    val names: Seq[String] = ls.indices.map(_.toString)
+    val data: Seq[(String, Seq[(Double, Double)])] =
+      names.indices.map { i =>
+        (
+          names(i),
+          Seq(toDoublePoint(ls(i).p1), toDoublePoint(ls(i).p2))
+        )
+      }
+
+    val p = XYLineChart(data.toList)
+    p.plot.setAxisOffset(new RectangleInsets(0.2, 0.2, 0.2, 0.2))
+    p
   }
 }
 

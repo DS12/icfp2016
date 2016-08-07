@@ -65,6 +65,8 @@ case class LineSegment(p1: Point, p2: Point){
     case LineSegment(p1, p2) => LineSegment(this.reflect(p1), this.reflect(p2))
   }
 
+  def reflect(ls: Seq[LineSegment]): Seq[LineSegment] = ls.map(this.reflect(_))
+
   def flip: LineSegment = LineSegment(this.p2, this.p1)
 
 
