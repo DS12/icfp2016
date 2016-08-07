@@ -1,6 +1,7 @@
 package tv.pluto.icfpGaming
 
-import tv.pluto.icfp.Parser
+import spire.math.Rational
+import tv.pluto.icfp.{Parser, Point}
 
 object ManuallySolved {
 
@@ -22,4 +23,16 @@ object ManuallySolved {
 
   //   val solA =
 
+
+  def moveSolution(parsedSol: Solution, xTrans: Rational, yTrans: Rational): Solution = {
+    val skeleton = parsedSol.skeleton
+    val facets = parsedSol.facets
+    val silhouette = parsedSol.silhouette
+
+    // Only need to move silhouette
+    val newSil = silhouette.map{ aPoint => aPoint.add(Point(xTrans, yTrans)) }
+
+    Solution(skeleton, facets, newSil)
+  }
 }
+

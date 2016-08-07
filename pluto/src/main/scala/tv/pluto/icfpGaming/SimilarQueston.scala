@@ -36,6 +36,8 @@ object SimilarQuestions {
       .sortBy(_._2.size).reverse
 
     recurringProblems.foreach { x => println(x._2.size); println(x.toString); Visualizer.visualize(x._1.edges); }
+
+    val recurringProblemsMap = recurringProblems.zipWithIndex.map(_.swap).toMap
   }
 
   def computeMinPoint(p: Problem): Point = {
