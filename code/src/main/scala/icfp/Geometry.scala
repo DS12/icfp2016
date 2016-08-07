@@ -8,6 +8,8 @@ object Geometry {
   case class Point(x: Rational, y: Rational) {
     def -(that: Point): Point = Point(this.x - that.x, this.y - that.y)
 
+    def +(that: Point): Point = this - (Point(0,0) - that)
+
     def dot(that: Point): Double = (this.x * that.x + this.y * that.y).doubleValue
 
     def length: Double = sqrt(this.dot(this))
