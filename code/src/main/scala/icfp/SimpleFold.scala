@@ -202,7 +202,7 @@ case class SimpleFold(problemString: String)(xScale: Double = 1.0, yScale: Doubl
   // normalize problem
   val normalizedProblem: Problem = problem.normalize
   val normalizedProblemPoints: ProblemPoints = ProblemPoints(normalizedProblem.allPts)
-  // generate a bounch of rotation lines and pick one of them
+  // generate a bunch of rotation lines and pick one of them, they are in the southwest of the unit square.
   val pinPoints: Seq[Point] = (-10 to -5).map((i: Int) => Point(i, 10 + i))
   val rotationLines: Seq[LineSegment] = pinPoints.map((p: Point) => LineSegment(Point(0, 0), p))
   val linePicked: LineSegment = pickRotationLine(normalizedProblemPoints)(rotationLines)
@@ -210,8 +210,9 @@ case class SimpleFold(problemString: String)(xScale: Double = 1.0, yScale: Doubl
   val flipedProblemPoints: ProblemPoints = ProblemPoints(normalizedProblemPoints.allPts.map(linePicked.reflect))
   // solve the fliped problem
   val solutionSource = SolutionSource(flipedProblemPoints)
-  // flip the folded points back
-  val flipBackFoldedPoints: Seq[Point] = solutionSource.foldedPoints.map(linePicked.reflect)
+  // flip the folded points back, need to move the picked line to the northeast of the unit square
+  val movedLine: LineSegment = linePicked.translate(Point(1, 1))
+  val flipBackFoldedPoints: Seq[Point] = solutionSource.foldedPoints.map(movedLine.reflect)
   // move the destination to the original problem
   val solutionDestination = SolutionDestination(flipBackFoldedPoints)(problem)
 
